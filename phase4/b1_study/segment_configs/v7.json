@@ -1,0 +1,7 @@
+{
+  "experiment_stage": "head_ablations",
+  "segment": 3,
+  "resume_dataset": "krshnakarthikeyagn/cs781-b1-hierarchy-resume-20261022",
+  "expected_resume_manifest": "a88b107a3cc3f5c0907d359f4e37e96e77f020f49e15924ab32c21bb1400d672",
+  "session_hours": 1.6
+}

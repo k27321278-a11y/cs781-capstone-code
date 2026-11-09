@@ -1,0 +1,20 @@
+{
+  "id": "krshnakarthikeyagn/cs781-b1-hierarchy-and-depth",
+  "title": "CS781 B1 Hierarchy and Depth",
+  "code_file": "cs781-phase4-b1-hierarchy-depth.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "krshnakarthikeyagn/cs781-phase4-private-inputs-20261022",
+    "krshnakarthikeyagn/cs781-phase4-recovered-data-runner-20261022",
+    "krshnakarthikeyagn/cs781-b1-hierarchy-resume-20261022"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

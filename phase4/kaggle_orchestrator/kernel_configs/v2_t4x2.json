@@ -1,0 +1,21 @@
+{
+  "id": "krshnakarthikeyagn/cs781-phase4-t4x2-orchestrator",
+  "id_no": 140097245,
+  "title": "CS781_Phase4_T4x2_Orchestrator",
+  "code_file": "cs781-phase4-t4x2-orchestrator.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [],
+  "dataset_sources": [
+    "krshnakarthikeyagn/cs781-phase4-private-inputs-20261022",
+    "krshnakarthikeyagn/cs781-phase4-recovered-data-runner-20261022"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

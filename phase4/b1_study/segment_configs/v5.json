@@ -1,0 +1,7 @@
+{
+  "experiment_stage": "head_ablations",
+  "segment": 1,
+  "resume_dataset": null,
+  "expected_resume_manifest": null,
+  "session_hours": 4.2
+}
