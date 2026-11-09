@@ -1,0 +1,41 @@
+{
+  "method": "Phase 1 B1 LoRA encoder adaptation plus official-train-only full-document sparse classifier; fixed global probability blend",
+  "phase1_adaptation": true,
+  "selection": "Global blend weight and per-label thresholds selected exclusively on grouped official-train calibration",
+  "source_b1_adapter_sha256": "46e23da3fb1c4fa15d6db22e50e0954db51bf4ad49d174a7b019d4ed6e42b16a",
+  "source_sparse_model_sha256": "66de249517c8bd5c96cd72297c75d36785a6e3ec7286b1960452b407724ec4f1",
+  "sparse_weight": 0.9,
+  "b1_weight": 0.09999999999999998,
+  "calibration_macro_f1": 0.44360504284119023,
+  "official_dev_macro_f1": 0.3909436491485561,
+  "official_dev_micro_f1": 0.499987951516904,
+  "calibration_candidates": [
+    {
+      "sparse_weight": 0.0,
+      "macro_f1": 0.268156874483274
+    },
+    {
+      "sparse_weight": 0.25,
+      "macro_f1": 0.349296178329588
+    },
+    {
+      "sparse_weight": 0.5,
+      "macro_f1": 0.4201817955627834
+    },
+    {
+      "sparse_weight": 0.75,
+      "macro_f1": 0.4426551988985307
+    },
+    {
+      "sparse_weight": 0.9,
+      "macro_f1": 0.44360504284119023
+    }
+  ],
+  "fit_count": 38113,
+  "calibration_count": 4313,
+  "dev_count": 10181,
+  "test_count": 13019,
+  "submission_sha256": "3e6da4355fea564e0b88373f76e144589e72db0ac048d9b6213a8b71f3153705",
+  "codabench_score": null,
+  "course_method_eligibility": "Unverified: hybrid uses a Phase 1-adapted B1 LoRA branch, but the capstone method list may require a listed standalone method or multiple Phase 1 architectures."
+}

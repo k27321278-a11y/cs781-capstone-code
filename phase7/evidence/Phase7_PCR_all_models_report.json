@@ -1,0 +1,89 @@
+{
+  "source_run": "krshnakarthikeyagn/cs781-phase7-pcr-retrieval-experiments",
+  "parent_sha256": "1e8aca9800b87e952ed82e54307dd874220845d6a8545d2568bb743993cfb9dc",
+  "lexical_dev": {
+    "micro_f1_at_7": 0.39688715953307396,
+    "micro_precision_at_7": 0.4322033898305085,
+    "micro_recall_at_7": 0.3669064748201439,
+    "tp": 357,
+    "fp": 469,
+    "fn": 616,
+    "queries": 118
+  },
+  "experiments": {
+    "full": {
+      "checkpoint": "full_best.pt",
+      "checkpoint_sha256": "0844d68a706e64211b9320ad1a52ffe62a9e9f8422c0297b138a993718eea510",
+      "dense_weight": 0.30000000000000004,
+      "dev_metric": {
+        "micro_f1_at_7": 0.4102279043913285,
+        "micro_precision_at_7": 0.4467312348668281,
+        "micro_recall_at_7": 0.37923946557040084,
+        "tp": 369,
+        "fp": 457,
+        "fn": 604,
+        "queries": 118
+      },
+      "test_query_count": 237
+    },
+    "lorma": {
+      "checkpoint": "lorma_best.pt",
+      "checkpoint_sha256": "c5df495f9b502477d32bb445ce9861050e5a5098b94d4b3a7d403fc41497c02b",
+      "dense_weight": 0.4,
+      "dev_metric": {
+        "micro_f1_at_7": 0.4068927181767649,
+        "micro_precision_at_7": 0.4430992736077482,
+        "micro_recall_at_7": 0.3761562178828366,
+        "tp": 366,
+        "fp": 460,
+        "fn": 607,
+        "queries": 118
+      },
+      "test_query_count": 237
+    },
+    "partial": {
+      "checkpoint": "partial_best.pt",
+      "checkpoint_sha256": "f03163590d4d1cc2d1d386c9767fa3d8debd566e0683569e92259dc0e0a95eba",
+      "dense_weight": 0.4,
+      "dev_metric": {
+        "micro_f1_at_7": 0.4113396331295164,
+        "micro_precision_at_7": 0.44794188861985473,
+        "micro_recall_at_7": 0.3802672147995889,
+        "tp": 370,
+        "fp": 456,
+        "fn": 603,
+        "queries": 118
+      },
+      "test_query_count": 237
+    },
+    "kd": {
+      "checkpoint": "kd_student_best.pt",
+      "checkpoint_sha256": "8bf6f05f2469b11ecf1830b7ebd45c2010651f013a4e8648a1c0ae3ad60b77d9",
+      "dense_weight": 0.1,
+      "dev_metric": {
+        "micro_f1_at_7": 0.39911061700944966,
+        "micro_precision_at_7": 0.4346246973365617,
+        "micro_recall_at_7": 0.36896197327852004,
+        "tp": 359,
+        "fp": 467,
+        "fn": 614,
+        "queries": 118
+      },
+      "test_query_count": 237
+    }
+  },
+  "selected_ensemble": {
+    "full_weight": 0.4,
+    "lexical_weight": 0.5,
+    "dev_metric": {
+      "micro_f1_at_7": 0.4157865480822679,
+      "micro_precision_at_7": 0.45278450363196127,
+      "micro_recall_at_7": 0.38437821171634123,
+      "tp": 374,
+      "fp": 452,
+      "fn": 599,
+      "queries": 118
+    }
+  },
+  "hidden_test_scores": null
+}

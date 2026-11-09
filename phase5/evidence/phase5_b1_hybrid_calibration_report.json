@@ -1,0 +1,7 @@
+{
+  "source_adapter_sha256": "46e23da3fb1c4fa15d6db22e50e0954db51bf4ad49d174a7b019d4ed6e42b16a",
+  "phase1_checkpoint_sha256": "111296fb36a23dac1a11c07ede927cfc89dc86d51253e441d59afb82bd6924eb",
+  "rows": 4313,
+  "recomputed_calibration_macro_f1": 0.268156874483274,
+  "saved_calibration_macro_f1": 0.268156874483274
+}
