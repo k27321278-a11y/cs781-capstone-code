@@ -2,7 +2,7 @@
 
 Each record below is copied from the original Phase 4 run or export archive; source files have their SHA-256 values in `SOURCE_HASHES.json`. Large checkpoint tensors and official data stay in local backups.
 
-- `SOURCE_HASHES.json` — 7,875 bytes
+- `SOURCE_HASHES.json` — 7,804 bytes
 - `v1_budget.json` — 125 bytes
 - `v1_checkpoint.json` — 216 bytes
 - `v1_config.json` — 946 bytes

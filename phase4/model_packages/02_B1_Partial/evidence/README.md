@@ -11,9 +11,9 @@ Each record below is copied from the original Phase 4 run or export archive; sou
 - `job_result.json` — 10,746 bytes
 - `latest_export.json` — 1,476 bytes
 - `run.json` — 10,981 bytes
-- `RUN_SUMMARY_ENTRY.json` — 11,084 bytes
+- `RUN_SUMMARY_ENTRY.json` — 10,891 bytes
 - `selection.json` — 544 bytes
-- `SOURCE_HASHES.json` — 6,959 bytes
+- `SOURCE_HASHES.json` — 6,898 bytes
 - `status.json` — 831 bytes
 - `terminal.json` — 10,890 bytes
 - `training.jsonl` — 277,882 bytes
