@@ -1,0 +1,3 @@
+\section{A0 dense causal Transformer}
+\subsection{Architecture} A 12-block decoder-only Transformer predicts the next subword token from a causal context. Width 768, 12 attention heads of 64, 2048-wide SwiGLU feed-forward layers, RMSNorm, rotary positions, and tied input/output embeddings make the 110.1M-parameter graph.
+\subsection{Evidence} 0.8304 (historical Codabench screenshot). Original source and logs are indexed alongside this section; the illustrated notebook was reconstructed after training.

@@ -1,0 +1,44 @@
+{
+  "model": {
+    "vocab_size": 32768,
+    "max_seq_len": 2048,
+    "n_encoder_layers": 6,
+    "n_decoder_layers": 6,
+    "d_model": 768,
+    "n_heads": 12,
+    "d_head": 64,
+    "d_ff": 2048,
+    "rope_theta": 10000.0,
+    "dropout": 0.0,
+    "gradient_checkpointing": true,
+    "pad_token_id": 0
+  },
+  "train": {
+    "target_tokens": 209914685,
+    "micro_batch_size": 1,
+    "grad_accum_steps": 32,
+    "learning_rate": 0.0003,
+    "min_lr_ratio": 0.1,
+    "warmup_ratio": 0.02,
+    "weight_decay": 0.1,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "eps": 1e-8,
+    "grad_clip": 1.0,
+    "save_every": 100,
+    "log_every": 10,
+    "seed": 781,
+    "device": "cuda"
+  },
+  "decoding": [
+    {
+      "strategy": "greedy",
+      "temperature": 0.8,
+      "top_p": 0.9,
+      "repetition_penalty": 1.0,
+      "target_words": 128,
+      "max_new_tokens": 1024,
+      "seed": 781
+    }
+  ]
+}

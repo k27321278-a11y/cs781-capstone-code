@@ -1,0 +1,44 @@
+{
+  "code_sha256": "a89dbed0d77639327759bbaa34e9e8d176b73fe8278082065cb87f2788c96323",
+  "config_sha256": "d25e4217509d055d3d71e81e9b0f9a416d2eefa1a2080a0f4da9c5db73814a7f",
+  "original_data_sha256": "67c07b4b0c5b2e970f222ca04bf396f9262753ea957304f27dab1b6a9afc31a1",
+  "parent_checkpoint_sha256": "822252d0613ec063b1c3a096f0d1412bcb8d9835c205e8ee6c7633cc9084f54a",
+  "policies": [
+    {
+      "max_new_tokens": 2048,
+      "repetition_penalty": 1.0,
+      "seed": 781,
+      "strategy": "greedy",
+      "target_words": 128,
+      "temperature": 0.8,
+      "top_p": 0.9
+    },
+    {
+      "max_new_tokens": 2048,
+      "repetition_penalty": 1.1,
+      "seed": 781,
+      "strategy": "greedy",
+      "target_words": 128,
+      "temperature": 0.8,
+      "top_p": 0.9
+    },
+    {
+      "max_new_tokens": 2048,
+      "repetition_penalty": 1.2,
+      "seed": 781,
+      "strategy": "greedy",
+      "target_words": 128,
+      "temperature": 0.8,
+      "top_p": 0.9
+    },
+    {
+      "max_new_tokens": 2048,
+      "repetition_penalty": 1.1,
+      "seed": 781,
+      "strategy": "nucleus",
+      "target_words": 128,
+      "temperature": 0.8,
+      "top_p": 0.9
+    }
+  ]
+}

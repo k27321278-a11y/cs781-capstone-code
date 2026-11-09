@@ -1,0 +1,9 @@
+{
+  "purpose": "Portability settings; not a measured or completed T4 run",
+  "max_tokens": 512,
+  "max_chars": 1100,
+  "overlap": 200,
+  "grad_accum": 8,
+  "mixed_precision": "Automatic FP16 with GradScaler on T4; BF16 where supported",
+  "instructions": "Replace queue.json checkpoint, tokenizer, dataset and output paths with actual uploaded Colab/Kaggle paths. Record the hardware actually used."
+}

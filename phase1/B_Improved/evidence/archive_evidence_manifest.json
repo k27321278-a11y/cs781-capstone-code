@@ -1,0 +1,227 @@
+[
+  {
+    "path": "MANIFEST.json",
+    "size": 22098,
+    "sha256": "697a2d22eab0d4a3166f4085d111b38af719430f64f72a4aaf040cb7f410354c"
+  },
+  {
+    "path": "artifacts/b_improved_finalizer_20261004_v2.log",
+    "size": 18824,
+    "sha256": "5513da9f69add7567ffbefa51e78ebcafa8e8c51d8c7b89118abec84858b269e"
+  },
+  {
+    "path": "artifacts/b_improved_training_20261004.log",
+    "size": 136,
+    "sha256": "ee4667757f3282aa5e2e16256d3d35e6c67f28816b0ea3c981d3b20a855d4a19"
+  },
+  {
+    "path": "artifacts/evaluation/baseline_confirmation.context.json",
+    "size": 11782,
+    "sha256": "de8776cc340eccc2394108635e66811460cb9e7135334a513fc28cf384f11553"
+  },
+  {
+    "path": "artifacts/evaluation/baseline_confirmation.json",
+    "size": 108104,
+    "sha256": "305103850f3067cc3fe2a7a642519a0276e13eb8608211b9ce1245cac02e3c40"
+  },
+  {
+    "path": "artifacts/evaluation/baseline_confirmation.metrics.json",
+    "size": 1411,
+    "sha256": "63349818e4b0c59def1f8601e1654a97fc3e0b07ce3433d539c91c07f5032177"
+  },
+  {
+    "path": "artifacts/evaluation/baseline_confirmation.progress.json",
+    "size": 106877,
+    "sha256": "e0321b8f59e06ec2c06acdc85c5ff439df62469d74c506e57d72367ff0ab5683"
+  },
+  {
+    "path": "artifacts/evaluation/baseline_dev.context.json",
+    "size": 13082,
+    "sha256": "89449c2307db3aa8f7691f05f8785af1912692d18157dd4e084421d907777468"
+  },
+  {
+    "path": "artifacts/evaluation/baseline_dev.json",
+    "size": 121941,
+    "sha256": "e4fbf4861a4f34e7b86760c1a6deb8d07d7dc716d45d288b230aeda3befffcab"
+  },
+  {
+    "path": "artifacts/evaluation/baseline_dev.metrics.json",
+    "size": 1411,
+    "sha256": "cdf8754459283a0064b63232a6acfa37114530db7db59dd91d67f8b72d16770c"
+  },
+  {
+    "path": "artifacts/evaluation/baseline_dev.progress.json",
+    "size": 120433,
+    "sha256": "80e9ed0034bfc0456781e231dbcb75a1134efeaee726b0ee37a962749b921f60"
+  },
+  {
+    "path": "artifacts/evaluation/experiment_result.json",
+    "size": 17438,
+    "sha256": "07439c38517826408c09ca09d476cd7c5d56157eaf76d15bd9baf7d313eb1d9b"
+  },
+  {
+    "path": "artifacts/evaluation/latest_policy0_dev.progress.json",
+    "size": 117570,
+    "sha256": "2e7d5cf3b9bd747994957ee8a2fa0754b4f8cc4946470308099cb6fad7ab5c9d"
+  },
+  {
+    "path": "artifacts/evaluation/latest_policy1_dev.progress.json",
+    "size": 117439,
+    "sha256": "09ba46d87fa7f66816e2cfc03236c8c7e78ec54fbc2c312e33ae86f43ff8ddaf"
+  },
+  {
+    "path": "artifacts/evaluation/latest_policy2_dev.progress.json",
+    "size": 117805,
+    "sha256": "1297690e65169d0b9ee744835a338af623727d6003ae3709dd5e64faf45a66e7"
+  },
+  {
+    "path": "artifacts/evaluation/latest_policy3_dev.context.json",
+    "size": 13699,
+    "sha256": "17fc90b2057306fda5288e987302e7c6991e8a2f9c342df3fe85b2a424fe7951"
+  },
+  {
+    "path": "artifacts/evaluation/latest_policy3_dev.json",
+    "size": 119318,
+    "sha256": "1ab9fb5ee7b4f1fe063e157149ab07618b0b14eff85044d3de4af56c0f0e59a2"
+  },
+  {
+    "path": "artifacts/evaluation/latest_policy3_dev.metrics.json",
+    "size": 1411,
+    "sha256": "0928d4bdb85f7ebb24e4b2697e670f8cbfe13e576c8113f83080efe063ebcb45"
+  },
+  {
+    "path": "artifacts/evaluation/latest_policy3_dev.progress.json",
+    "size": 117811,
+    "sha256": "ed9c476a20c5a8b1ab1aa654cc96da75e3303165ce068e650ef06440d47fde8e"
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy0_dev.context.json",
+    "size": 13697,
+    "sha256": "5d65070ef2d901c1b015fe3842152ef13f2159315c8a063ae136534a30627b36"
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy0_dev.json",
+    "size": 121397,
+    "sha256": "c6b1c49b881c8c7fd3139f38a3da65c34e657088b072ba3a91322881be30647b"
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy0_dev.metrics.json",
+    "size": 1411,
+    "sha256": "73c85aec5322d1ba43e0755886b458b3b38ae23e125a707dab7c72248808c809"
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy0_dev.progress.json",
+    "size": 119889,
+    "sha256": "042bda1b64d614ab777caef5f229cd5c844d171ecd3a55a54bcca475c6d12c83"
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy1_dev.context.json",
+    "size": 13697,
+    "sha256": "d467804c66238b9c14d0b69283f519521068850211f2db52c461878761a778f7"
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy1_dev.json",
+    "size": 120863,
+    "sha256": "d0ae4bc0a634c163b55a05a3fc40bd122d216f3a4bfffe9d867fcf22d62f4375"
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy1_dev.metrics.json",
+    "size": 1411,
+    "sha256": "b3e00afc51bd155c5ec48d02e583d83efc771073d821e92d0afee76a601302d4"
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy1_dev.progress.json",
+    "size": 119355,
+    "sha256": "c039e17a195818a97aeab30fbf1400be466ec1c0a886c0195eaeae6bf1887a3c"
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy2_dev.context.json",
+    "size": 13697,
+    "sha256": "0e52eb8041ed0fd765346241857ebe4e55ece197b451bdf100e156c62deac3b3"
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy2_dev.json",
+    "size": 121063,
+    "sha256": "592b6d94a7b5bc4fad3fdbce4825b08e702c71dd91b2922abe55b096848dcdbc"
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy2_dev.metrics.json",
+    "size": 1411,
+    "sha256": "d86b3359b536802e68580682a9c4183e870d7f4358e66aa90decdbca548b402b"
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy2_dev.progress.json",
+    "size": 119555,
+    "sha256": "8da787e749fac255d1bc61fba30f3b43e16ce2f933c9edb089aeda977332ab08"
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy3_dev.context.json",
+    "size": 13698,
+    "sha256": "8d6aea5dc0d1753defeea071b24cf8712a76880cd794625bcee83f47a80a258f"
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy3_dev.json",
+    "size": 120778,
+    "sha256": "d9068027fc1e8df250ef1eccbadfbf515b29b8513b79eccd87330bef1e84ecc2"
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy3_dev.metrics.json",
+    "size": 1411,
+    "sha256": "9805874d226ad4849c5b5bbbceba5d38034e100cf52e68989bab6bf1d083ed75"
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy3_dev.progress.json",
+    "size": 119271,
+    "sha256": "344ec547555f8fd30cc042e330c7d65eb9f16b26cb5585408473c63467035f52"
+  },
+  {
+    "path": "artifacts/evaluation/selected_confirmation.context.json",
+    "size": 12398,
+    "sha256": "d339348df1e449305ba9f66a2e292dcbbac9ea4e945534e2bc3e11937defd4fc"
+  },
+  {
+    "path": "artifacts/evaluation/selected_confirmation.json",
+    "size": 106234,
+    "sha256": "937437b7eb93ae61c36fb112f884cec679c3a614b358fe75671861f4d9a753d5"
+  },
+  {
+    "path": "artifacts/evaluation/selected_confirmation.metrics.json",
+    "size": 1411,
+    "sha256": "f3bef3dc3ddb0ff39e20db1749fb89741b7b961c6212f4f214d615a931cf57aa"
+  },
+  {
+    "path": "artifacts/evaluation/selected_confirmation.progress.json",
+    "size": 105007,
+    "sha256": "2534dd12623f1cd01192ae9003837447f3a32e922d64fdf1eb74fd0ff48fe9a7"
+  },
+  {
+    "path": "artifacts/evaluation/selection.json",
+    "size": 30358,
+    "sha256": "a9f5fa993fb1110f04fc17fe522115d31f00aff89bfeb1e8981e22e77e9229da"
+  },
+  {
+    "path": "artifacts/experiment.json",
+    "size": 1167,
+    "sha256": "66276e4131ca00969e42ff50b631af33fff2d456ce9f2c70b3486a366506b77c"
+  },
+  {
+    "path": "artifacts/metrics.jsonl",
+    "size": 342581,
+    "sha256": "93c4805d9213fbfccc1e1491a7e7e6d0d15167641e10a29bf3b75f59858391d7"
+  },
+  {
+    "path": "artifacts/pipeline_status.json",
+    "size": 309,
+    "sha256": "3ba8b4ce543ba9d76fa09f9e61029e291cf303f0415831453124e6c362ae2b90"
+  },
+  {
+    "path": "artifacts/run.json",
+    "size": 1758,
+    "sha256": "aef242328e136a6de865472c855b99f4f1c4fc76da21e619f119945c9b5b915b"
+  },
+  {
+    "path": "artifacts/training_status.json",
+    "size": 413,
+    "sha256": "afd456f378e9c9fdfd5c9ff26b6319d10817e1de5db6ff0af1d9b8362d6fbe5a"
+  }
+]

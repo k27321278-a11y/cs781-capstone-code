@@ -1,0 +1,49 @@
+{
+  "architecture": "C",
+  "code_sha256": "fa55ade07f412559459c58b7fab7d2e73579060d43c8384f19d5566f07e89db3",
+  "data_manifest_sha256": "15a76c2de42a3f5e1b53781f6439f5cd0fd4c2521c16b656416de04d89e9aa78",
+  "model_config": {
+    "d_ff": 2048,
+    "d_head": 64,
+    "d_model": 768,
+    "dropout": 0.0,
+    "gradient_checkpointing": true,
+    "max_prompt_len": 8192,
+    "max_seq_len": 2048,
+    "n_encoder_layers": 10,
+    "n_gru_layers": 4,
+    "n_heads": 12,
+    "pad_token_id": 0,
+    "rope_theta": 10000.0,
+    "vocab_size": 32768
+  },
+  "numpy": "1.26.4",
+  "recurrent_precision": "float32",
+  "snapshot_schedule": {
+    "candidate_every": 2000,
+    "milestone_tokens": [
+      209914685
+    ]
+  },
+  "synthetic_smoke": false,
+  "tokenizer_sha256": "5c0bd30290e0bd6919253b1ff864f52053924808aabd33482df92cc4bd471c8e",
+  "torch": "2.5.1+cu121",
+  "train_config": {
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "device": "cuda",
+    "eps": 1e-08,
+    "grad_accum_steps": 32,
+    "grad_clip": 1.0,
+    "learning_rate": 0.0003,
+    "log_every": 10,
+    "micro_batch_size": 1,
+    "min_lr_ratio": 0.1,
+    "save_every": 500,
+    "seed": 781,
+    "target_tokens": 300000000,
+    "warmup_ratio": 0.02,
+    "weight_decay": 0.1
+  },
+  "unique_parameters": 117805824
+}

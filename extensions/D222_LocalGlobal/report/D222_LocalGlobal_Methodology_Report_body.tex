@@ -1,0 +1,3 @@
+\section{D222 local/global grouped-query decoder}
+\subsection{Architecture} A 24-block, width-896 causal decoder uses 14 query heads over two shared key/value heads. Every fourth block attends globally and intervening blocks use 512-token local attention. The 222M-scale run was built after the original Phase 1 deadline.
+\subsection{Evidence} Local confirmation BERTScore F1 0.863190; post-deadline, no Codabench score. Original source and logs are indexed alongside this section; the illustrated notebook was reconstructed after training.

@@ -1,0 +1,16 @@
+digraph G {graph [bgcolor="white",ranksep="0.35",nodesep="0.22",pad="0.22",fontname="DejaVu Sans",splines=ortho]; node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=12,color="#C7D2DE",fillcolor="#EEF3F8",fontcolor="#14243A",penwidth=1.2,margin="0.16,0.13"];edge [color="#61768D",arrowsize=0.7,penwidth=1.35];
+
+rankdir=TB;
+raw [label="Official Phase-1 legal documents\nActs • High Courts • Supreme Court • Tribunals"];
+selector [label="Equal-probability source interleaving\nshuffle buffer=4096; skip text <64 chars"];
+split [label="Deterministic document-level hash split\n98% training / 2% validation (expected)",fillcolor="#E7F4F0"];
+bpe [label="Train Byte-Level BPE on train text only\n100M-character cap; V=32,768; min frequency=2",fillcolor="#DBEAFE"];
+encode [label="BOS + BPE IDs + EOS\nuint16 binary token caches"];
+window [label="Random windows of T+1=2049 token IDs\nx=s[0:2048], y=s[1:2049]"];
+train [label="12-layer decoder-only A0\nT=2048, d=768, 12 heads ×64; 110.12M params",fillcolor="#F0E9FF"];
+loss [label="Shifted next-token cross-entropy\nAdamW + AMP + gradient accumulation"];
+val [label="Validation NLL / perplexity\nBest checkpoint by minimum NLL",fillcolor="#E7F4F0"];
+gen [label="Greedy autoregressive generation\n512 WORD prompt → 128 WORD continuation",fillcolor="#FFF0DB"];
+test [label="Codabench test submission\nprediction.json at root of submission.zip"];
+raw->selector->split;split->bpe->encode->window->train->loss->val->gen->test;split->encode [style=dashed];
+}

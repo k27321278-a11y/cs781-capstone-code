@@ -1,0 +1,9 @@
+\section{Exact-span two-of-four consensus}
+\subsection{Architecture}
+This is a prediction-level ensemble, not a newly trained neural architecture. A span survives if at least two of the first four models output the same start, end, and label; conflicting overlaps are resolved by vote count then span length.
+\subsection{Method}
+Two-of-four exact span vote. The original source and run config are packaged alongside this section.
+\subsection{Local evaluation}
+Strict held-out macro-F1: 0.463066765. This is not a hidden Codabench score.
+\subsection{Reproducibility}
+The companion notebook and report were reconstructed after training. Original selected weights and course data remain in the separately named complete archive.

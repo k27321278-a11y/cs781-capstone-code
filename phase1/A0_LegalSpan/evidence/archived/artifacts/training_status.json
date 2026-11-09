@@ -1,0 +1,11 @@
+{
+  "best_generation_f1": null,
+  "checkpoint_sha256": "2eb64c8489aa4ead38ece810e020c11469b91fa1a6577ed384d939f76da0ee84",
+  "example_cursor": 380416,
+  "input_tokens": 581555637,
+  "session_seconds": 21988.447722101002,
+  "status": "complete",
+  "step": 11888,
+  "target_budget": 209914685,
+  "target_tokens": 209927459
+}

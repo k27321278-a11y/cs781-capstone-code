@@ -1,0 +1,10 @@
+digraph G {graph [bgcolor="white",ranksep="0.35",nodesep="0.22",pad="0.22",fontname="DejaVu Sans",splines=ortho]; node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=12,color="#C7D2DE",fillcolor="#EEF3F8",fontcolor="#14243A",penwidth=1.2,margin="0.16,0.13"];edge [color="#61768D",arrowsize=0.7,penwidth=1.35];
+
+rankdir=LR;
+a [label="Document A\nBOS · 80 IDs · EOS",fillcolor="#DBEAFE"];
+b [label="Document B\nBOS · 1500 IDs · EOS",fillcolor="#F0E9FF"];
+c [label="Document C\nBOS · 1000 IDs · EOS",fillcolor="#E7F4F0"];
+stream [label="Continuous uint16 train stream\n...A EOS BOS B EOS BOS C...",fillcolor="#FFF0DB"];
+win [label="Sample 2049 consecutive IDs\nInput 2048 / shifted targets 2048"];
+a->stream;b->stream;c->stream;stream->win;
+}

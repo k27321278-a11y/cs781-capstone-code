@@ -1,0 +1,9 @@
+\section{A0 distilled from B1 NER}
+\subsection{Architecture}
+A 12-layer causal A0 student is fully tuned. The completed B1 LoRA NER model supplies temperature-2 teacher probabilities on training windows only; the loss mixes hard-label cross-entropy and teacher KL equally.
+\subsection{Method}
+Supervised + teacher KL. The original source and run config are packaged alongside this section.
+\subsection{Local evaluation}
+Strict held-out macro-F1: 0.409578526. This is not a hidden Codabench score.
+\subsection{Reproducibility}
+The companion notebook and report were reconstructed after training. Original selected weights and course data remain in the separately named complete archive.

@@ -1,0 +1,50 @@
+[
+  {
+    "path": "artifacts/evaluation/baseline_confirmation.metrics.json",
+    "bertscore_f1": 0.814624,
+    "rouge_l_f1": 0.209707,
+    "bleu4": 0.110735
+  },
+  {
+    "path": "artifacts/evaluation/baseline_dev.metrics.json",
+    "bertscore_f1": 0.814967,
+    "rouge_l_f1": 0.215115,
+    "bleu4": 0.112003
+  },
+  {
+    "path": "artifacts/evaluation/latest_policy3_dev.metrics.json",
+    "bertscore_f1": 0.831896,
+    "rouge_l_f1": 0.193576,
+    "bleu4": 0.079072
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy0_dev.metrics.json",
+    "bertscore_f1": 0.813487,
+    "rouge_l_f1": 0.202474,
+    "bleu4": 0.085562
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy1_dev.metrics.json",
+    "bertscore_f1": 0.824108,
+    "rouge_l_f1": 0.207248,
+    "bleu4": 0.092058
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy2_dev.metrics.json",
+    "bertscore_f1": 0.834723,
+    "rouge_l_f1": 0.210449,
+    "bleu4": 0.099695
+  },
+  {
+    "path": "artifacts/evaluation/milestone_20000000_policy3_dev.metrics.json",
+    "bertscore_f1": 0.834227,
+    "rouge_l_f1": 0.203016,
+    "bleu4": 0.100771
+  },
+  {
+    "path": "artifacts/evaluation/selected_confirmation.metrics.json",
+    "bertscore_f1": 0.830992,
+    "rouge_l_f1": 0.196481,
+    "bleu4": 0.093573
+  }
+]

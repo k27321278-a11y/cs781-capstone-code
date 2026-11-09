@@ -1,0 +1,9 @@
+\section{C1 recurrent hybrid, full tuning}
+\subsection{Architecture}
+The C1 backbone combines a 10-layer encoder with a four-layer GRU decoder and cross-attention. Phase 2 updates all model parameters, then uses the shared character BiGRU and BIO classifier.
+\subsection{Method}
+Full fine-tuning. The original source and run config are packaged alongside this section.
+\subsection{Local evaluation}
+Strict held-out macro-F1: 0.357207372. This is not a hidden Codabench score.
+\subsection{Reproducibility}
+The companion notebook and report were reconstructed after training. Original selected weights and course data remain in the separately named complete archive.

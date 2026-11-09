@@ -1,0 +1,3 @@
+\section{B0 encoder-decoder Transformer}
+\subsection{Architecture} Six bidirectional prompt-encoder blocks build source memory. Six causal decoder blocks attend both to earlier generated tokens and to that source memory before SwiGLU. The model has width 768 and approximately 124.3M parameters.
+\subsection{Evidence} 0.7972 (historical Codabench screenshot). Original source and logs are indexed alongside this section; the illustrated notebook was reconstructed after training.

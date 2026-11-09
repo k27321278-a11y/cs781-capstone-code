@@ -1,0 +1,14 @@
+{
+  "architecture": "B",
+  "checkpoint_sha256": "90b351d325dd85b959c384966c926bce4831f7ed94216a8a0acca5aca301e04a",
+  "code_sha256": "717d1b4761473da4dcdac4749417dc61a34886d0bebbf4ec2912891e8aeb8fbc",
+  "state": {
+    "best_generation_f1": null,
+    "example_cursor": 286208,
+    "input_tokens": 419251691,
+    "step": 8944,
+    "target_tokens": 209936931
+  },
+  "status": "complete",
+  "target_tokens": 209914685
+}

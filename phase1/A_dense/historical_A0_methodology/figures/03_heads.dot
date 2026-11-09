@@ -1,0 +1,13 @@
+digraph G {graph [bgcolor="white",ranksep="0.35",nodesep="0.22",pad="0.22",fontname="DejaVu Sans",splines=ortho]; node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=12,color="#C7D2DE",fillcolor="#EEF3F8",fontcolor="#14243A",penwidth=1.2,margin="0.16,0.13"];edge [color="#61768D",arrowsize=0.7,penwidth=1.35];
+
+rankdir=TB;
+h [label="Input after RMSNorm: 2048 × 768",fillcolor="#E7F4F0"];
+qkv [label="Fused projection Wqkv: 768 × 2304\nQ, K, V each 2048 × 768"];
+split [label="Reshape each Q/K/V: [12, 2048, 64]\nEach head sees ALL 2048 positions"];
+rope [label="Per head RoPE: 32 feature pairs\nOnly Q and K rotated; V unchanged",fillcolor="#DBEAFE"];
+scores [label="Per-head scaled Q'K'ᵀ/8 → 2048 × 2048\nCausal mask and softmax"];
+val [label="Attention probabilities × V\nEach head output: 2048 × 64"];
+concat [label="Concatenate 12 heads\n2048 × 768"];
+wo [label="Output projection Wo (768 × 768)\nMHA output: 2048 × 768",fillcolor="#E7F4F0"];
+h->qkv->split->rope->scores->val->concat->wo;
+}

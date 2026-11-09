@@ -1,0 +1,12 @@
+    PID STAT COMMAND
+ 284634 T    bash scripts/run_tartanground_compare.sh
+ 469837 T    bash scripts/run_tartanground_compare.sh
+ 469841 Tl   /home/stud1/miniconda3/envs/v7f4080/bin/python -u train.py --config /home/stud1/merged_feelwm_v7/configs/tartanground_leg_k5.yaml
+ 497086 T    bash scripts/run_v7f_force_finetune_after_compare.sh 284634
+ 524833 Tl   /media/hdd/SAMBA4080_left_Dataset/Jahnavi_HBTU/venv/bin/python -m ipykernel_launcher --f=/run/user/1002/jupyter/runtime/kernel-v32a17e92c428accb02bf227a94e84d2310911f7fe.json
+ 526131 T    sleep 60
+ 526372 Tl   /media/hdd/SAMBA4080_left_Dataset/Jahnavi_HBTU/venv/bin/python -m ipykernel_launcher --f=/run/user/1002/jupyter/runtime/kernel-v3b43dbf1ff1c49773c2a7a318f40a9522f4a632ac.json
+0, 1887 MiB, 14050 MiB, 0 %
+1, 4214 MiB, 11731 MiB, 0 %
+Starting C on physical GPU0, fresh weights, 419829370 supervised target tokens
+{"step": 23233, "input_tokens": 837582775, "target_tokens": 419831985, "example_cursor": 743456, "best_generation_f1": null}

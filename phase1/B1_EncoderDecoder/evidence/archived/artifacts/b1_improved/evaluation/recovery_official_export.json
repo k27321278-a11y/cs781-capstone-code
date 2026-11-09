@@ -1,0 +1,53 @@
+{
+  "reason": "official export recovery after non-selected baseline confirmation generation failure",
+  "selected_checkpoint": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/own_bpe_20261006/b1_improved/checkpoints/latest.pt",
+  "selected_policy": 2,
+  "selection_sha256": "2e7fe51ee3ffe277059c918219a8584ed288093ff10e3414a664fd15a3821604",
+  "submission": {
+    "architecture": "B",
+    "checkpoint_sha256": "d93a2f1796e90b9fdbe4a7b542f76eb6065dab619feed4a1ef5a9952e2376a1f",
+    "checkpoint_state": {
+      "best_generation_f1": null,
+      "example_cursor": 141088,
+      "input_tokens": 200443343,
+      "step": 4409,
+      "target_tokens": 40008454
+    },
+    "dataset_revision": "89edba6a44d6bb9593fd13b6895b5cd3b06eb82e",
+    "fingerprint": {
+      "checkpoint": "d93a2f1796e90b9fdbe4a7b542f76eb6065dab619feed4a1ef5a9952e2376a1f",
+      "code": "85001254459330d7c01bcb4918c131015d6656fc91f07cc242790213730fbfb5",
+      "encoder_context": 8192,
+      "policy": {
+        "max_new_tokens": 2048,
+        "repetition_penalty": 1.2,
+        "seed": 781,
+        "strategy": "greedy",
+        "target_words": 128,
+        "temperature": 0.8,
+        "top_p": 0.9
+      },
+      "selection": "2e7fe51ee3ffe277059c918219a8584ed288093ff10e3414a664fd15a3821604",
+      "test": "614f348b3dcbb2a9f43706cd239438386dc396246cd5cc685a5ccb6eb06b7218",
+      "tokenizer": "5c0bd30290e0bd6919253b1ff864f52053924808aabd33482df92cc4bd471c8e"
+    },
+    "initialization": {
+      "checkpoint": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/own_bpe_20261006/b0_scratch/checkpoints/latest.pt",
+      "checkpoint_sha256": "90b351d325dd85b959c384966c926bce4831f7ed94216a8a0acca5aca301e04a",
+      "data_manifest_sha256": "15a76c2de42a3f5e1b53781f6439f5cd0fd4c2521c16b656416de04d89e9aa78",
+      "learned_parameter_changes": false,
+      "source_sha256": "717d1b4761473da4dcdac4749417dc61a34886d0bebbf4ec2912891e8aeb8fbc",
+      "state": {
+        "best_generation_f1": null,
+        "example_cursor": 286208,
+        "input_tokens": 419251691,
+        "step": 8944,
+        "target_tokens": 209936931
+      }
+    },
+    "prediction_count": 1000,
+    "prediction_zip_sha256": "b322e6258ca60549854c9dff78473df604234fea0acf15fff8e7457ed25b3ca8",
+    "synthetic_smoke": false,
+    "variant": "B_taskaligned"
+  }
+}

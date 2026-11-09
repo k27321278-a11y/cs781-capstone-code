@@ -1,0 +1,1 @@
+This folder is the A0 methodology package recovered from the user-provided shared-chat download. It is a separate historical documentation artifact; the October 6 complete archive remains the source of original training/run evidence.

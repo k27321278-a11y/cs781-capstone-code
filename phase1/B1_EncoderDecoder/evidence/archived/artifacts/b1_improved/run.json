@@ -1,0 +1,56 @@
+{
+  "architecture": "B",
+  "code_sha256": "85001254459330d7c01bcb4918c131015d6656fc91f07cc242790213730fbfb5",
+  "data_manifest_sha256": "0b0dc84b486b9389c2b82992737311eef27267e83d24c13c15ef487d6e4c26e4",
+  "initialization": {
+    "checkpoint": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/own_bpe_20261006/b0_scratch/checkpoints/latest.pt",
+    "checkpoint_sha256": "90b351d325dd85b959c384966c926bce4831f7ed94216a8a0acca5aca301e04a",
+    "data_manifest_sha256": "15a76c2de42a3f5e1b53781f6439f5cd0fd4c2521c16b656416de04d89e9aa78",
+    "learned_parameter_changes": false,
+    "source_sha256": "717d1b4761473da4dcdac4749417dc61a34886d0bebbf4ec2912891e8aeb8fbc",
+    "state": {
+      "best_generation_f1": null,
+      "example_cursor": 286208,
+      "input_tokens": 419251691,
+      "step": 8944,
+      "target_tokens": 209936931
+    }
+  },
+  "model_config": {
+    "d_ff": 2048,
+    "d_head": 64,
+    "d_model": 768,
+    "dropout": 0.0,
+    "gradient_checkpointing": true,
+    "max_seq_len": 8192,
+    "n_decoder_layers": 6,
+    "n_encoder_layers": 6,
+    "n_heads": 12,
+    "pad_token_id": 0,
+    "rope_theta": 10000.0,
+    "vocab_size": 32768
+  },
+  "numpy": "1.26.4",
+  "synthetic_smoke": false,
+  "tokenizer_sha256": "5c0bd30290e0bd6919253b1ff864f52053924808aabd33482df92cc4bd471c8e",
+  "torch": "2.5.1+cu121",
+  "train_config": {
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "device": "cuda",
+    "eps": 1e-08,
+    "grad_accum_steps": 32,
+    "grad_clip": 1.0,
+    "learning_rate": 5e-05,
+    "log_every": 10,
+    "micro_batch_size": 1,
+    "min_lr_ratio": 0.1,
+    "save_every": 1000,
+    "seed": 781,
+    "target_tokens": 40000000,
+    "warmup_ratio": 0.05,
+    "weight_decay": 0.1
+  },
+  "unique_parameters": 124280832,
+  "variant": "B_taskaligned"
+}

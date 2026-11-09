@@ -1,0 +1,37 @@
+[
+  {
+    "path": "MANIFEST.json",
+    "size": 14683,
+    "sha256": "519336ee46f134b0bb8c95a1718ba923f1ba2be3359a652670a3e3e7f112e0b1"
+  },
+  {
+    "path": "artifacts/b_phase1_5pass_20261003.log",
+    "size": 125,
+    "sha256": "547cfeb23c004fc5ad16c14b3a94e8fc6aa123f0a204a85c2fca070e584a372a"
+  },
+  {
+    "path": "artifacts/b_phase1_5pass_20261003_submission_policy0_20261003T062709Z.context.json",
+    "size": 1164,
+    "sha256": "b7780130adef75f5ed50bea2177dc6da226d2f37c89cd62bec07664b0ff06494"
+  },
+  {
+    "path": "artifacts/b_phase1_5pass_20261003_submission_policy0_20261003T062709Z.log",
+    "size": 4599,
+    "sha256": "a50f3bf0e237df844569d222be7a9603e5a494c2b287268455d2b957d7a0057a"
+  },
+  {
+    "path": "artifacts/metrics.jsonl",
+    "size": 506361,
+    "sha256": "f932e865233b67ae211877897902341001b564e26a7c5d16a59259b459d9244c"
+  },
+  {
+    "path": "artifacts/run.json",
+    "size": 1088,
+    "sha256": "a812a698e3a69d77995678e9006cb7fe6bd17e89f2030a76807bc2a65148ba12"
+  },
+  {
+    "path": "artifacts/training_status.json",
+    "size": 416,
+    "sha256": "e1bd93368cc845cfcd34ba24befceadf12878edf218a9e1e979c859c6ca37e91"
+  }
+]

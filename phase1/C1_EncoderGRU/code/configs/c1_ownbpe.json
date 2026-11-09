@@ -1,0 +1,72 @@
+{
+  "model": {
+    "vocab_size": 32768,
+    "max_seq_len": 2048,
+    "max_prompt_len": 8192,
+    "n_encoder_layers": 10,
+    "n_gru_layers": 4,
+    "d_model": 768,
+    "n_heads": 12,
+    "d_head": 64,
+    "d_ff": 2048,
+    "rope_theta": 10000.0,
+    "dropout": 0.0,
+    "gradient_checkpointing": true,
+    "pad_token_id": 0
+  },
+  "train": {
+    "target_tokens": 300000000,
+    "micro_batch_size": 1,
+    "grad_accum_steps": 32,
+    "learning_rate": 0.0003,
+    "min_lr_ratio": 0.1,
+    "warmup_ratio": 0.02,
+    "weight_decay": 0.1,
+    "beta1": 0.9,
+    "beta2": 0.95,
+    "eps": 1e-08,
+    "grad_clip": 1.0,
+    "save_every": 500,
+    "log_every": 10,
+    "seed": 781,
+    "device": "cuda"
+  },
+  "decoding": [
+    {
+      "strategy": "greedy",
+      "temperature": 0.8,
+      "top_p": 0.9,
+      "repetition_penalty": 1.0,
+      "target_words": 128,
+      "max_new_tokens": 2048,
+      "seed": 781
+    },
+    {
+      "strategy": "greedy",
+      "temperature": 0.8,
+      "top_p": 0.9,
+      "repetition_penalty": 1.05,
+      "target_words": 128,
+      "max_new_tokens": 2048,
+      "seed": 781
+    },
+    {
+      "strategy": "greedy",
+      "temperature": 0.8,
+      "top_p": 0.9,
+      "repetition_penalty": 1.15,
+      "target_words": 128,
+      "max_new_tokens": 2048,
+      "seed": 781
+    },
+    {
+      "strategy": "nucleus",
+      "temperature": 0.8,
+      "top_p": 0.9,
+      "repetition_penalty": 1.1,
+      "target_words": 128,
+      "max_new_tokens": 2048,
+      "seed": 781
+    }
+  ]
+}

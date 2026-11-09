@@ -1,0 +1,924 @@
+{
+  "checkpoint": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/a_legalspan_v1/experiment/full/candidates/final.pt",
+  "checkpoint_sha256": "775a198d9f453739b48e39095587db2ed793d9bcb652aba08e8d9d947971b0ea",
+  "diagnostics": {
+    "digit_metric_note": "Surface strings only; neither citation accuracy nor factual correctness",
+    "mean_repeated_4gram_fraction": 0.0932283464566929,
+    "per_id": {
+      "acts:0c7aa5bc7adc86ce945b3b76b3725858bae61d9a275734a3bd25c9e6be650996": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 77,
+        "repeated_4gram_fraction": 0.04800000000000004
+      },
+      "acts:30dce3fbd55e564a8b3581a77d508ac1f5ab83acbcc596673c7978e4ebd6f969": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 62,
+        "repeated_4gram_fraction": 0.08799999999999997
+      },
+      "acts:3a106446187b72cdc08ae7b11c655fd25964ca2c3be80038dc0ecb4026e3defa": {
+        "digit_multiset_precision": 0.4,
+        "digit_multiset_recall": 0.5,
+        "distinct_word_count": 68,
+        "repeated_4gram_fraction": 0.07199999999999995
+      },
+      "acts:485761634c205391734bb344db72c8d69d9f7a75c6707f29dc4ad019b9c014ac": {
+        "digit_multiset_precision": 1.0,
+        "digit_multiset_recall": 1.0,
+        "distinct_word_count": 64,
+        "repeated_4gram_fraction": 0.128
+      },
+      "acts:7943566895d7a066f9d4e55726801ed0449d5e88ddee0ce89f0fd6465ea3de63": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 57,
+        "repeated_4gram_fraction": 0.36
+      },
+      "acts:85e25ceb4be506faa00249980b4dca07a6f171ca2f1f1458bcf0eec97c2f20f1": {
+        "digit_multiset_precision": 0.25,
+        "digit_multiset_recall": 0.5,
+        "distinct_word_count": 77,
+        "repeated_4gram_fraction": 0.03200000000000003
+      },
+      "acts:8729a081a9a0113ecb8317198f0c7ad79d10f8d4959cf67292ab26df7724b665": {
+        "digit_multiset_precision": 0.15384615384615385,
+        "digit_multiset_recall": 0.18181818181818182,
+        "distinct_word_count": 53,
+        "repeated_4gram_fraction": 0.22399999999999998
+      },
+      "acts:91d32f18e6ec02e3312dadf700cb8958a5eeb45d4a7df497512dd37cc5c4a730": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 73,
+        "repeated_4gram_fraction": 0.0
+      },
+      "acts:95749f3966457e4c5562ca2a824b5dc997350560f33968335d78a0a0d7d4c622": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 49,
+        "repeated_4gram_fraction": 0.22399999999999998
+      },
+      "acts:9cffb5b9fce8fcf7e28acfb13d42145319cedd23f61bceea8e54b2fa771f1772": {
+        "digit_multiset_precision": 0.13333333333333333,
+        "digit_multiset_recall": 0.5,
+        "distinct_word_count": 81,
+        "repeated_4gram_fraction": 0.02400000000000002
+      },
+      "acts:a2932fd9e2b7d15a9953551e8023f8a9100be182e7d9da51bebda0142af1b365": {
+        "digit_multiset_precision": 1.0,
+        "digit_multiset_recall": 0.05555555555555555,
+        "distinct_word_count": 24,
+        "repeated_4gram_fraction": 0.608
+      },
+      "acts:ae57e0dae3a5dd97427a2d35140efb7444f01c70d61a293fa2bc585cdb880398": {
+        "digit_multiset_precision": 0.5,
+        "digit_multiset_recall": 0.7142857142857143,
+        "distinct_word_count": 48,
+        "repeated_4gram_fraction": 0.24
+      },
+      "acts:b225e1a89821b263333342a612c5e7b9c83e2cc76bbf6272729a8f7845542a13": {
+        "digit_multiset_precision": 0.6666666666666666,
+        "digit_multiset_recall": 0.5,
+        "distinct_word_count": 68,
+        "repeated_4gram_fraction": 0.136
+      },
+      "acts:bcc29389caa65e561d9730cb6c389aa3cdfb0812fdddb9f976e207123d427edb": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 59,
+        "repeated_4gram_fraction": 0.12
+      },
+      "acts:f18fa52f17d533087252fd37c126f240e757e2c3fe4b3e344816a40eacfdb794": {
+        "digit_multiset_precision": 0.5,
+        "digit_multiset_recall": 0.5,
+        "distinct_word_count": 45,
+        "repeated_4gram_fraction": 0.392
+      },
+      "acts:ffe13ea5eac14b2a64cad02c1f4a1c8e736b31438ca8975b02126e687e09ec33": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 60,
+        "repeated_4gram_fraction": 0.10399999999999998
+      },
+      "high_courts:003159e675939e5bb51a6388bab1998e89d782a0039e700424b8d5f969a754a8": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 70,
+        "repeated_4gram_fraction": 0.22399999999999998
+      },
+      "high_courts:16856214ad4bc55ebee1a5518dab5ef73644eebf24555438b4a4f98e49849784": {
+        "digit_multiset_precision": 1.0,
+        "digit_multiset_recall": 1.0,
+        "distinct_word_count": 95,
+        "repeated_4gram_fraction": 0.0
+      },
+      "high_courts:208049914947db2bd0dee44e27d145b01aab00de811a4c418a95f107d2f393fe": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 69,
+        "repeated_4gram_fraction": 0.04800000000000004
+      },
+      "high_courts:22ad72b0781417d45dcf02d1948162986a2d5d6c24e0ced6f5b49cfe158b0fc1": {
+        "digit_multiset_precision": 1.0,
+        "digit_multiset_recall": 1.0,
+        "distinct_word_count": 79,
+        "repeated_4gram_fraction": 0.0
+      },
+      "high_courts:272b2fc4718bfd31b39a7923ce1cf4df393d396bf0ce2d64f992ece497af589e": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 94,
+        "repeated_4gram_fraction": 0.0
+      },
+      "high_courts:342b87e425f66324ecbd1072d73fa5eeba3f278a332bcf04e35e245504289e43": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 81,
+        "repeated_4gram_fraction": 0.0
+      },
+      "high_courts:36b3a607e817bd226555e661899b0f28cabe751010f0dfc446ad603ecc204f21": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 69,
+        "repeated_4gram_fraction": 0.02400000000000002
+      },
+      "high_courts:3eb08641a0679a6f6140194c2e86ee337a766043530eb83023950a907ff733e4": {
+        "digit_multiset_precision": 0.25,
+        "digit_multiset_recall": 0.375,
+        "distinct_word_count": 83,
+        "repeated_4gram_fraction": 0.06399999999999995
+      },
+      "high_courts:4e0d106c0fd086ecd4b077514ae3c7f2c95b320a5c58716d7c1d5ceb03849003": {
+        "digit_multiset_precision": 0.2,
+        "digit_multiset_recall": 0.5,
+        "distinct_word_count": 35,
+        "repeated_4gram_fraction": 0.5920000000000001
+      },
+      "high_courts:4fd17ff45489498bb38ed4ace3216645628037632dd00695f337be7c545658c7": {
+        "digit_multiset_precision": 0.2,
+        "digit_multiset_recall": 0.17647058823529413,
+        "distinct_word_count": 68,
+        "repeated_4gram_fraction": 0.02400000000000002
+      },
+      "high_courts:5202b8f25ce6732a069192570a25a88f060951baed6f0046bc7e8cb7d59c7186": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 61,
+        "repeated_4gram_fraction": 0.17600000000000005
+      },
+      "high_courts:52c1be8569806ecb2d5cce4f00b79a2f252e5f959723845be2bc9c7a794c124a": {
+        "digit_multiset_precision": 1.0,
+        "digit_multiset_recall": 1.0,
+        "distinct_word_count": 74,
+        "repeated_4gram_fraction": 0.02400000000000002
+      },
+      "high_courts:55f27011f75f9c9809ef830af49c7f23d5153bcd38c935dc3fa2b0899ea2e8bb": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 84,
+        "repeated_4gram_fraction": 0.016000000000000014
+      },
+      "high_courts:56de391f1748ffa5511a3cf52ee237ca5f9f405a6e258370b42351655afcf06c": {
+        "digit_multiset_precision": 1.0,
+        "digit_multiset_recall": 1.0,
+        "distinct_word_count": 81,
+        "repeated_4gram_fraction": 0.008000000000000007
+      },
+      "high_courts:594dfb88cc09da75627b44c39b2f99a711fe7f69a267d5f5a2a6bfaf370f4fb5": {
+        "digit_multiset_precision": 0.5,
+        "digit_multiset_recall": 0.36363636363636365,
+        "distinct_word_count": 72,
+        "repeated_4gram_fraction": 0.06399999999999995
+      },
+      "high_courts:5d51deb281dfc85644da5c26ca4052a9d21eb92273a3fcb19dd816869e80a9eb": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 62,
+        "repeated_4gram_fraction": 0.12
+      },
+      "high_courts:5d9b942ba4c784fedc5ca373646c143be1ad564998d64dcefd5d16f4f6f8251a": {
+        "digit_multiset_precision": 0.8333333333333334,
+        "digit_multiset_recall": 0.4166666666666667,
+        "distinct_word_count": 58,
+        "repeated_4gram_fraction": 0.272
+      },
+      "high_courts:637791f6af811c1ed35f383acef3f90935d4c132e4e493d656b7ad2b200a2b3c": {
+        "digit_multiset_precision": 0.8333333333333334,
+        "digit_multiset_recall": 1.0,
+        "distinct_word_count": 79,
+        "repeated_4gram_fraction": 0.016000000000000014
+      },
+      "high_courts:646b6f2e55ca3f498cfb5b83d1a6b6d2f0cfef4b80a49b310817b7d9d4c4213b": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 53,
+        "repeated_4gram_fraction": 0.392
+      },
+      "high_courts:6a33592e8cb04f56145d54aacbb45f6db15bcb8e6f94aa7ef6714a29ba7a9247": {
+        "digit_multiset_precision": 0.09090909090909091,
+        "digit_multiset_recall": 0.25,
+        "distinct_word_count": 76,
+        "repeated_4gram_fraction": 0.016000000000000014
+      },
+      "high_courts:6b5d2b5cfc16fca2c62253d2c11c1e4aa914e36e7f195f603ee1766f8f628517": {
+        "digit_multiset_precision": 0.15384615384615385,
+        "digit_multiset_recall": 0.6666666666666666,
+        "distinct_word_count": 61,
+        "repeated_4gram_fraction": 0.14400000000000002
+      },
+      "high_courts:7225d280276b218f16e9e7ae804ff7624b670240d82056d4128abdb33ee868f6": {
+        "digit_multiset_precision": 0.2857142857142857,
+        "digit_multiset_recall": 0.18181818181818182,
+        "distinct_word_count": 74,
+        "repeated_4gram_fraction": 0.03200000000000003
+      },
+      "high_courts:7935fb118190d37a0e82d082b79b6a778859774cd44ee8f1962f056a44c5fe90": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 89,
+        "repeated_4gram_fraction": 0.0
+      },
+      "high_courts:79453d4183eafeae6c60309c94defb5449dd6f29e51e3b4a602e614b1a24ea27": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 93,
+        "repeated_4gram_fraction": 0.0
+      },
+      "high_courts:7b6a067af64bfb153cef609f7591609e5e66b7e39266ca7eb838ee02f2e5e933": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 75,
+        "repeated_4gram_fraction": 0.04800000000000004
+      },
+      "high_courts:7e009d5d92dbb6b82ed7b8b4bbaff46a2c029f33a6859a5d6b1e90786b9185d5": {
+        "digit_multiset_precision": 0.3333333333333333,
+        "digit_multiset_recall": 0.3333333333333333,
+        "distinct_word_count": 67,
+        "repeated_4gram_fraction": 0.24
+      },
+      "high_courts:825ab03e8b5bb72debc5b8a64b49c86f774dbcec7ab73acdac49b07e56e0c911": {
+        "digit_multiset_precision": 0.6,
+        "digit_multiset_recall": 1.0,
+        "distinct_word_count": 86,
+        "repeated_4gram_fraction": 0.0
+      },
+      "high_courts:845299428f1616d0f1bf57cc3ed1627ad597a02decafbbd26090651a80b3d422": {
+        "digit_multiset_precision": 0.6428571428571429,
+        "digit_multiset_recall": 0.5,
+        "distinct_word_count": 82,
+        "repeated_4gram_fraction": 0.016000000000000014
+      },
+      "high_courts:9088e829276282e9e6118e83d93132910b0371241971275d7fb7a485830dcfff": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 84,
+        "repeated_4gram_fraction": 0.0
+      },
+      "high_courts:963423d70d03cbdfde5529e5bc559f7b9a387fda072edb3d9de3db0aeab2b16b": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 89,
+        "repeated_4gram_fraction": 0.0
+      },
+      "high_courts:973e010494307e82a761ad39fd4fd44af2ed7b007ad7ac7bbf7a7679a5c68bed": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 70,
+        "repeated_4gram_fraction": 0.07199999999999995
+      },
+      "high_courts:97ecfb4af0a23ec401c600cc77cbca7b8146cb5e06894ee7c699a9b2d0feedd0": {
+        "digit_multiset_precision": 1.0,
+        "digit_multiset_recall": 1.0,
+        "distinct_word_count": 85,
+        "repeated_4gram_fraction": 0.0
+      },
+      "high_courts:9825b527d6083c0691e4ab5f2fe3a589f88a3c10ca01a6bb8ae455c3c86285cf": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 60,
+        "repeated_4gram_fraction": 0.07199999999999995
+      },
+      "high_courts:9a5f7879a9ac21255020438d75b4e60c6def89134090c2c1ca18914063564543": {
+        "digit_multiset_precision": 0.1111111111111111,
+        "digit_multiset_recall": 0.1,
+        "distinct_word_count": 75,
+        "repeated_4gram_fraction": 0.08799999999999997
+      },
+      "high_courts:9b07513f3dc6814013e48c5deb2a4cc2d678b815c1f853584e646c5519b8a908": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 67,
+        "repeated_4gram_fraction": 0.040000000000000036
+      },
+      "high_courts:9d2ebcb0cb541f90d15f091fc96f8aa4b9d6bccd9908f1eca84773ae636febed": {
+        "digit_multiset_precision": 1.0,
+        "digit_multiset_recall": 1.0,
+        "distinct_word_count": 83,
+        "repeated_4gram_fraction": 0.040000000000000036
+      },
+      "high_courts:a1c9600dfae351edbebe63bad50aa5b04f582873236467c046ac4380bd121185": {
+        "digit_multiset_precision": 0.3333333333333333,
+        "digit_multiset_recall": 0.25,
+        "distinct_word_count": 59,
+        "repeated_4gram_fraction": 0.05600000000000005
+      },
+      "high_courts:a6788fdcbd0f57cb8ae158bf9083ba97a63619e5e0bf282338947fb5fe962402": {
+        "digit_multiset_precision": 1.0,
+        "digit_multiset_recall": 1.0,
+        "distinct_word_count": 78,
+        "repeated_4gram_fraction": 0.02400000000000002
+      },
+      "high_courts:a9070ec49b5b01ecfcb91133779148e25b708abc56bde4250f3f0accc6221d7d": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 68,
+        "repeated_4gram_fraction": 0.02400000000000002
+      },
+      "high_courts:ac74f499745882ad50c9a28a1ac528d316c40da78c8056f09ae9ad9f74a6da74": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 77,
+        "repeated_4gram_fraction": 0.128
+      },
+      "high_courts:ad51d621000abeb5ea93cb5de39f649c63cbdc03d763d9042221431a981346bb": {
+        "digit_multiset_precision": 0.5833333333333334,
+        "digit_multiset_recall": 0.5833333333333334,
+        "distinct_word_count": 73,
+        "repeated_4gram_fraction": 0.04800000000000004
+      },
+      "high_courts:aebb687f8e12689b3dc3e3687530bd18dd6e8c593f09cb89f743da54cd889a44": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 76,
+        "repeated_4gram_fraction": 0.008000000000000007
+      },
+      "high_courts:b34b61d339fb2d219ae178e656afc7e9369dc334da27ff82f4e17763928d1397": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 54,
+        "repeated_4gram_fraction": 0.4
+      },
+      "high_courts:b8a2ca834b2ddf78df48e501cb2354056267f58738420dc82729f1ebf533cc68": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 62,
+        "repeated_4gram_fraction": 0.07999999999999996
+      },
+      "high_courts:c0a2e50381504c7a74e35ea4348cf7a77e5317b8dfb9140ffbe8c73661aabc96": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 90,
+        "repeated_4gram_fraction": 0.008000000000000007
+      },
+      "high_courts:c683cb8e249b60232dc63d3ffa6fa4cea4e4320be4f7e3ca9009c9d64a5caa52": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 82,
+        "repeated_4gram_fraction": 0.008000000000000007
+      },
+      "high_courts:c822cd22afd74f1eec3a7fa277838526eaecfb4483de3e26990ae148de9dad60": {
+        "digit_multiset_precision": 0.6,
+        "digit_multiset_recall": 0.15789473684210525,
+        "distinct_word_count": 82,
+        "repeated_4gram_fraction": 0.008000000000000007
+      },
+      "high_courts:c8f4ef3ff1f0291fc11b9558c26ad0c2dc3b4e452ce858eef1b322a61ce7251f": {
+        "digit_multiset_precision": 0.041666666666666664,
+        "digit_multiset_recall": 0.25,
+        "distinct_word_count": 75,
+        "repeated_4gram_fraction": 0.05600000000000005
+      },
+      "high_courts:c9421387ac7f39c9ed51678c3357443f4a71bece5369734e0052f58197234cf4": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 95,
+        "repeated_4gram_fraction": 0.008000000000000007
+      },
+      "high_courts:d539801a33353434491d6f59f6b75d898350cf4798075327b753584ecf0472ff": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 79,
+        "repeated_4gram_fraction": 0.016000000000000014
+      },
+      "high_courts:d8b55a31abf02578693ec146c7e4d5320c04bf31558f45deb120c496170a6fb6": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 72,
+        "repeated_4gram_fraction": 0.008000000000000007
+      },
+      "high_courts:da663512d8665b4ec21f6aeb48ccbb07fe1aacdd737e7b3e3587a37dbb244aa6": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 88,
+        "repeated_4gram_fraction": 0.0
+      },
+      "high_courts:dd45297f1cd9a4071d36807234df7c1521e14eb51ea83725895faaf657c39d66": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 83,
+        "repeated_4gram_fraction": 0.0
+      },
+      "high_courts:df9d771949aa782f6b8ca65a6e90f02c4a35d0af24ac0cd6e2ce597f4fc1068f": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 88,
+        "repeated_4gram_fraction": 0.0
+      },
+      "high_courts:e55bfcef4e9cf5230631ff667119310c3854a28b2571ffa8c22e3dfce2748828": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 84,
+        "repeated_4gram_fraction": 0.0
+      },
+      "high_courts:e609f63388d7a3d2c5298b9faf0986b25fdf0ffe315ce7b0425df9be6a37456e": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 87,
+        "repeated_4gram_fraction": 0.0
+      },
+      "high_courts:eba3c83347f20543c7beaf3bb238b5c82b29d6bdb6781564ad8ba2c91d2f277d": {
+        "digit_multiset_precision": 1.0,
+        "digit_multiset_recall": 1.0,
+        "distinct_word_count": 90,
+        "repeated_4gram_fraction": 0.0
+      },
+      "high_courts:eba601741cb1d61f3dc759d24038eb0b61afbcca3572f1cac8904b5016a22094": {
+        "digit_multiset_precision": 0.16666666666666666,
+        "digit_multiset_recall": 0.5,
+        "distinct_word_count": 71,
+        "repeated_4gram_fraction": 0.03200000000000003
+      },
+      "high_courts:f2d452a2b8bd62258329488b4bbe68265fd35dfca82629a9e9b4160d4588ae8b": {
+        "digit_multiset_precision": 0.16666666666666666,
+        "digit_multiset_recall": 0.041666666666666664,
+        "distinct_word_count": 71,
+        "repeated_4gram_fraction": 0.06399999999999995
+      },
+      "high_courts:f843aef6d4501b734d6ecf322dace8c0a46021a43c41e55c765c3151a5b3387e": {
+        "digit_multiset_precision": 0.3333333333333333,
+        "digit_multiset_recall": 0.3333333333333333,
+        "distinct_word_count": 73,
+        "repeated_4gram_fraction": 0.07199999999999995
+      },
+      "high_courts:fee94dad4b77795e2fb6310400b16b245a8f7bce96bb6c25107d0ec73c84e647": {
+        "digit_multiset_precision": 1.0,
+        "digit_multiset_recall": 1.0,
+        "distinct_word_count": 88,
+        "repeated_4gram_fraction": 0.0
+      },
+      "supreme_court:05bdc7840269eecd127860170cf7cfb1c7410008add0f1b249fad9684602e3d8": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 67,
+        "repeated_4gram_fraction": 0.10399999999999998
+      },
+      "supreme_court:0653ae0be75c65319273226a76c9832a1ec78b015e38d5d8a47bcf384747abca": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 56,
+        "repeated_4gram_fraction": 0.16000000000000003
+      },
+      "supreme_court:066b6e2cc861854d221909d4c4953b7fc192995463ee663638d4a714a32751c1": {
+        "digit_multiset_precision": 0.125,
+        "digit_multiset_recall": 1.0,
+        "distinct_word_count": 73,
+        "repeated_4gram_fraction": 0.03200000000000003
+      },
+      "supreme_court:1a408be87d6dcb12ae30ea97e19c9a4e8b5eb9520c62eec12840a060abef2833": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 68,
+        "repeated_4gram_fraction": 0.06399999999999995
+      },
+      "supreme_court:24f2ea73bab30bd09b7263729757ec040a23375cb10314903215fa2d0f43a0ed": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 81,
+        "repeated_4gram_fraction": 0.0
+      },
+      "supreme_court:24faf77862820c2bb222c92a73118f8655b9d5ae26b43cf72a9f0a2a1ce523ef": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 35,
+        "repeated_4gram_fraction": 0.31999999999999995
+      },
+      "supreme_court:2576c81c1a6189bc39d03b1edf4ee1f339d5a52397e1285545b207f1adbbc9e7": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 80,
+        "repeated_4gram_fraction": 0.0
+      },
+      "supreme_court:369dfadeed8b48d070c02e643f4a221d0549ed2177587dd4284a77cc98b82f98": {
+        "digit_multiset_precision": 0.038461538461538464,
+        "digit_multiset_recall": 0.2,
+        "distinct_word_count": 82,
+        "repeated_4gram_fraction": 0.02400000000000002
+      },
+      "supreme_court:380e6209fe170a5a73c13084611744b7511fc6123059e1ac84b565334852ef92": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 61,
+        "repeated_4gram_fraction": 0.08799999999999997
+      },
+      "supreme_court:51d924621696890e72efe4046ebee4dea9497367d14ef65e5cc981252fca6077": {
+        "digit_multiset_precision": 0.125,
+        "digit_multiset_recall": 0.16666666666666666,
+        "distinct_word_count": 72,
+        "repeated_4gram_fraction": 0.016000000000000014
+      },
+      "supreme_court:5414e6ef26b5bc5abb969c236ca842faa20cf9d0b9c169fd1e924be8b675c77a": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 63,
+        "repeated_4gram_fraction": 0.07999999999999996
+      },
+      "supreme_court:5ed3ec1a9fb9ab7c646ea2809428a3f1a12074c3ee5fbdf1317efb62ef898c6e": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 70,
+        "repeated_4gram_fraction": 0.03200000000000003
+      },
+      "supreme_court:69516b09ba4d9f7d08bc05929c575fd95287c78709122c25ec8a8a63df8575ad": {
+        "digit_multiset_precision": 0.25,
+        "digit_multiset_recall": 0.14285714285714285,
+        "distinct_word_count": 51,
+        "repeated_4gram_fraction": 0.19199999999999995
+      },
+      "supreme_court:6ca6a9be580e2a4430c396a28e329533c931c53decd93f90d3c9cfcf306af8bb": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 73,
+        "repeated_4gram_fraction": 0.02400000000000002
+      },
+      "supreme_court:751ea3de2f295707e88e9c41144d48e43241b8cf7bddda356045f12a7ac2a4c9": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 78,
+        "repeated_4gram_fraction": 0.0
+      },
+      "supreme_court:75d438455673ad43007273ed5ca7e711832103583aba0ac343c7634d34b2fd83": {
+        "digit_multiset_precision": 0.25,
+        "digit_multiset_recall": 1.0,
+        "distinct_word_count": 47,
+        "repeated_4gram_fraction": 0.29600000000000004
+      },
+      "supreme_court:7f363a1fe34bf8b9cdd29dfa9834cd93ed231bd16bb899fee8d37e85cb00a12b": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 72,
+        "repeated_4gram_fraction": 0.128
+      },
+      "supreme_court:a05f1bac9d0220bd093dfeefbe573637e7a0e0c04cd5d2fdfb04b4e58710c58d": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 63,
+        "repeated_4gram_fraction": 0.128
+      },
+      "supreme_court:b3e8b37e5978a1b7515a003ee0512c8ee300b384505979dfaa2d6bd36287369e": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 68,
+        "repeated_4gram_fraction": 0.07999999999999996
+      },
+      "supreme_court:bb09c481fce47d40945bd0ab9779713364f994f7e44c46db07300e35eb6d8895": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 70,
+        "repeated_4gram_fraction": 0.02400000000000002
+      },
+      "supreme_court:bb47ea76b5e9e362c6985029971009869e907ab20180755177bd0bd5b41c1fe9": {
+        "digit_multiset_precision": 0.375,
+        "digit_multiset_recall": 0.6,
+        "distinct_word_count": 81,
+        "repeated_4gram_fraction": 0.04800000000000004
+      },
+      "supreme_court:c75bb8bfc8d4b31ba07cd7bc73f535d6633f5d08f9cf2f7c5799a340a6b57a94": {
+        "digit_multiset_precision": 0.4,
+        "digit_multiset_recall": 0.25,
+        "distinct_word_count": 82,
+        "repeated_4gram_fraction": 0.008000000000000007
+      },
+      "supreme_court:dd811173f773940130d0ccbf8eb2d4d72c59f081e2329e2fc20deafb07620604": {
+        "digit_multiset_precision": 0.2,
+        "digit_multiset_recall": 1.0,
+        "distinct_word_count": 57,
+        "repeated_4gram_fraction": 0.06399999999999995
+      },
+      "supreme_court:e4c798b061becca3bb0ffc6e5c3a5c09ff2b0db734fd27f75ffa4f30c31338f8": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 56,
+        "repeated_4gram_fraction": 0.136
+      },
+      "supreme_court:ecdad3af349acde72a9972500820815b54ecd4077d2f61a388b30c279da9871e": {
+        "digit_multiset_precision": 0.3548387096774194,
+        "digit_multiset_recall": 0.3728813559322034,
+        "distinct_word_count": 30,
+        "repeated_4gram_fraction": 0.6639999999999999
+      },
+      "supreme_court:ee5001cdad45c21bce7f1765557f3abc27d29868b279ccf10021136573bb94fd": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 53,
+        "repeated_4gram_fraction": 0.16800000000000004
+      },
+      "supreme_court:f07f5d7d32bd3620343c9ff3ebdd0438bbfb56ee7d826f3c21def3551b693f0e": {
+        "digit_multiset_precision": 0.05263157894736842,
+        "digit_multiset_recall": 1.0,
+        "distinct_word_count": 87,
+        "repeated_4gram_fraction": 0.0
+      },
+      "supreme_court:f1bcf19f3308b9d9dc6b3cda838ce4bbea07532b6b1639d0d8cf2f268f1cf103": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 64,
+        "repeated_4gram_fraction": 0.04800000000000004
+      },
+      "tribunals:0a08400d065d888f7304a4c5a3c9593f60b5a73aed4f70c63e08e910c1fc3a03": {
+        "digit_multiset_precision": 1.0,
+        "digit_multiset_recall": 0.1875,
+        "distinct_word_count": 75,
+        "repeated_4gram_fraction": 0.008000000000000007
+      },
+      "tribunals:0a4227c8b669e0517f36b9166edacf014049d7159824982868dc25a5bf061f13": {
+        "digit_multiset_precision": 0.2,
+        "digit_multiset_recall": 0.3333333333333333,
+        "distinct_word_count": 58,
+        "repeated_4gram_fraction": 0.08799999999999997
+      },
+      "tribunals:1df72d3e1c1b2be189a8cbeef152520d6e5d596ab2d7990af6791afdeb3f371d": {
+        "digit_multiset_precision": 0.3,
+        "digit_multiset_recall": 0.2727272727272727,
+        "distinct_word_count": 65,
+        "repeated_4gram_fraction": 0.040000000000000036
+      },
+      "tribunals:2c693330083a460f20a5806dd281f137b5d54dd4def3541cdf2c2fbbba9551a0": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 81,
+        "repeated_4gram_fraction": 0.008000000000000007
+      },
+      "tribunals:38dbc5ad300253fb01c3cbed3e508ca16178ef24aeae977eb9d66fb86c1de642": {
+        "digit_multiset_precision": 0.13636363636363635,
+        "digit_multiset_recall": 0.14285714285714285,
+        "distinct_word_count": 65,
+        "repeated_4gram_fraction": 0.17600000000000005
+      },
+      "tribunals:491e5c7c5b873c824674b54137f7dde5d3c13418970b52f6a45ad7ae243ccc5f": {
+        "digit_multiset_precision": 0.2,
+        "digit_multiset_recall": 0.5714285714285714,
+        "distinct_word_count": 76,
+        "repeated_4gram_fraction": 0.07199999999999995
+      },
+      "tribunals:5186fb8fdc92f200f87d9d7697cad000713066e938a87e74c5ffdd14b4598e4f": {
+        "digit_multiset_precision": 0.3,
+        "digit_multiset_recall": 0.42857142857142855,
+        "distinct_word_count": 69,
+        "repeated_4gram_fraction": 0.08799999999999997
+      },
+      "tribunals:5f5170804e4288648ed04f72e52a193a0d3291c70ea2635b7e1976787dc74db2": {
+        "digit_multiset_precision": 0.3333333333333333,
+        "digit_multiset_recall": 0.2,
+        "distinct_word_count": 72,
+        "repeated_4gram_fraction": 0.12
+      },
+      "tribunals:6dd521d7895088adf8b06e0f938392af83841e290295e0b03c6529ad1e63da2c": {
+        "digit_multiset_precision": 1.0,
+        "digit_multiset_recall": 0.2857142857142857,
+        "distinct_word_count": 62,
+        "repeated_4gram_fraction": 0.14400000000000002
+      },
+      "tribunals:6f8ec06b43236f975bbaf96db202e2fa59c0efd62f04a4dcbe97a3b5dad1bb1c": {
+        "digit_multiset_precision": 0.2222222222222222,
+        "digit_multiset_recall": 0.3333333333333333,
+        "distinct_word_count": 69,
+        "repeated_4gram_fraction": 0.03200000000000003
+      },
+      "tribunals:92f07954bb3cf4460773fc4fd7345cd4179dd31c12a435994fdd6fda0cde43c4": {
+        "digit_multiset_precision": 0.21052631578947367,
+        "digit_multiset_recall": 0.5,
+        "distinct_word_count": 75,
+        "repeated_4gram_fraction": 0.05600000000000005
+      },
+      "tribunals:b9b3277a30d0687316f4530f4e06e9481fdcb75c09e5a35832e7efe1b850dba1": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 62,
+        "repeated_4gram_fraction": 0.16000000000000003
+      },
+      "tribunals:bb93381495ab96d82df2221e1841fb1642eeb349a6057e6d357369841197e2c0": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 72,
+        "repeated_4gram_fraction": 0.0
+      },
+      "tribunals:c42e02204830ca867d41fb77ab873396257654fc68559ca5b6d102dc1fe31a0a": {
+        "digit_multiset_precision": 0.29411764705882354,
+        "digit_multiset_recall": 0.8333333333333334,
+        "distinct_word_count": 68,
+        "repeated_4gram_fraction": 0.06399999999999995
+      },
+      "tribunals:cc7f1ef46a1f4913d9d11e521321c4b24ee0f16374d1e71cea6ff8b632291677": {
+        "digit_multiset_precision": 0.5,
+        "digit_multiset_recall": 0.3333333333333333,
+        "distinct_word_count": 63,
+        "repeated_4gram_fraction": 0.08799999999999997
+      },
+      "tribunals:cd6c15a2cb2f26328846e85217a1fd0e7ee4a53cb4d542a26b2063e603534134": {
+        "digit_multiset_precision": 0.4117647058823529,
+        "digit_multiset_recall": 0.4666666666666667,
+        "distinct_word_count": 49,
+        "repeated_4gram_fraction": 0.31999999999999995
+      },
+      "tribunals:cf6f66596bde5d04b468a2e1367037bc66c8eb2c2fb57edc0a13aff0b42148bb": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 64,
+        "repeated_4gram_fraction": 0.07999999999999996
+      },
+      "tribunals:d0268f15fdea9837867849754d2f282a9cfb1ade2b4e59ed60d3be202da250fd": {
+        "digit_multiset_precision": 0.4166666666666667,
+        "digit_multiset_recall": 0.2,
+        "distinct_word_count": 58,
+        "repeated_4gram_fraction": 0.16800000000000004
+      },
+      "tribunals:dcd8680b33597f8c0a0c3dc44dae2b64d6703b8642c1c76ded2930a5ed54c7d6": {
+        "digit_multiset_precision": 0.3333333333333333,
+        "digit_multiset_recall": 0.3333333333333333,
+        "distinct_word_count": 46,
+        "repeated_4gram_fraction": 0.19999999999999996
+      },
+      "tribunals:ed94306255a4001a33e41d1edf747732d289866443de309e02c19dfe2a9b8fe0": {
+        "digit_multiset_precision": 0.0,
+        "digit_multiset_recall": 0.0,
+        "distinct_word_count": 72,
+        "repeated_4gram_fraction": 0.128
+      },
+      "tribunals:f200a0c9461f7f084d5fb269f566c1d779ff0e5291111bb1e6ea465143e7f007": {
+        "digit_multiset_precision": 0.16666666666666666,
+        "digit_multiset_recall": 0.05555555555555555,
+        "distinct_word_count": 72,
+        "repeated_4gram_fraction": 0.06399999999999995
+      },
+      "tribunals:fa344bf8e6d6bf8283deff3b3b6ab2722aaa63f6d72f87819814e5c6f8e78135": {
+        "digit_multiset_precision": 0.09090909090909091,
+        "digit_multiset_recall": 0.3333333333333333,
+        "distinct_word_count": 71,
+        "repeated_4gram_fraction": 0.08799999999999997
+      }
+    }
+  },
+  "engineering_only": false,
+  "generation": {
+    "checkpoint_sha256": "775a198d9f453739b48e39095587db2ed793d9bcb652aba08e8d9d947971b0ea",
+    "code_sha256": "cc775bbe5a3afa80bc817bbc4f64e7be7bfb33e89c3fa40a287baba4e6f7219f",
+    "policy": {
+      "max_new_tokens": 2048,
+      "repetition_penalty": 1.05,
+      "seed": 781,
+      "strategy": "nucleus",
+      "target_words": 128,
+      "temperature": 0.8,
+      "top_p": 0.9
+    },
+    "tokenizer_sha256": "5c0bd30290e0bd6919253b1ff864f52053924808aabd33482df92cc4bd471c8e"
+  },
+  "ids": [
+    "acts:0c7aa5bc7adc86ce945b3b76b3725858bae61d9a275734a3bd25c9e6be650996",
+    "acts:30dce3fbd55e564a8b3581a77d508ac1f5ab83acbcc596673c7978e4ebd6f969",
+    "acts:3a106446187b72cdc08ae7b11c655fd25964ca2c3be80038dc0ecb4026e3defa",
+    "acts:485761634c205391734bb344db72c8d69d9f7a75c6707f29dc4ad019b9c014ac",
+    "acts:7943566895d7a066f9d4e55726801ed0449d5e88ddee0ce89f0fd6465ea3de63",
+    "acts:85e25ceb4be506faa00249980b4dca07a6f171ca2f1f1458bcf0eec97c2f20f1",
+    "acts:8729a081a9a0113ecb8317198f0c7ad79d10f8d4959cf67292ab26df7724b665",
+    "acts:91d32f18e6ec02e3312dadf700cb8958a5eeb45d4a7df497512dd37cc5c4a730",
+    "acts:95749f3966457e4c5562ca2a824b5dc997350560f33968335d78a0a0d7d4c622",
+    "acts:9cffb5b9fce8fcf7e28acfb13d42145319cedd23f61bceea8e54b2fa771f1772",
+    "acts:a2932fd9e2b7d15a9953551e8023f8a9100be182e7d9da51bebda0142af1b365",
+    "acts:ae57e0dae3a5dd97427a2d35140efb7444f01c70d61a293fa2bc585cdb880398",
+    "acts:b225e1a89821b263333342a612c5e7b9c83e2cc76bbf6272729a8f7845542a13",
+    "acts:bcc29389caa65e561d9730cb6c389aa3cdfb0812fdddb9f976e207123d427edb",
+    "acts:f18fa52f17d533087252fd37c126f240e757e2c3fe4b3e344816a40eacfdb794",
+    "acts:ffe13ea5eac14b2a64cad02c1f4a1c8e736b31438ca8975b02126e687e09ec33",
+    "high_courts:003159e675939e5bb51a6388bab1998e89d782a0039e700424b8d5f969a754a8",
+    "high_courts:16856214ad4bc55ebee1a5518dab5ef73644eebf24555438b4a4f98e49849784",
+    "high_courts:208049914947db2bd0dee44e27d145b01aab00de811a4c418a95f107d2f393fe",
+    "high_courts:22ad72b0781417d45dcf02d1948162986a2d5d6c24e0ced6f5b49cfe158b0fc1",
+    "high_courts:272b2fc4718bfd31b39a7923ce1cf4df393d396bf0ce2d64f992ece497af589e",
+    "high_courts:342b87e425f66324ecbd1072d73fa5eeba3f278a332bcf04e35e245504289e43",
+    "high_courts:36b3a607e817bd226555e661899b0f28cabe751010f0dfc446ad603ecc204f21",
+    "high_courts:3eb08641a0679a6f6140194c2e86ee337a766043530eb83023950a907ff733e4",
+    "high_courts:4e0d106c0fd086ecd4b077514ae3c7f2c95b320a5c58716d7c1d5ceb03849003",
+    "high_courts:4fd17ff45489498bb38ed4ace3216645628037632dd00695f337be7c545658c7",
+    "high_courts:5202b8f25ce6732a069192570a25a88f060951baed6f0046bc7e8cb7d59c7186",
+    "high_courts:52c1be8569806ecb2d5cce4f00b79a2f252e5f959723845be2bc9c7a794c124a",
+    "high_courts:55f27011f75f9c9809ef830af49c7f23d5153bcd38c935dc3fa2b0899ea2e8bb",
+    "high_courts:56de391f1748ffa5511a3cf52ee237ca5f9f405a6e258370b42351655afcf06c",
+    "high_courts:594dfb88cc09da75627b44c39b2f99a711fe7f69a267d5f5a2a6bfaf370f4fb5",
+    "high_courts:5d51deb281dfc85644da5c26ca4052a9d21eb92273a3fcb19dd816869e80a9eb",
+    "high_courts:5d9b942ba4c784fedc5ca373646c143be1ad564998d64dcefd5d16f4f6f8251a",
+    "high_courts:637791f6af811c1ed35f383acef3f90935d4c132e4e493d656b7ad2b200a2b3c",
+    "high_courts:646b6f2e55ca3f498cfb5b83d1a6b6d2f0cfef4b80a49b310817b7d9d4c4213b",
+    "high_courts:6a33592e8cb04f56145d54aacbb45f6db15bcb8e6f94aa7ef6714a29ba7a9247",
+    "high_courts:6b5d2b5cfc16fca2c62253d2c11c1e4aa914e36e7f195f603ee1766f8f628517",
+    "high_courts:7225d280276b218f16e9e7ae804ff7624b670240d82056d4128abdb33ee868f6",
+    "high_courts:7935fb118190d37a0e82d082b79b6a778859774cd44ee8f1962f056a44c5fe90",
+    "high_courts:79453d4183eafeae6c60309c94defb5449dd6f29e51e3b4a602e614b1a24ea27",
+    "high_courts:7b6a067af64bfb153cef609f7591609e5e66b7e39266ca7eb838ee02f2e5e933",
+    "high_courts:7e009d5d92dbb6b82ed7b8b4bbaff46a2c029f33a6859a5d6b1e90786b9185d5",
+    "high_courts:825ab03e8b5bb72debc5b8a64b49c86f774dbcec7ab73acdac49b07e56e0c911",
+    "high_courts:845299428f1616d0f1bf57cc3ed1627ad597a02decafbbd26090651a80b3d422",
+    "high_courts:9088e829276282e9e6118e83d93132910b0371241971275d7fb7a485830dcfff",
+    "high_courts:963423d70d03cbdfde5529e5bc559f7b9a387fda072edb3d9de3db0aeab2b16b",
+    "high_courts:973e010494307e82a761ad39fd4fd44af2ed7b007ad7ac7bbf7a7679a5c68bed",
+    "high_courts:97ecfb4af0a23ec401c600cc77cbca7b8146cb5e06894ee7c699a9b2d0feedd0",
+    "high_courts:9825b527d6083c0691e4ab5f2fe3a589f88a3c10ca01a6bb8ae455c3c86285cf",
+    "high_courts:9a5f7879a9ac21255020438d75b4e60c6def89134090c2c1ca18914063564543",
+    "high_courts:9b07513f3dc6814013e48c5deb2a4cc2d678b815c1f853584e646c5519b8a908",
+    "high_courts:9d2ebcb0cb541f90d15f091fc96f8aa4b9d6bccd9908f1eca84773ae636febed",
+    "high_courts:a1c9600dfae351edbebe63bad50aa5b04f582873236467c046ac4380bd121185",
+    "high_courts:a6788fdcbd0f57cb8ae158bf9083ba97a63619e5e0bf282338947fb5fe962402",
+    "high_courts:a9070ec49b5b01ecfcb91133779148e25b708abc56bde4250f3f0accc6221d7d",
+    "high_courts:ac74f499745882ad50c9a28a1ac528d316c40da78c8056f09ae9ad9f74a6da74",
+    "high_courts:ad51d621000abeb5ea93cb5de39f649c63cbdc03d763d9042221431a981346bb",
+    "high_courts:aebb687f8e12689b3dc3e3687530bd18dd6e8c593f09cb89f743da54cd889a44",
+    "high_courts:b34b61d339fb2d219ae178e656afc7e9369dc334da27ff82f4e17763928d1397",
+    "high_courts:b8a2ca834b2ddf78df48e501cb2354056267f58738420dc82729f1ebf533cc68",
+    "high_courts:c0a2e50381504c7a74e35ea4348cf7a77e5317b8dfb9140ffbe8c73661aabc96",
+    "high_courts:c683cb8e249b60232dc63d3ffa6fa4cea4e4320be4f7e3ca9009c9d64a5caa52",
+    "high_courts:c822cd22afd74f1eec3a7fa277838526eaecfb4483de3e26990ae148de9dad60",
+    "high_courts:c8f4ef3ff1f0291fc11b9558c26ad0c2dc3b4e452ce858eef1b322a61ce7251f",
+    "high_courts:c9421387ac7f39c9ed51678c3357443f4a71bece5369734e0052f58197234cf4",
+    "high_courts:d539801a33353434491d6f59f6b75d898350cf4798075327b753584ecf0472ff",
+    "high_courts:d8b55a31abf02578693ec146c7e4d5320c04bf31558f45deb120c496170a6fb6",
+    "high_courts:da663512d8665b4ec21f6aeb48ccbb07fe1aacdd737e7b3e3587a37dbb244aa6",
+    "high_courts:dd45297f1cd9a4071d36807234df7c1521e14eb51ea83725895faaf657c39d66",
+    "high_courts:df9d771949aa782f6b8ca65a6e90f02c4a35d0af24ac0cd6e2ce597f4fc1068f",
+    "high_courts:e55bfcef4e9cf5230631ff667119310c3854a28b2571ffa8c22e3dfce2748828",
+    "high_courts:e609f63388d7a3d2c5298b9faf0986b25fdf0ffe315ce7b0425df9be6a37456e",
+    "high_courts:eba3c83347f20543c7beaf3bb238b5c82b29d6bdb6781564ad8ba2c91d2f277d",
+    "high_courts:eba601741cb1d61f3dc759d24038eb0b61afbcca3572f1cac8904b5016a22094",
+    "high_courts:f2d452a2b8bd62258329488b4bbe68265fd35dfca82629a9e9b4160d4588ae8b",
+    "high_courts:f843aef6d4501b734d6ecf322dace8c0a46021a43c41e55c765c3151a5b3387e",
+    "high_courts:fee94dad4b77795e2fb6310400b16b245a8f7bce96bb6c25107d0ec73c84e647",
+    "supreme_court:05bdc7840269eecd127860170cf7cfb1c7410008add0f1b249fad9684602e3d8",
+    "supreme_court:0653ae0be75c65319273226a76c9832a1ec78b015e38d5d8a47bcf384747abca",
+    "supreme_court:066b6e2cc861854d221909d4c4953b7fc192995463ee663638d4a714a32751c1",
+    "supreme_court:1a408be87d6dcb12ae30ea97e19c9a4e8b5eb9520c62eec12840a060abef2833",
+    "supreme_court:24f2ea73bab30bd09b7263729757ec040a23375cb10314903215fa2d0f43a0ed",
+    "supreme_court:24faf77862820c2bb222c92a73118f8655b9d5ae26b43cf72a9f0a2a1ce523ef",
+    "supreme_court:2576c81c1a6189bc39d03b1edf4ee1f339d5a52397e1285545b207f1adbbc9e7",
+    "supreme_court:369dfadeed8b48d070c02e643f4a221d0549ed2177587dd4284a77cc98b82f98",
+    "supreme_court:380e6209fe170a5a73c13084611744b7511fc6123059e1ac84b565334852ef92",
+    "supreme_court:51d924621696890e72efe4046ebee4dea9497367d14ef65e5cc981252fca6077",
+    "supreme_court:5414e6ef26b5bc5abb969c236ca842faa20cf9d0b9c169fd1e924be8b675c77a",
+    "supreme_court:5ed3ec1a9fb9ab7c646ea2809428a3f1a12074c3ee5fbdf1317efb62ef898c6e",
+    "supreme_court:69516b09ba4d9f7d08bc05929c575fd95287c78709122c25ec8a8a63df8575ad",
+    "supreme_court:6ca6a9be580e2a4430c396a28e329533c931c53decd93f90d3c9cfcf306af8bb",
+    "supreme_court:751ea3de2f295707e88e9c41144d48e43241b8cf7bddda356045f12a7ac2a4c9",
+    "supreme_court:75d438455673ad43007273ed5ca7e711832103583aba0ac343c7634d34b2fd83",
+    "supreme_court:7f363a1fe34bf8b9cdd29dfa9834cd93ed231bd16bb899fee8d37e85cb00a12b",
+    "supreme_court:a05f1bac9d0220bd093dfeefbe573637e7a0e0c04cd5d2fdfb04b4e58710c58d",
+    "supreme_court:b3e8b37e5978a1b7515a003ee0512c8ee300b384505979dfaa2d6bd36287369e",
+    "supreme_court:bb09c481fce47d40945bd0ab9779713364f994f7e44c46db07300e35eb6d8895",
+    "supreme_court:bb47ea76b5e9e362c6985029971009869e907ab20180755177bd0bd5b41c1fe9",
+    "supreme_court:c75bb8bfc8d4b31ba07cd7bc73f535d6633f5d08f9cf2f7c5799a340a6b57a94",
+    "supreme_court:dd811173f773940130d0ccbf8eb2d4d72c59f081e2329e2fc20deafb07620604",
+    "supreme_court:e4c798b061becca3bb0ffc6e5c3a5c09ff2b0db734fd27f75ffa4f30c31338f8",
+    "supreme_court:ecdad3af349acde72a9972500820815b54ecd4077d2f61a388b30c279da9871e",
+    "supreme_court:ee5001cdad45c21bce7f1765557f3abc27d29868b279ccf10021136573bb94fd",
+    "supreme_court:f07f5d7d32bd3620343c9ff3ebdd0438bbfb56ee7d826f3c21def3551b693f0e",
+    "supreme_court:f1bcf19f3308b9d9dc6b3cda838ce4bbea07532b6b1639d0d8cf2f268f1cf103",
+    "tribunals:0a08400d065d888f7304a4c5a3c9593f60b5a73aed4f70c63e08e910c1fc3a03",
+    "tribunals:0a4227c8b669e0517f36b9166edacf014049d7159824982868dc25a5bf061f13",
+    "tribunals:1df72d3e1c1b2be189a8cbeef152520d6e5d596ab2d7990af6791afdeb3f371d",
+    "tribunals:2c693330083a460f20a5806dd281f137b5d54dd4def3541cdf2c2fbbba9551a0",
+    "tribunals:38dbc5ad300253fb01c3cbed3e508ca16178ef24aeae977eb9d66fb86c1de642",
+    "tribunals:491e5c7c5b873c824674b54137f7dde5d3c13418970b52f6a45ad7ae243ccc5f",
+    "tribunals:5186fb8fdc92f200f87d9d7697cad000713066e938a87e74c5ffdd14b4598e4f",
+    "tribunals:5f5170804e4288648ed04f72e52a193a0d3291c70ea2635b7e1976787dc74db2",
+    "tribunals:6dd521d7895088adf8b06e0f938392af83841e290295e0b03c6529ad1e63da2c",
+    "tribunals:6f8ec06b43236f975bbaf96db202e2fa59c0efd62f04a4dcbe97a3b5dad1bb1c",
+    "tribunals:92f07954bb3cf4460773fc4fd7345cd4179dd31c12a435994fdd6fda0cde43c4",
+    "tribunals:b9b3277a30d0687316f4530f4e06e9481fdcb75c09e5a35832e7efe1b850dba1",
+    "tribunals:bb93381495ab96d82df2221e1841fb1642eeb349a6057e6d357369841197e2c0",
+    "tribunals:c42e02204830ca867d41fb77ab873396257654fc68559ca5b6d102dc1fe31a0a",
+    "tribunals:cc7f1ef46a1f4913d9d11e521321c4b24ee0f16374d1e71cea6ff8b632291677",
+    "tribunals:cd6c15a2cb2f26328846e85217a1fd0e7ee4a53cb4d542a26b2063e603534134",
+    "tribunals:cf6f66596bde5d04b468a2e1367037bc66c8eb2c2fb57edc0a13aff0b42148bb",
+    "tribunals:d0268f15fdea9837867849754d2f282a9cfb1ade2b4e59ed60d3be202da250fd",
+    "tribunals:dcd8680b33597f8c0a0c3dc44dae2b64d6703b8642c1c76ded2930a5ed54c7d6",
+    "tribunals:ed94306255a4001a33e41d1edf747732d289866443de309e02c19dfe2a9b8fe0",
+    "tribunals:f200a0c9461f7f084d5fb269f566c1d779ff0e5291111bb1e6ea465143e7f007",
+    "tribunals:fa344bf8e6d6bf8283deff3b3b6ab2722aaa63f6d72f87819814e5c6f8e78135"
+  ],
+  "limited_sample": false,
+  "metrics": {
+    "bertscore_f1": 0.869258,
+    "bleu4": 0.287066,
+    "rouge_l_f1": 0.368787
+  },
+  "policy": 2,
+  "split": "confirmation"
+}

@@ -1,0 +1,5 @@
+{
+  "model": {"vocab_size": 32768, "max_seq_len": 8192, "n_layers": 12, "d_model": 768, "n_heads": 12, "d_head": 64, "d_ff": 2048, "rope_theta": 10000.0, "dropout": 0.0, "gradient_checkpointing": true, "route_layers": 4, "route_dim": 128, "route_mode": "full"},
+  "train": {"target_tokens": 209914685, "grad_accum_steps": 32, "learning_rate": 0.0003, "save_every": 100, "log_every": 10, "device": "cuda", "seed": 781},
+  "pilot_target_tokens": 1000000
+}

@@ -1,0 +1,157 @@
+{
+  "catalog": {
+    "complete": true,
+    "corpus_config": {
+      "max_chars_per_source": 100000000,
+      "repo_id": "Exploration-Lab/CS-781-Capstone",
+      "revision": "89edba6a44d6bb9593fd13b6895b5cd3b06eb82e",
+      "seed": 781,
+      "source_paths": {
+        "acts": "Phase_1_Pretraining/Train/train_acts.json",
+        "high_courts": "Phase_1_Pretraining/Train/train_high_courts.json",
+        "supreme_court": "Phase_1_Pretraining/Train/train_supreme_court.json",
+        "tribunals": "Phase_1_Pretraining/Train/train_tribunals.json"
+      }
+    },
+    "duplicate_algorithm": "sha256 + simhash64/5word/hamming3/4bands",
+    "seed": 781,
+    "source_counts": {
+      "acts": 2608,
+      "high_courts": 38854,
+      "supreme_court": 3165,
+      "tribunals": 2560
+    }
+  },
+  "catalog_sha256": "838e9e760a6cfc2bd3744eec03550fa9aee432537a24c52341330484a0c064eb",
+  "complete": true,
+  "counts": {
+    "confirmation": 127,
+    "dev": 144,
+    "train": 188294
+  },
+  "excluded_short": {
+    "confirmation": 358,
+    "dev": 340,
+    "train": 34123
+  },
+  "files": {
+    "confirmation.jsonl": {
+      "bytes": 874475,
+      "sha256": "5599e0d3df0eb10b77ebdce91ad6c5293d609d18b28818613ed3970a84ffc258"
+    },
+    "confirmation.offsets.npy": {
+      "bytes": 1144,
+      "sha256": "a0b9ab7fed6f9f444a4813beca61238f9aa93de4aa23e5ce31d6a5c480a9bad6"
+    },
+    "confirmation.prompts.json": {
+      "bytes": 402288,
+      "sha256": "16a7a9024e6f828b58804fa0a79e8c10496b2ac940411dca02c46bbe62c5f130"
+    },
+    "confirmation.references.json": {
+      "bytes": 109808,
+      "sha256": "4ffbe2ac66da5c41ff27b85fb2e45ef32dad550ae65ed38a75f84c8c56bccfe6"
+    },
+    "dev.jsonl": {
+      "bytes": 1013393,
+      "sha256": "47af3909d2feea6af84f15e8713c05e0f6e385b9461cda02ec6a179964db51b8"
+    },
+    "dev.offsets.npy": {
+      "bytes": 1280,
+      "sha256": "79edd7f0b0942e7782d58cac58234a761f83aa0b271ee58f4262f36078633a91"
+    },
+    "dev.prompts.json": {
+      "bytes": 456814,
+      "sha256": "9b6ade688c985649ec7e6bf1b0d9f44ff1370c1f49fa0735e6bfb34531192dcb"
+    },
+    "dev.references.json": {
+      "bytes": 124527,
+      "sha256": "96799fd819af9a59391469b1d8fe2d90548624d17948eb6a2fb1b983965dd0a4"
+    },
+    "tokenizer.json": {
+      "bytes": 422288,
+      "sha256": "5c0bd30290e0bd6919253b1ff864f52053924808aabd33482df92cc4bd471c8e"
+    },
+    "tokenizer.meta.json": {
+      "bytes": 3153878,
+      "sha256": "b2606a01f1782b17acbc8e47219a8cf3f8665cc8e4c60130bc0535eb791dfe5a"
+    },
+    "train.jsonl": {
+      "bytes": 1301077366,
+      "sha256": "7930f78b3f73e4de7af76755dceba6a40034f713b0c4cd56d69d891e6d18ad8f"
+    },
+    "train.offsets.npy": {
+      "bytes": 1506480,
+      "sha256": "9830f197a48bb69336fa2e9bf0a9cddc7da052a68980beeba73ad00d0f76f03a"
+    }
+  },
+  "max_seq_len": 8192,
+  "max_training_prompt_tokens": 2403,
+  "max_training_suffix_tokens": 908,
+  "overlength": {
+    "confirmation": 1,
+    "dev": 1,
+    "train": 0
+  },
+  "parent_manifest_sha256": "15a76c2de42a3f5e1b53781f6439f5cd0fd4c2521c16b656416de04d89e9aa78",
+  "seed": 781,
+  "source_counts": {
+    "confirmation": {
+      "acts": 16,
+      "high_courts": 61,
+      "supreme_court": 28,
+      "tribunals": 22
+    },
+    "dev": {
+      "acts": 29,
+      "high_courts": 63,
+      "supreme_court": 24,
+      "tribunals": 28
+    },
+    "train": {
+      "acts": 58473,
+      "high_courts": 14955,
+      "supreme_court": 57693,
+      "tribunals": 57173
+    }
+  },
+  "synthetic": false,
+  "tokenizer_report": {
+    "heldout_512word_prompt_count": 352,
+    "per_source_sample": {
+      "acts": {
+        "sampled_documents": 64,
+        "tokens": 1090108,
+        "words": 483065
+      },
+      "high_courts": {
+        "sampled_documents": 64,
+        "tokens": 56597,
+        "words": 25119
+      },
+      "supreme_court": {
+        "sampled_documents": 64,
+        "tokens": 634514,
+        "words": 288175
+      },
+      "tribunals": {
+        "sampled_documents": 64,
+        "tokens": 805731,
+        "words": 363606
+      }
+    },
+    "prompt_token_percentiles": {
+      "max": 4507.0,
+      "p50": 1153.0,
+      "p95": 1271.9,
+      "p99": 1409.8700000000006
+    }
+  },
+  "training_target_tokens_one_pass": 53390730,
+  "training_window_policy": {
+    "prompt_words": 512,
+    "seed": 781,
+    "stride_words": 256,
+    "target_words": 128,
+    "train_documents_only": true
+  }
+}

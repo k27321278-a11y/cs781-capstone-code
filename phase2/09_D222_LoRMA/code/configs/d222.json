@@ -1,0 +1,83 @@
+{
+  "seed": 781,
+  "model": {
+    "vocab_size": 32768,
+    "layers": 24,
+    "width": 896,
+    "query_heads": 14,
+    "kv_heads": 2,
+    "head_dim": 64,
+    "ff_width": 2304,
+    "context": 2048,
+    "local_window": 512,
+    "global_every": 4,
+    "query_tile": 128,
+    "dropout": 0.0,
+    "checkpointing": true
+  },
+  "prepared_root": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/own_bpe_20261006/prepared",
+  "tokenizer": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/own_bpe_20261006/tokenizer.json",
+  "phase2_data": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase2_20261011/data/Phase_2_LNER",
+  "phase1_test": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/own_bpe_20261006/official_test.json",
+  "output_root": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_d222_20261011",
+  "pretrain": {
+    "target_tokens": 300000000,
+    "pilot_tokens": 50000000,
+    "microbatch": 1,
+    "accumulation": 8,
+    "learning_rate": 0.0003,
+    "weight_decay": 0.1,
+    "warmup_fraction": 0.03,
+    "save_every": 100,
+    "evaluate_every": 250,
+    "log_every": 10,
+    "calibration_steps": 20,
+    "reserve_ner_hours": 3,
+    "deadline_utc": "2026-10-11T18:29:00+00:00",
+    "selection_candidates": 3
+  },
+  "ner": {
+    "max_epochs": 16,
+    "patience": 4,
+    "max_tokens": 768,
+    "max_chars": 1600,
+    "overlap": 240,
+    "accumulation": 8,
+    "candidates": [
+      {
+        "name": "full_lr2e5",
+        "method": "full",
+        "backbone_lr": 2e-05,
+        "head_lr": 0.0005,
+        "dropout": 0.1
+      },
+      {
+        "name": "full_lr1e5",
+        "method": "full",
+        "backbone_lr": 1e-05,
+        "head_lr": 0.0002,
+        "dropout": 0.2
+      },
+      {
+        "name": "lorma_rank8",
+        "method": "lorma",
+        "backbone_lr": 0.0002,
+        "head_lr": 0.0005,
+        "dropout": 0.1
+      }
+    ],
+    "pilot_epochs": 3,
+    "rank": 8,
+    "alpha": 32,
+    "boundary_weight": 0.15,
+    "rare_sampling_mix": 0.25,
+    "best_existing_macro_f1": 0.41164117308528686,
+    "budget_fractions": {
+      "pilot_total": 0.2,
+      "full_promoted": 0.4,
+      "lorma": 0.4
+    }
+  },
+  "scorer_cache": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/bert_score_hf_cache",
+  "allow_postdeadline_benchmark": true
+}

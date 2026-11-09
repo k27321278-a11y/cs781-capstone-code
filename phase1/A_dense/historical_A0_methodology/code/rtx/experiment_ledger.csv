@@ -1,0 +1,2 @@
+submission_id,architecture,variant,change_from_previous,predicted_bertscore_effect,local_val_nll,local_ppl,local_rougeL,local_bleu4,codabench_bertscore,codabench_rougeL,codabench_bleu4,train_tokens,params,decode_strategy,temperature,top_p,top_k,repetition_penalty,notes
+,A,A0 Dense Flash LegalGPT,Baseline,, , , , , , , ,200000000,110119680,greedy,1.0,1.0,0,1.05,

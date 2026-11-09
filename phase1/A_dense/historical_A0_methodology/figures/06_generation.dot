@@ -1,0 +1,14 @@
+digraph G {graph [bgcolor="white",ranksep="0.35",nodesep="0.22",pad="0.22",fontname="DejaVu Sans",splines=ortho]; node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=12,color="#C7D2DE",fillcolor="#EEF3F8",fontcolor="#14243A",penwidth=1.2,margin="0.16,0.13"];edge [color="#61768D",arrowsize=0.7,penwidth=1.35];
+
+rankdir=TB;
+prompt [label="512 whitespace-separated WORD prompt\nByte-Level BPE → N token IDs + BOS"];
+prefill [label="Prefill: embedding + 12 decoder blocks\nCompute logits, cache per-layer K/V",fillcolor="#DBEAFE"];
+last [label="Select last-position logits: 32768 values"];
+mask [label="Forbid PAD/BOS/EOS/UNK\nRepetition penalty=1.05 to previously generated IDs"];
+greedy [label="Greedy argmax token\nTemperature/top-k/top-p NOT applied",fillcolor="#E7F4F0"];
+append [label="Append selected token; decode generated IDs\nCheck whitespace word count"];
+condition [shape=diamond,label="128 words reached?",fillcolor="#FFF0DB"];
+finish [label="Trim to exactly 128 words\nReturn continuation (not original prompt)",fillcolor="#E7F4F0"];
+cache [label="Not yet: one token forward pass\nusing KV cache and RoPE offset"];
+prompt->prefill->last->mask->greedy->append->condition;condition->finish [label="yes"];condition->cache [label="no"];cache->mask [constraint=false,style=dashed];
+}

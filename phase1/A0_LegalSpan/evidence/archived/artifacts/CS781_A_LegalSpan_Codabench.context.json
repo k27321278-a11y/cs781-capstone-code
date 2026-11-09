@@ -1,0 +1,25 @@
+{
+  "architecture": "A legal-span",
+  "continuation_words": 128,
+  "data_manifest_sha256": "78b285abc6abeb282761393df8e8d2eac4c302e0a1f398ee70cef759569dc3e8",
+  "dataset_revision": "89edba6a44d6bb9593fd13b6895b5cd3b06eb82e",
+  "generation": {
+    "checkpoint_sha256": "775a198d9f453739b48e39095587db2ed793d9bcb652aba08e8d9d947971b0ea",
+    "code_sha256": "cc775bbe5a3afa80bc817bbc4f64e7be7bfb33e89c3fa40a287baba4e6f7219f",
+    "policy": {
+      "max_new_tokens": 2048,
+      "repetition_penalty": 1.05,
+      "seed": 781,
+      "strategy": "nucleus",
+      "target_words": 128,
+      "temperature": 0.8,
+      "top_p": 0.9
+    },
+    "tokenizer_sha256": "5c0bd30290e0bd6919253b1ff864f52053924808aabd33482df92cc4bd471c8e"
+  },
+  "official_test_sha256": "614f348b3dcbb2a9f43706cd239438386dc396246cd5cc685a5ccb6eb06b7218",
+  "prediction_count": 1000,
+  "prompt_words": 512,
+  "score_claim": "No private leaderboard score inferred",
+  "zip_sha256": "711bdc953403981181353adf3b828713e4c4787a0d553b5c8956c3609479f532"
+}

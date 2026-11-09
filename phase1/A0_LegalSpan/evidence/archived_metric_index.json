@@ -1,0 +1,128 @@
+[
+  {
+    "path": "ablations/control/evaluation/confirmation.metrics.json",
+    "bertscore_f1": 0.865052,
+    "rouge_l_f1": 0.347625,
+    "bleu4": 0.263503
+  },
+  {
+    "path": "ablations/control/evaluation/final_policy0_dev.metrics.json",
+    "bertscore_f1": 0.852547,
+    "rouge_l_f1": 0.361654,
+    "bleu4": 0.264489
+  },
+  {
+    "path": "ablations/control/evaluation/final_policy1_dev.metrics.json",
+    "bertscore_f1": 0.854311,
+    "rouge_l_f1": 0.363661,
+    "bleu4": 0.26647
+  },
+  {
+    "path": "ablations/control/evaluation/final_policy2_dev.metrics.json",
+    "bertscore_f1": 0.865228,
+    "rouge_l_f1": 0.347439,
+    "bleu4": 0.262007
+  },
+  {
+    "path": "ablations/control/evaluation/targets_104957342_policy0_dev.metrics.json",
+    "bertscore_f1": 0.842879,
+    "rouge_l_f1": 0.329427,
+    "bleu4": 0.225916
+  },
+  {
+    "path": "ablations/control/evaluation/targets_104957342_policy1_dev.metrics.json",
+    "bertscore_f1": 0.846102,
+    "rouge_l_f1": 0.330566,
+    "bleu4": 0.228938
+  },
+  {
+    "path": "ablations/control/evaluation/targets_104957342_policy2_dev.metrics.json",
+    "bertscore_f1": 0.857066,
+    "rouge_l_f1": 0.314996,
+    "bleu4": 0.211921
+  },
+  {
+    "path": "ablations/generic/evaluation/confirmation.metrics.json",
+    "bertscore_f1": 0.865343,
+    "rouge_l_f1": 0.349225,
+    "bleu4": 0.263527
+  },
+  {
+    "path": "ablations/generic/evaluation/final_policy0_dev.metrics.json",
+    "bertscore_f1": 0.853683,
+    "rouge_l_f1": 0.361871,
+    "bleu4": 0.26854
+  },
+  {
+    "path": "ablations/generic/evaluation/final_policy1_dev.metrics.json",
+    "bertscore_f1": 0.855002,
+    "rouge_l_f1": 0.362467,
+    "bleu4": 0.268896
+  },
+  {
+    "path": "ablations/generic/evaluation/final_policy2_dev.metrics.json",
+    "bertscore_f1": 0.86877,
+    "rouge_l_f1": 0.358181,
+    "bleu4": 0.270168
+  },
+  {
+    "path": "ablations/generic/evaluation/targets_104957342_policy0_dev.metrics.json",
+    "bertscore_f1": 0.845818,
+    "rouge_l_f1": 0.346897,
+    "bleu4": 0.245119
+  },
+  {
+    "path": "ablations/generic/evaluation/targets_104957342_policy1_dev.metrics.json",
+    "bertscore_f1": 0.846677,
+    "rouge_l_f1": 0.342014,
+    "bleu4": 0.243811
+  },
+  {
+    "path": "ablations/generic/evaluation/targets_104957342_policy2_dev.metrics.json",
+    "bertscore_f1": 0.863878,
+    "rouge_l_f1": 0.334744,
+    "bleu4": 0.239906
+  },
+  {
+    "path": "artifacts/evaluation/confirmation.metrics.json",
+    "bertscore_f1": 0.869258,
+    "rouge_l_f1": 0.368787,
+    "bleu4": 0.287066
+  },
+  {
+    "path": "artifacts/evaluation/final_policy0_dev.metrics.json",
+    "bertscore_f1": 0.852215,
+    "rouge_l_f1": 0.3565,
+    "bleu4": 0.258539
+  },
+  {
+    "path": "artifacts/evaluation/final_policy1_dev.metrics.json",
+    "bertscore_f1": 0.852701,
+    "rouge_l_f1": 0.355957,
+    "bleu4": 0.260597
+  },
+  {
+    "path": "artifacts/evaluation/final_policy2_dev.metrics.json",
+    "bertscore_f1": 0.867648,
+    "rouge_l_f1": 0.350857,
+    "bleu4": 0.264881
+  },
+  {
+    "path": "artifacts/evaluation/targets_104957342_policy0_dev.metrics.json",
+    "bertscore_f1": 0.843481,
+    "rouge_l_f1": 0.331163,
+    "bleu4": 0.228666
+  },
+  {
+    "path": "artifacts/evaluation/targets_104957342_policy1_dev.metrics.json",
+    "bertscore_f1": 0.843433,
+    "rouge_l_f1": 0.328722,
+    "bleu4": 0.228325
+  },
+  {
+    "path": "artifacts/evaluation/targets_104957342_policy2_dev.metrics.json",
+    "bertscore_f1": 0.862181,
+    "rouge_l_f1": 0.324002,
+    "bleu4": 0.234164
+  }
+]

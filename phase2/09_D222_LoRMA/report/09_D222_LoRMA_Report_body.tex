@@ -1,0 +1,9 @@
+\section{D222 with LoRMA NER tuning}
+\subsection{Architecture}
+The same D222 decoder is adapted by rank-8 multiplicative low-rank matrices, training a small fraction of its weights. Character BiGRU, boundary logits, and CRF form the NER head.
+\subsection{Method}
+LoRMA+, rank 8. The original source and run config are packaged alongside this section.
+\subsection{Local evaluation}
+Strict held-out macro-F1: 0.427679112. This is not a hidden Codabench score.
+\subsection{Reproducibility}
+The companion notebook and report were reconstructed after training. Original selected weights and course data remain in the separately named complete archive.

@@ -1,0 +1,44 @@
+[
+  {
+    "path": "benchmark/phase1_benchmark/candidate_0019250_policy0_dev.metrics.json",
+    "bertscore_f1": 0.84984,
+    "rouge_l_f1": 0.333876,
+    "bleu4": 0.231147
+  },
+  {
+    "path": "benchmark/phase1_benchmark/candidate_0019606_policy1_dev.metrics.json",
+    "bertscore_f1": 0.862577,
+    "rouge_l_f1": 0.326226,
+    "bleu4": 0.236736
+  },
+  {
+    "path": "benchmark/phase1_benchmark/confirmation.metrics.json",
+    "bertscore_f1": 0.86319,
+    "rouge_l_f1": 0.33034,
+    "bleu4": 0.248523
+  },
+  {
+    "path": "benchmark/phase1_benchmark/candidate_0019250_policy1_dev.metrics.json",
+    "bertscore_f1": 0.859437,
+    "rouge_l_f1": 0.314236,
+    "bleu4": 0.222028
+  },
+  {
+    "path": "benchmark/phase1_benchmark/candidate_0019606_policy0_dev.metrics.json",
+    "bertscore_f1": 0.851183,
+    "rouge_l_f1": 0.347656,
+    "bleu4": 0.252999
+  },
+  {
+    "path": "benchmark/phase1_benchmark/candidate_0019500_policy1_dev.metrics.json",
+    "bertscore_f1": 0.863767,
+    "rouge_l_f1": 0.324653,
+    "bleu4": 0.237132
+  },
+  {
+    "path": "benchmark/phase1_benchmark/candidate_0019500_policy0_dev.metrics.json",
+    "bertscore_f1": 0.847919,
+    "rouge_l_f1": 0.324544,
+    "bleu4": 0.227834
+  }
+]

@@ -1,0 +1,9 @@
+\section{D222 with full NER tuning}
+\subsection{Architecture}
+D222 is a 24-layer, width-896 causal decoder with grouped-query attention: 14 query heads share two key/value heads. Every fourth layer is global; others use a 512-token local window. The NER head adds a character BiGRU, boundary logits, and CRF.
+\subsection{Method}
+Full fine-tuning. The original source and run config are packaged alongside this section.
+\subsection{Local evaluation}
+Strict held-out macro-F1: 0.400950487. This is not a hidden Codabench score.
+\subsection{Reproducibility}
+The companion notebook and report were reconstructed after training. Original selected weights and course data remain in the separately named complete archive.

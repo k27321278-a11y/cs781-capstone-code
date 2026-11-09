@@ -1,0 +1,11 @@
+digraph G {graph [bgcolor="white",ranksep="0.35",nodesep="0.22",pad="0.22",fontname="DejaVu Sans",splines=ortho]; node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=12,color="#C7D2DE",fillcolor="#EEF3F8",fontcolor="#14243A",penwidth=1.2,margin="0.16,0.13"];edge [color="#61768D",arrowsize=0.7,penwidth=1.35];
+
+rankdir=TB;
+x [label="One token x: 768-dimensional row",fillcolor="#E7F4F0"];
+a [label="Branch A: a = x W₁\n768 → 2048; bias=False",fillcolor="#DBEAFE"];
+b [label="Branch B: b = x W₃\n768 → 2048; bias=False",fillcolor="#E6F7EA"];
+silu [label="SiLU(a) = a · sigmoid(a)\n2048 activations",fillcolor="#DBEAFE"];
+mult [label="Elementwise gate: z = SiLU(a) ⊙ b\n2048 features",fillcolor="#F0E9FF"];
+proj [label="Projection W₂: 2048 → 768\nOne token output: 768 features",fillcolor="#E7F4F0"];
+x->a;x->b;{rank=same;a;b}a->silu;silu->mult;b->mult;mult->proj;
+}

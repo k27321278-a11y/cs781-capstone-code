@@ -1,0 +1,27 @@
+[
+  {
+    "path": "artifacts/c1_scratch/metrics.jsonl",
+    "size": 556835,
+    "sha256": "7d5f007b3109b3cd0d0d7241f5f45ef2457177007dde98af2e7feededdd72b65"
+  },
+  {
+    "path": "artifacts/c1_scratch/run.json",
+    "size": 1256,
+    "sha256": "5cf5d9362c1f2ad35d1272f80b9ce63088d51c34b54e04360eb691bff681d9c6"
+  },
+  {
+    "path": "artifacts/c1_scratch/training_status.json",
+    "size": 416,
+    "sha256": "88e305bf25fa4581471552f40c5a4c01da4de1c571b02aafa77513c1faf6e2a3"
+  },
+  {
+    "path": "artifacts/pipeline.log",
+    "size": 8937,
+    "sha256": "90e1244cf027f736634d984c1e5ae8173cb406570eecc6bc1fb2b8bbb78ad4a5"
+  },
+  {
+    "path": "MANIFEST.json",
+    "size": 16129,
+    "sha256": "3a3a859e229afa72e79c2a7d542ac17518392d6a772afcd531e10cadec186b6e"
+  }
+]

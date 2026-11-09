@@ -1,0 +1,9 @@
+\section{B1 encoder-decoder with LoRA}
+\subsection{Architecture}
+The 6+6-layer B1 encoder-decoder supplies contextual decoder states. Additive low-rank updates train selected linear projections while the pretrained backbone weights remain frozen; a character BiGRU produces BIO tags.
+\subsection{Method}
+LoRA, rank 8. The original source and run config are packaged alongside this section.
+\subsection{Local evaluation}
+Strict held-out macro-F1: 0.386274524. This is not a hidden Codabench score.
+\subsection{Reproducibility}
+The companion notebook and report were reconstructed after training. Original selected weights and course data remain in the separately named complete archive.

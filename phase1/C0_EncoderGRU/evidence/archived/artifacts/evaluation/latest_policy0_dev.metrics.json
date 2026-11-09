@@ -1,0 +1,35 @@
+{
+  "bert_score_settings": {
+    "batch_size": 8,
+    "idf": false,
+    "lang": "en",
+    "model": "roberta-large",
+    "model_files": {
+      "config.json": "82ba49810e6441735e696033ac2512ee09da555507b2917ac3865b202d592cc3",
+      "merges.txt": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "model.safetensors": "047c85f0b96269cd62e6f732644f067004eebd95af5b5d35965ae2528f13bf38",
+      "tokenizer.json": "847bbeab6174d66a88898f729d52fa8d355fafe1bea101cf960dd404581df70e",
+      "vocab.json": "9e7f63c2d15d666b52e21d250d2e513b87c9b713cfa6987a82ed89e5e6e50655"
+    },
+    "offline": true,
+    "rescale_with_baseline": false,
+    "resolved_model": "FacebookAI/roberta-large",
+    "revision": "722cf37b1afa9454edce342e7895e588b6ff1d59"
+  },
+  "evaluator_sha256": "3f3a9e62be718b478e3f52b378fcc535350ab90b9cb84e3a4c49fec247abf1db",
+  "metrics": {
+    "bertscore_f1": 0.82053,
+    "bleu4": 0.10415,
+    "rouge_l_f1": 0.217502
+  },
+  "prediction_sha256": "5ecb9a7fba7016dd8a78f2b54f335cec35be06b1260e91fed54d3ba8cf2aedf2",
+  "raw_stdout": "Examples: 144\nBERTScore F1: 0.820530\nROUGE-L F1:   0.217502\nBLEU-4:       0.104150\n",
+  "reference_sha256": "96799fd819af9a59391469b1d8fe2d90548624d17948eb6a2fb1b983965dd0a4",
+  "versions": {
+    "bert-score": "0.3.13",
+    "huggingface-hub": "0.36.2",
+    "tokenizers": "0.21.4",
+    "torch": "2.5.1+cu121",
+    "transformers": "4.51.3"
+  }
+}

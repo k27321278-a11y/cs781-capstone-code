@@ -1,0 +1,9 @@
+\section{LegalSpan header attention and CRF}
+\subsection{Architecture}
+The selected LegalSpan LoRMA NER checkpoint is merged into the backbone, then fully tuned. A header-character BiGRU and four-head attention inform each character; a 25-tag CRF and boundary loss encourage coherent spans.
+\subsection{Method}
+Full tuning + header attention + CRF. The original source and run config are packaged alongside this section.
+\subsection{Local evaluation}
+Strict held-out macro-F1: 0.411516001. This is not a hidden Codabench score.
+\subsection{Reproducibility}
+The companion notebook and report were reconstructed after training. Original selected weights and course data remain in the separately named complete archive.

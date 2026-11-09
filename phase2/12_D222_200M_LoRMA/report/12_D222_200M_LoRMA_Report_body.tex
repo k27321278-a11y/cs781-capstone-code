@@ -1,0 +1,9 @@
+\section{D222 200M checkpoint + LoRMA}
+\subsection{Architecture}
+An intermediate D222 pretraining snapshot at about 200M supervised tokens initializes the same rank-8 LoRMA NER model. This isolates the effect of pretraining progress while retaining the NER mechanism.
+\subsection{Method}
+200M-token LM checkpoint, LoRMA+. The original source and run config are packaged alongside this section.
+\subsection{Local evaluation}
+Strict held-out macro-F1: 0.455429159. This is not a hidden Codabench score.
+\subsection{Reproducibility}
+The companion notebook and report were reconstructed after training. Original selected weights and course data remain in the separately named complete archive.

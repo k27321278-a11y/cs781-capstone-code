@@ -1,0 +1,167 @@
+B1 stage 1: scratch encoder-decoder pretraining with project-owned BPE on physical GPU0
+{"step": 8944, "input_tokens": 419251691, "target_tokens": 209936931, "example_cursor": 286208, "best_generation_f1": null}
+B1 stage 2: task-aligned continuation, dev selection, and official ZIP export
+{"phase": "prepare_B", "examples": 10000}
+{"phase": "prepare_B", "examples": 20000}
+{"phase": "prepare_B", "examples": 30000}
+{"phase": "prepare_B", "examples": 40000}
+{"phase": "prepare_B", "examples": 50000}
+{"phase": "prepare_B", "examples": 60000}
+{"phase": "prepare_B", "examples": 70000}
+{"phase": "prepare_B", "examples": 80000}
+{"phase": "prepare_B", "examples": 90000}
+{"phase": "prepare_B", "examples": 100000}
+{"phase": "prepare_B", "examples": 110000}
+{"phase": "prepare_B", "examples": 120000}
+{"phase": "prepare_B", "examples": 130000}
+{"phase": "prepare_B", "examples": 140000}
+{"phase": "prepare_B", "examples": 150000}
+{"phase": "prepare_B", "examples": 160000}
+{"phase": "prepare_B", "examples": 170000}
+{"phase": "prepare_B", "examples": 180000}
+{"phase": "B_generation", "completed": 10, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 20, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 30, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 40, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 50, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 60, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 70, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 80, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 90, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 100, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 110, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 120, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 130, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 140, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 144, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 10, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 20, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 30, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 40, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 50, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 59, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 69, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 79, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 89, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 99, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 109, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 119, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 129, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 139, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 10, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 20, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 30, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 40, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 50, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 60, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 70, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 80, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 90, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 100, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 110, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 120, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 130, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 140, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 144, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 10, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 20, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 30, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 40, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 50, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 60, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 70, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 80, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 90, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 100, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 110, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 120, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 130, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 140, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 144, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 10, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 20, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 30, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 40, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 50, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 59, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 69, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 79, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 89, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 99, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 109, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 119, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 129, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 139, "total": 144, "failures": 1}
+{"phase": "B_generation", "completed": 10, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 20, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 30, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 40, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 50, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 60, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 70, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 80, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 90, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 100, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 110, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 120, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 130, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 140, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 144, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 10, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 20, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 30, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 40, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 50, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 60, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 70, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 80, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 90, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 100, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 110, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 120, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 130, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 140, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 144, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 10, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 20, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 30, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 40, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 50, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 60, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 70, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 80, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 90, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 100, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 110, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 120, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 130, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 140, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 144, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 10, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 20, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 30, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 40, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 50, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 60, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 70, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 80, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 90, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 100, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 110, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 120, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 130, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 140, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 144, "total": 144, "failures": 0}
+{"phase": "B_generation", "completed": 10, "total": 127, "failures": 0}
+{"phase": "B_generation", "completed": 20, "total": 127, "failures": 0}
+{"phase": "B_generation", "completed": 30, "total": 127, "failures": 0}
+{"phase": "B_generation", "completed": 39, "total": 127, "failures": 1}
+{"phase": "B_generation", "completed": 49, "total": 127, "failures": 1}
+{"phase": "B_generation", "completed": 59, "total": 127, "failures": 1}
+{"phase": "B_generation", "completed": 69, "total": 127, "failures": 1}
+{"phase": "B_generation", "completed": 79, "total": 127, "failures": 1}
+{"phase": "B_generation", "completed": 89, "total": 127, "failures": 1}
+{"phase": "B_generation", "completed": 99, "total": 127, "failures": 1}
+{"phase": "B_generation", "completed": 109, "total": 127, "failures": 1}
+{"phase": "B_generation", "completed": 119, "total": 127, "failures": 1}
+ValueError: Generation is incomplete; saved records can be resumed

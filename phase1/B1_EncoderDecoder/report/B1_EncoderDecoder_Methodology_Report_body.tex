@@ -1,0 +1,3 @@
+\section{B1 own-BPE encoder-decoder}
+\subsection{Architecture} B1 retains the B0 six-encoder/six-decoder graph, but uses the handwritten byte-level BPE and a separate scratch/continuation pretraining lineage. This isolates tokenizer and training changes without claiming a different block graph.
+\subsection{Evidence} No independently verified Codabench score. Original source and logs are indexed alongside this section; the illustrated notebook was reconstructed after training.

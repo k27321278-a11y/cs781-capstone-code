@@ -1,0 +1,12 @@
+digraph G {graph [bgcolor="white",ranksep="0.35",nodesep="0.22",pad="0.22",fontname="DejaVu Sans",splines=ortho]; node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=12,color="#C7D2DE",fillcolor="#EEF3F8",fontcolor="#14243A",penwidth=1.2,margin="0.16,0.13"];edge [color="#61768D",arrowsize=0.7,penwidth=1.35];
+
+rankdir=TB;
+cache [label="200M-token train cache / 5M-token validation cache\nuint16; separate documents by deterministic hash"];
+samp [label="Training micro-batch: 1 × 2048 IDs\nTarget: shifted by one token"];
+forward [label="Forward + mean cross-entropy\n1 × 2048 × 32768 logits",fillcolor="#DBEAFE"];
+back [label="Backward on loss / 32\nAccumulate 32 micro-batches"];
+opt [label="Clip grad norm ≤1.0\nAdamW optimizer step + cosine LR",fillcolor="#E7F4F0"];
+val [label="Every 100 steps or last step\n32 validation micro-batches; no gradients",fillcolor="#F0E9FF"];
+best [label="Save latest.pt\nCopy to best.pt only if validation NLL improves"];
+cache->samp->forward->back->opt->val->best;
+}

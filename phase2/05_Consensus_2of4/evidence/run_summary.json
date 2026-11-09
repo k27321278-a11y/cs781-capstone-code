@@ -1,0 +1,41 @@
+{
+  "model": "Exact-span two-of-four consensus",
+  "family": "Ensemble",
+  "method": "Two-of-four exact span vote",
+  "status": "Pre-deadline export; rule selected on validation",
+  "local_validation_macro_f1": 0.4630667646052263,
+  "codabench_hidden_score": null,
+  "submission_filename": "UPLOAD_Phase2_05_Consensus_2of4.zip",
+  "submission_sha256": "c7ebcdda565008949c9df37578610277161520173db5ef90a4b34e533c0d36f0",
+  "selected_checkpoint_sha256": null,
+  "archive": {},
+  "source_hashes": {
+    "scripts/build_consensus.py": "91c8b54a0f8723b4c29486e9ccecbd4ba96404f7c6762998553756191116b3a6",
+    "lner/data.py": "5192745f04d039a75e1066ee47e89c29a5f3279ef80fdb9c234cc221424fc7c4"
+  },
+  "run": {
+    "method": "two_of_four_exact_span_agreement",
+    "source_models": [
+      {
+        "model": "01_legalspan_lorma",
+        "prediction_sha256": "b26d7dc4b8ac8281ef8a3a9f3d570e32668a2fc6d9088434bd15a101912d0cd6",
+        "checkpoint_sha256": "609c3b97603769ed8035900cad20121fd3160a5e8cd36ae1d2ba32a7a9ef9819"
+      },
+      {
+        "model": "02_b1_lora",
+        "prediction_sha256": "7668f7d2c941578ba0b7860e5a879ab8fc88f1a230b4f16540fe70e0a6d089cb",
+        "checkpoint_sha256": "3f2b49fabeb6396549bff21c75481e7406f4a5897d9e7b15d56310d0fadc46d7"
+      },
+      {
+        "model": "03_c1_full",
+        "prediction_sha256": "090088e3e034fbcfed3267d3bf46ef9c6a603110407839546b23b943d9fffe54",
+        "checkpoint_sha256": "1e5df7c9cca24f1d4113618e0d9e1f2cdee85db02b931fea7a4d1c9105f012a7"
+      },
+      {
+        "model": "04_a0_distilled",
+        "prediction_sha256": "6b2ddb633ea55ad837549ffe06c3a26239204c92cfd133986f6aa9856daf144e",
+        "checkpoint_sha256": "2e605bafac82bfab0bc6d584732c2923e079f1038a3951d4f536d299740fc0d3"
+      }
+    ]
+  }
+}

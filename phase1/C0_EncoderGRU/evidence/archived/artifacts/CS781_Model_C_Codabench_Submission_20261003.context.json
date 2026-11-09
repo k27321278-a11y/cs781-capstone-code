@@ -1,0 +1,38 @@
+{
+  "architecture": "C",
+  "checkpoint_run_dir": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/c_phase1_10pass_20261003",
+  "checkpoint_sha256": "263bae20b9f62e189413a0f2e6ba9ac38f13539723c3a4532d9938e80265395a",
+  "checkpoint_state": {
+    "best_generation_f1": null,
+    "example_cursor": 743456,
+    "input_tokens": 837582775,
+    "step": 23233,
+    "target_tokens": 419831985
+  },
+  "code_sha256": "cd79bc27fa72c97af27fb73771a97e8281f694a3291fa8ecdc8df8d435be6020",
+  "completed_parent_state": {
+    "best_generation_f1": null,
+    "example_cursor": 743456,
+    "input_tokens": 837582775,
+    "step": 23233,
+    "target_tokens": 419831985
+  },
+  "data_manifest_sha256": "67c07b4b0c5b2e970f222ca04bf396f9262753ea957304f27dab1b6a9afc31a1",
+  "dataset_revision": "89edba6a44d6bb9593fd13b6895b5cd3b06eb82e",
+  "generation_config": {
+    "max_new_tokens": 2048,
+    "repetition_penalty": 1.15,
+    "seed": 781,
+    "strategy": "greedy",
+    "target_words": 128,
+    "temperature": 0.8,
+    "top_p": 0.9
+  },
+  "orchestration_sha256": "409414ee0764512e8d82590241b0a70fde8e7b54659e46c74a97b5ec3d928b0a",
+  "prediction_count": 1000,
+  "prediction_zip_sha256": "20e7a0be32afc3e775eec6e397e05cb19499a33745b80484c2f873ac1fb84183",
+  "selection_sha256": "b222106fbd14a5bbcdd875d174edc4edd313b9b85b34608e164cc904cd69a287",
+  "synthetic_smoke": false,
+  "test_sha256": "614f348b3dcbb2a9f43706cd239438386dc396246cd5cc685a5ccb6eb06b7218",
+  "tokenizer_sha256": "9b32abd6b09b9c30fcd6cccac236d5815a8740f35d4b70993cd4390a18a72e0c"
+}

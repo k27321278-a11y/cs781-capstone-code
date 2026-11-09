@@ -1,0 +1,48 @@
+{
+  "seed": 781,
+  "max_chars": 1600,
+  "overlap": 240,
+  "max_tokens": 768,
+  "grad_accum": 8,
+  "max_epochs": 12,
+  "patience": 3,
+  "data_root": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase2_20261011/data/Phase_2_LNER",
+  "output_root": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase2_20261011/runs",
+  "tokenizers": {
+    "own": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/own_bpe_20261006/tokenizer.json",
+    "a0": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/official_100m_chars_per_source/prepared/tokenizer.json"
+  },
+  "experiments": [
+    {
+      "name": "01_legalspan_lorma", "family": "legalspan", "method": "lorma",
+      "encoding": "own", "rank": 8, "alpha": 32,
+      "base_lr": 0.0002, "head_lr": 0.0005,
+      "checkpoint": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/a_legalspan_v1/experiment/full/checkpoints/latest.pt",
+      "tokenizer": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/a_legalspan_v1/prepared_v2/tokenizer.json",
+      "submission_name": "UPLOAD_Phase2_01_LegalSpan_LORMA.zip"
+    },
+    {
+      "name": "02_b1_lora", "family": "b1", "method": "lora",
+      "encoding": "own", "rank": 8, "alpha": 32,
+      "base_lr": 0.0002, "head_lr": 0.0005,
+      "checkpoint": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/own_bpe_20261006/b1_improved/checkpoints/latest.pt",
+      "tokenizer": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/own_bpe_20261006/tokenizer.json",
+      "submission_name": "UPLOAD_Phase2_02_B1_LoRA.zip"
+    },
+    {
+      "name": "03_c1_full", "family": "c1", "method": "full",
+      "encoding": "own", "base_lr": 0.00002, "head_lr": 0.0003,
+      "checkpoint": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/own_bpe_20261006/c1_scratch/checkpoints/latest.pt",
+      "tokenizer": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/own_bpe_20261006/tokenizer.json",
+      "submission_name": "UPLOAD_Phase2_03_C1_Full.zip"
+    },
+    {
+      "name": "04_a0_distilled", "family": "a0", "method": "kd",
+      "encoding": "a0", "base_lr": 0.00002, "head_lr": 0.0003,
+      "teacher": "02_b1_lora",
+      "checkpoint": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/a_phase1_5pass_20261003/checkpoints/latest.pt",
+      "tokenizer": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/official_100m_chars_per_source/prepared/tokenizer.json",
+      "submission_name": "UPLOAD_Phase2_04_A0_Distilled.zip"
+    }
+  ]
+}

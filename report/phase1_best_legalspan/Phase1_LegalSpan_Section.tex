@@ -1,0 +1,120 @@
+% Evidence-backed Phase 1 section. Integrate into the official seven-phase
+% Report.tex template, retaining its compulsory top-level section order.
+% This section was drafted with Codex assistance; disclose that truthfully.
+
+\subsection{Phase 1 foundation: Improved A / LegalSpan}
+Phase~1 required a legal language model trained from scratch on the four
+provided sources---Acts, High Court judgments, Supreme Court judgments, and
+Tribunal documents---to generate a 128-word continuation for each 512-word
+prompt. BERTScore F1 was the primary metric; ROUGE-L F1 and BLEU-4 were
+secondary. The course supplied no public development split, so the archived
+pipeline constructed seeded train, development, and confirmation partitions.
+It grouped exact and near-duplicate documents by normalized SHA-256 and
+five-word-shingle SimHash before assignment. The official complete corpus was
+described as exceeding 4.5 billion tokens; the selected run trained on
+209,927,459 supervised continuation tokens, not the full corpus.
+
+The tokenizer was a handwritten, reversible byte-level BPE learner and codec,
+fitted on training documents only. It sampled 25 million characters from each
+of the four sources and produced a vocabulary of 32,768 tokens. The prepared
+stream contained 189,729 training examples, 144 development prompts, and 127
+confirmation prompts. It alternated exact 512-word/128-word continuation
+windows with nonoverlapping token windows whose prefix was cut at a seeded
+position. One quarter of documents used the model's 8,192-token maximum for
+token windows; the remainder used 2,047-token windows. Only suffix positions
+contributed to the training loss.
+
+LegalSpan contained 112,095,887 parameters. Its backbone was a 12-block
+causal Transformer of width 768 with 12 attention heads of width 64,
+2,048-dimensional SwiGLU feed-forward layers, pre-RMSNorm, RoPE, and tied
+input/output embeddings. The last four blocks added a 128-dimensional
+prompt-memory route. At each generation position, a projected query scored
+eligible observed prompt tokens, with a learned bias from heuristic prompt
+roles and a continuity feature based on up to four already-observed tokens.
+The resulting prompt context passed through a sigmoid-gated residual fusion.
+Prompt states preceding the continuation boundary remained unchanged. A
+second learned gate mixed the normal vocabulary probability with copy mass
+aggregated over prompt token IDs:
+\begin{equation}
+P(y_t\mid x_{\leq t})=(1-g_t)P_{\mathrm{vocab}}(y_t\mid x_{\leq t})
+ +g_tP_{\mathrm{copy}}(y_t\mid x_{\leq t}).
+\end{equation}
+The role cues were surface heuristics, not gold entity labels. The architecture
+combined established causal-Transformer and pointer-generator ideas in a
+course-specific route/copy hypothesis; it does not claim to invent copying.
+
+The recovered training record specifies AdamW, peak learning rate
+$3\times10^{-4}$, betas $(0.9,0.95)$, weight decay $0.1$, 2\% linear warm-up,
+cosine decay to 10\% of the peak rate, BF16 autocast, gradient clipping at
+$1.0$, and 32 gradient-accumulation examples per optimizer step. The run
+completed 11,888 steps and processed 581,555,637 input tokens in about 6.11
+hours. Input tokens and supervised target tokens count different quantities.
+The pipeline compared checkpoints and three decoding policies on development
+data, selecting nucleus sampling with temperature $0.8$, top-$p=0.9$, and
+repetition penalty $1.05$. A separate confirmation set was evaluated after
+selection. The final generator enforced exactly 128 complete words and wrote
+one root-level \texttt{prediction.json} for 1,000 official test IDs.
+
+\begin{table}[H]
+\centering
+\caption{Historical Phase~1 Codabench scores from preserved screenshots,
+not a fresh leaderboard retrieval.}
+\begin{tabular}{llc}
+\toprule
+Lineage & Computation graph & BERTScore F1 \\
+\midrule
+A0 & Dense causal decoder & 0.8304 \\
+B0 & Encoder--decoder Transformer & 0.7972 \\
+C & Prompt encoder plus GRU generator & 0.8237 \\
+\textbf{Improved A / LegalSpan} & Routed/copy causal decoder & \textbf{0.8341} \\
+Improved B & B0 graph with continued task-aligned training & 0.8244 \\
+\bottomrule
+\end{tabular}
+\end{table}
+LegalSpan was the highest evidenced Phase~1 submission, 0.0037 above A0.
+B1 and C1 own-BPE reruns had valid prediction ZIPs but no independently
+verified Codabench scores in the preserved record. D222 was built after the
+Phase~1 deadline and is therefore excluded from this on-time comparison.
+
+\begin{table}[H]
+\centering
+\caption{Matched local route variants on separate held-out sets.}
+\begin{tabular}{lcc}
+\toprule
+Variant & Dev BERTScore F1 ($n=144$) & Confirmation F1 ($n=127$) \\
+\midrule
+Dense control & 0.865228 & 0.865052 \\
+Generic prompt route & \textbf{0.868770} & 0.865343 \\
+Full role/continuity route & 0.867648 & \textbf{0.869258} \\
+\bottomrule
+\end{tabular}
+\end{table}
+The generic route exceeded the full route on the development split, while the
+full route scored higher on confirmation. The full route's development
+ROUGE-L F1 and BLEU-4 were 0.350857 and 0.264881; on confirmation they were
+0.368787 and 0.287066. A paired 5,000-resample bootstrap on archived
+per-example BERTScore values gave a full-minus-generic mean difference of
+$-0.001122$ on development data (95\% interval $[-0.004886,0.002749]$) and
+$0.003915$ on confirmation data (95\% interval
+$[-0.001572,0.009617]$). These intervals include zero. The small held-out
+sets and selection over checkpoints/decoding policies do not establish a
+general causal gain from the full route.
+
+The experiments directly examined an own BPE, four-source sampling,
+two training-window types, long-context capacity, a fixed training schedule,
+checkpoint/decoding selection, and dense/generic/full routing. They did not
+form a full factorial study of tokenizer sizes, source ratios, context
+lengths, optimizer settings, or compression. Archived training loss is not a
+validation-perplexity curve, and generated-text BERTScore does not verify
+legal factuality or citation correctness. The generic route's better local
+development score is retained as a negative result for the full-route
+hypothesis. The historical model-code and results provenance are preserved in
+the October~6 archive and its SHA manifests; the companion notebook in the
+code package was assembled later and must not be described as the original
+executed GPU notebook.
+
+% Sources to merge into the template bibliography: CS781 Capstone Document
+% Phase 1 sections 7.1--7.9; Sennrich et al. 2016 BPE (ACL P16-1162);
+% Touvron et al. 2023 LLaMA (arXiv 2302.13971); See et al. 2017
+% pointer-generator (ACL P17-1099); Gu et al. 2016 CopyNet (ACL P16-1154).
+% Phase 1 code and documentation: https://github.com/k27321278-a11y/cs781-capstone-code

@@ -1,0 +1,9 @@
+{
+  "model": {"vocab_size":32768,"max_seq_len":2048,"n_layers":12,"d_model":768,"n_heads":12,"d_head":64,"d_ff":2048,"rope_theta":10000.0,"dropout":0.0,"gradient_checkpointing":true},
+  "train": {"micro_batch_size":1,"grad_accum_steps":32,"learning_rate":0.0003,"min_lr_ratio":0.1,"warmup_ratio":0.02,"weight_decay":0.1,"beta1":0.9,"beta2":0.95,"eps":1e-8,"grad_clip":1.0,"save_every":100,"log_every":10,"seed":781,"device":"cuda"},
+  "decoding": [
+    {"strategy":"greedy","repetition_penalty":1.0},
+    {"strategy":"greedy","repetition_penalty":1.05},
+    {"strategy":"nucleus","temperature":0.8,"top_p":0.9,"repetition_penalty":1.05,"seed":781}
+  ]
+}

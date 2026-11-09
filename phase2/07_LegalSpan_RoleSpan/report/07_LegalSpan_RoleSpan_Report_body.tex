@@ -1,0 +1,9 @@
+\section{LegalSpan coarse spans and legal roles}
+\subsection{Architecture}
+This warm-started LegalSpan variant first proposes generic spans, then classifies each span into one of six legal roles from boundary, pooled, header, and length features. It also contains a repeated-name consistency mechanism.
+\subsection{Method}
+Coarse span + six-role classifier. The original source and run config are packaged alongside this section.
+\subsection{Local evaluation}
+Strict held-out macro-F1: 0.408720599. This is not a hidden Codabench score.
+\subsection{Reproducibility}
+The companion notebook and report were reconstructed after training. Original selected weights and course data remain in the separately named complete archive.

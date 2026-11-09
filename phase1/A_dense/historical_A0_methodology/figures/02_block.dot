@@ -1,0 +1,15 @@
+digraph G {graph [bgcolor="white",ranksep="0.35",nodesep="0.22",pad="0.22",fontname="DejaVu Sans",splines=ortho]; node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=12,color="#C7D2DE",fillcolor="#EEF3F8",fontcolor="#14243A",penwidth=1.2,margin="0.16,0.13"];edge [color="#61768D",arrowsize=0.7,penwidth=1.35];
+
+rankdir=TB;
+x [label="H(l) input: 2048 × 768",fillcolor="#E7F4F0"];
+n1 [label="RMSNorm₁ (per-token 768 features)"];
+mha [label="MHA: fused QKV → 12 heads\nRoPE(Q,K) → causal SDPA → concat → Wo",fillcolor="#DBEAFE"];
+add1 [label="Residual #1: U = H(l) + MHA(RMSNorm₁(H(l)))",fillcolor="#E7F4F0"];
+n2 [label="RMSNorm₂ (per-token 768 features)"];
+ffn [label="SwiGLU:\nSiLU(UW₁) ⊙ (UW₃) → W₂",fillcolor="#F0E9FF"];
+add2 [label="Residual #2: H(l+1) = U + FFN(RMSNorm₂(U))",fillcolor="#E7F4F0"];
+out [label="H(l+1) output: 2048 × 768",fillcolor="#E7F4F0"];
+x->n1->mha->add1->n2->ffn->add2->out;
+x->add1 [constraint=false,style=dashed,color="#20836F"];
+add1->add2 [constraint=false,style=dashed,color="#20836F"];
+}

@@ -1,0 +1,9 @@
+\section{LegalSpan with LoRMA+}
+\subsection{Architecture}
+The 12-layer causal LegalSpan backbone remains frozen while rank-8 multiplicative adapters modify selected projections. A character-level bidirectional GRU and 25-way BIO classifier align token features with exact character offsets.
+\subsection{Method}
+LoRMA+, rank 8. The original source and run config are packaged alongside this section.
+\subsection{Local evaluation}
+Strict held-out macro-F1: 0.411641173. This is not a hidden Codabench score.
+\subsection{Reproducibility}
+The companion notebook and report were reconstructed after training. Original selected weights and course data remain in the separately named complete archive.

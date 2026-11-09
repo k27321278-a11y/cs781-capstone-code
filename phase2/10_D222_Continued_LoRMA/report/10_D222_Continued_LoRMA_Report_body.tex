@@ -1,0 +1,9 @@
+\section{Continued D222 pretraining + LoRMA}
+\subsection{Architecture}
+A later own D222 language-model checkpoint, selected after continued pretraining, replaces the earlier initialization. The same rank-8 LoRMA NER method and CRF head then train on the Phase 2 labels.
+\subsection{Method}
+Continued LM pretraining, LoRMA+. The original source and run config are packaged alongside this section.
+\subsection{Local evaluation}
+Strict held-out macro-F1: 0.436863579. This is not a hidden Codabench score.
+\subsection{Reproducibility}
+The companion notebook and report were reconstructed after training. Original selected weights and course data remain in the separately named complete archive.

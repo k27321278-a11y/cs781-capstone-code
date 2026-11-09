@@ -1,0 +1,6 @@
+torch>=2.5,<3
+numpy>=1.26,<3
+tokenizers>=0.20
+bert-score==0.3.13
+rouge-score
+nltk
