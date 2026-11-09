@@ -8,21 +8,41 @@ Phase 4 Court Judgment Prediction predicts binary outcome 0/1 from legal case te
 
 A zero-initialized up projection lets each width-32 bottleneck begin as an identity residual on selected feed-forward output layers. The task evidence head is trained alongside the adapters. Data flow: Legal case -> D222 own tokenizer/backbone -> Frozen D222 with width-32 residual FFN adapters -> Token evidence pooling -> Ordered chunk BiGRU -> 2-class logits -> prediction.json.
 
-## Training design and checkpoint selection
+## Scientific rationale
 
-Frozen D222 with width-32 residual FFN adapters. Executed v3 runner: `code/v3_t4x2.ipynb`, `code/runner/phase4_cjpe/kaggle_runner.py` with `published_v3_schedule.json`; the six jobs share `EvidenceCaseModel` in `code/runner/phase4_cjpe/models.py`.
+D222: 24-layer causal decoder with grouped-query attention and alternating local/global context This experiment isolates the effect of its recorded adaptation or document-head mechanism while retaining the original task and export contract. Comparisons across different backbones, training budgets or data coverage remain descriptive rather than controlled causal estimates.
 
 ## Exact run configuration and resource tradeoff
 
 Experiment family d222; adaptation method adapters; original parent checkpoint SHA-256 08a737d002a71a90ad21f350e25a76f1e70eb172badf0671ff8818d96ea5c46f. Configuration: 256 tokens/chunk, 8 chunks/case, 8192 source characters considered, maximum 12000 training cases, 256 holdout cases per class. Optimizer configuration: backbone learning rate 0.0003, head learning rate 0.0003, gradient accumulation 8, max epochs 4, planned training hours 2.5. Recorded 353 optimizer updates and 2824 seen training examples; selected step 353. Selected checkpoint SHA-256 d08fd295c77a6e4231fedae2f8dac13258e285434bff31cd7a77209018f12840; parameters 224620682, trainable 2540810. Original run completed after nominal deadline: True.
 
-## Measured results
+## Exact prediction path
 
-Original Kaggle run: complete; 353 optimizer updates; selected step 353. Official 994-case dev macro-F1 **0.530606** at recorded threshold 0.367270; default 0.5 dev macro-F1 0.442347. Verified prediction ZIP SHA-256 `3c0c236761a6fdc6d87cfac3ebf94cbc518e3f5229b89a02c50f7e888250c35d`, exactly 1,517 IDs. No finished Codabench score for this exact export is established by the supplied screenshot.
+For each unpadded chunk, the original backbone yields contextual token states. The head layer-normalizes them, then makes a softmax-weighted mixture of token mean, learned token attention and the last token. Normalized chunk positions enter through a learned projection. A bidirectional GRU contextualizes chunks in document order; learned attention and a chunk mean are mixed, then LayerNorm/dropout and a two-logit classifier predict the binary judgment.
 
 ## Evaluation mechanics
 
 Official labeled dev cases 994; class supports [497, 497]; confusion matrix rows true 0/1, columns predicted 0/1: [[155, 342], [96, 401]]. At selected threshold 0.367270, macro-F1 0.530606; at threshold 0.5, macro-F1 0.442347. The report keeps these thresholds separate because threshold choice changes the binary predictions. The submitted ZIP has 1,517 unique test IDs and binary labels; no test labels were available to this run.
+
+## Adaptation mechanism
+
+Every selected feed-forward w2 output gets a width-32 down/GELU/up residual adapter. Zero initialization of the up projection makes the initial addition zero while the original backbone is frozen.
+
+## Training design and checkpoint selection
+
+Frozen D222 with width-32 residual FFN adapters. Executed v3 runner: `code/v3_t4x2.ipynb`, `code/runner/phase4_cjpe/kaggle_runner.py` with `published_v3_schedule.json`; the six jobs share `EvidenceCaseModel` in `code/runner/phase4_cjpe/models.py`.
+
+## Training objective and validation boundary
+
+The runner uses AdamW with separate backbone/head learning rates and weight decay 0.01. For each training example it computes class-weighted cross-entropy; weights are capped at 3.0. It periodically evaluates the fixed train-only holdout, saves the best checkpoint, and exports predictions from selected weights. A fixed, balanced training-only holdout of up to 512 cases selected the checkpoint and decision threshold. The official 994-case labeled dev set was evaluated after that selection; selected-threshold dev macro-F1 was 0.530606, while default 0.5 gave 0.442347. The hidden test labels were not available. These dev metrics are not the Codabench score shown in the user screenshot.
+
+## Measured results
+
+Original Kaggle run: complete; 353 optimizer updates; selected step 353. Official 994-case dev macro-F1 **0.530606** at recorded threshold 0.367270; default 0.5 dev macro-F1 0.442347. Verified prediction ZIP SHA-256 `3c0c236761a6fdc6d87cfac3ebf94cbc518e3f5229b89a02c50f7e888250c35d`, exactly 1,517 IDs. No finished Codabench score for this exact export is established by the supplied screenshot.
+
+## Source and evidence trail
+
+Initial six-job Kaggle v3 runner; the per-model notebook in code/ is prepared source, while v3_t4x2.ipynb and archived Kaggle outputs identify the executed run. The code SHA-256 manifest, original run records, selected-checkpoint identity, and verified prediction archive are indexed in evidence/README.md. This report is a later reconstruction of preserved evidence, not a claim that its companion notebook ran the original training.
 
 ## Prediction contract and verification
 

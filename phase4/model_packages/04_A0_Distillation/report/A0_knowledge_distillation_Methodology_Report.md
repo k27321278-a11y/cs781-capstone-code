@@ -8,21 +8,41 @@ Phase 4 Court Judgment Prediction predicts binary outcome 0/1 from legal case te
 
 The twelve-layer causal A0 student learns CJPE labels and a frozen, larger, own D222 LoRMA teacher's class distribution. Teacher targets are created only for training IDs; temperature-scaled KL is mixed with supervised loss. Data flow: Legal case -> A0 own tokenizer/backbone -> Full A0 student tuning with teacher soft targets -> Token evidence pooling -> Ordered chunk BiGRU -> 2-class logits -> prediction.json.
 
-## Training design and checkpoint selection
+## Scientific rationale
 
-Full A0 student tuning with teacher soft targets. Executed v3 runner: `code/v3_t4x2.ipynb`, `code/runner/phase4_cjpe/kaggle_runner.py` with `published_v3_schedule.json`; the six jobs share `EvidenceCaseModel` in `code/runner/phase4_cjpe/models.py`.
+A0: 12-layer causal Transformer decoder This experiment isolates the effect of its recorded adaptation or document-head mechanism while retaining the original task and export contract. Comparisons across different backbones, training budgets or data coverage remain descriptive rather than controlled causal estimates.
 
 ## Exact run configuration and resource tradeoff
 
 Experiment family a0; adaptation method full; original parent checkpoint SHA-256 1e8aca9800b87e952ed82e54307dd874220845d6a8545d2568bb743993cfb9dc. Configuration: 256 tokens/chunk, 8 chunks/case, 8192 source characters considered, maximum 12000 training cases, 256 holdout cases per class. Optimizer configuration: backbone learning rate 1e-05, head learning rate 0.0003, gradient accumulation 8, max epochs 4, planned training hours 2.5. Recorded 700 optimizer updates and 5600 seen training examples; selected step 700. Selected checkpoint SHA-256 47df27c673d6ee7619853765d7ad3112ece96bfc9bee9780f30dc606bce3de98; parameters 111113098, trainable 111113098. Original run completed after nominal deadline: True.
 
-## Measured results
+## Exact prediction path
 
-Original Kaggle run: complete; 700 optimizer updates; selected step 700. Official 994-case dev macro-F1 **0.563179** at recorded threshold 0.317929; default 0.5 dev macro-F1 0.367628. Verified prediction ZIP SHA-256 `4e26e303cdfc2681221be1e6fbf54be9fa07d114e4386f81cd89c128cf686ec2`, exactly 1,517 IDs. The teacher record and training-only target cache are copied in `evidence/`. User-provided Codabench screenshot: **0.5691** (finished submission).
+For each unpadded chunk, the original backbone yields contextual token states. The head layer-normalizes them, then makes a softmax-weighted mixture of token mean, learned token attention and the last token. Normalized chunk positions enter through a learned projection. A bidirectional GRU contextualizes chunks in document order; learned attention and a chunk mean are mixed, then LayerNorm/dropout and a two-logit classifier predict the binary judgment.
 
 ## Evaluation mechanics
 
 Official labeled dev cases 994; class supports [497, 497]; confusion matrix rows true 0/1, columns predicted 0/1: [[384, 113], [305, 192]]. At selected threshold 0.317929, macro-F1 0.563179; at threshold 0.5, macro-F1 0.367628. The report keeps these thresholds separate because threshold choice changes the binary predictions. The submitted ZIP has 1,517 unique test IDs and binary labels; no test labels were available to this run.
+
+## Adaptation mechanism
+
+All original backbone weights are trainable, along with the task head. A0 is a full-tuned student. Frozen D222 LoRMA teacher logits are cached on training IDs only. The student loss mixes supervised cross-entropy and temperature-2 KL, each at weight 0.5; teacher targets do not include dev/test labels.
+
+## Training design and checkpoint selection
+
+Full A0 student tuning with teacher soft targets. Executed v3 runner: `code/v3_t4x2.ipynb`, `code/runner/phase4_cjpe/kaggle_runner.py` with `published_v3_schedule.json`; the six jobs share `EvidenceCaseModel` in `code/runner/phase4_cjpe/models.py`.
+
+## Training objective and validation boundary
+
+The runner uses AdamW with separate backbone/head learning rates and weight decay 0.01. For each training example it computes class-weighted cross-entropy; weights are capped at 3.0. It periodically evaluates the fixed train-only holdout, saves the best checkpoint, and exports predictions from selected weights. The A0 student additionally uses the teacher KL term described above. A fixed, balanced training-only holdout of up to 512 cases selected the checkpoint and decision threshold. The official 994-case labeled dev set was evaluated after that selection; selected-threshold dev macro-F1 was 0.563179, while default 0.5 gave 0.367628. The hidden test labels were not available. These dev metrics are not the Codabench score shown in the user screenshot.
+
+## Measured results
+
+Original Kaggle run: complete; 700 optimizer updates; selected step 700. Official 994-case dev macro-F1 **0.563179** at recorded threshold 0.317929; default 0.5 dev macro-F1 0.367628. Verified prediction ZIP SHA-256 `4e26e303cdfc2681221be1e6fbf54be9fa07d114e4386f81cd89c128cf686ec2`, exactly 1,517 IDs. The teacher record and training-only target cache are copied in `evidence/`. User-provided Codabench screenshot: **0.5691** (finished submission).
+
+## Source and evidence trail
+
+Initial six-job Kaggle v3 runner; the per-model notebook in code/ is prepared source, while v3_t4x2.ipynb and archived Kaggle outputs identify the executed run. The code SHA-256 manifest, original run records, selected-checkpoint identity, and verified prediction archive are indexed in evidence/README.md. This report is a later reconstruction of preserved evidence, not a claim that its companion notebook ran the original training.
 
 ## Prediction contract and verification
 

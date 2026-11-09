@@ -1,0 +1,64 @@
+{
+  "sha256": "d9acd7b64973e6e815f743003eca864ff7b569590bdf53fcef743f1cc996728a",
+  "bytes": 5598,
+  "cases": 1517,
+  "root_prediction_json_only": true,
+  "crc_verified": true,
+  "exact_ids_verified": true,
+  "submission": "/kaggle/working/CS781_Phase4_EvidenceV2_20261022/runs/02_B1_Partial_KaggleEvidenceV2/exports/final/UPLOAD_Phase4_02_B1_Partial_KaggleEvidenceV2.zip",
+  "dev_metrics": {
+    "macro_f1": 0.5945296959960975,
+    "precision": 0.6786885245901639,
+    "recall": 0.4164989939637827,
+    "confusion_matrix": [
+      [
+        399,
+        98
+      ],
+      [
+        290,
+        207
+      ]
+    ],
+    "class_support": [
+      497,
+      497
+    ],
+    "threshold": 0.73028963804245,
+    "cases": 994,
+    "at_default_threshold": {
+      "macro_f1": 0.39743707796193983,
+      "precision": 0.5120925341745531,
+      "recall": 0.9798792756539235,
+      "confusion_matrix": [
+        [
+          33,
+          464
+        ],
+        [
+          10,
+          487
+        ]
+      ],
+      "class_support": [
+        497,
+        497
+      ],
+      "threshold": 0.5,
+      "cases": 994
+    },
+    "probability_quantiles": [
+      0.02082439325749874,
+      0.5628644406795502,
+      0.6265598237514496,
+      0.6858179569244385,
+      0.7463122457265854,
+      0.8201909363269807,
+      0.992717981338501
+    ]
+  },
+  "stage": "final",
+  "finished_utc": "2026-10-22T02:34:37.813082+00:00",
+  "hidden_leaderboard_score": null,
+  "official_evaluator_passed": true
+}

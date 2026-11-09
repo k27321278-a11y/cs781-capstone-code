@@ -10,6 +10,14 @@ Binary Court Judgment Prediction from long legal case text. This is a prediction
 
 **Training/adaptation:** Four inputs fixed from prior evidence; L2 logistic stack C=0.1 fit on 512 disjoint train calibration examples; five-fold calibration CV; threshold 0.5. Official dev used only to report.
 
+## Architecture and experiment details
+
+Prediction-level B1 ensemble, not an additional neural backbone. For a case, stack the base-model probabilities into vector p. Compute logit = intercept + Σ(coefficient_i × p_i), apply sigmoid, and output 1 if the resulting probability reaches the recorded threshold. Every base probability comes from an independently trained B1 model; no backbone weight is updated when fitting the stack.
+
+L2-regularized logistic regression combines 4 aligned model probabilities: v7_transformer, v6_transformer, v5_gru, v4_reference. The stored coefficients are 0.5568, 0.3330, 0.3002, 0.3513 and intercept -0.0340.
+
+See [the technical reference](docs/TECHNICAL_REFERENCE.md) for the recorded configuration, validation boundary, and source-level mechanism. The [recorded trace](figures/recorded_trace.svg) is drawn from archived run records.
+
 ## Results and provenance
 
 Five-fold train-calibration CV macro-F1 **0.710655** on 512 cases. Exploratory official 994-case dev macro-F1 **0.693956**. Verified 1,517-ID ZIP SHA-256 `b341bb9d03656077c32ffd77cf4c60f9cb38ac55f6d7e583cb40080d0761e85e`.
@@ -21,6 +29,7 @@ User-provided Codabench screenshot: **0.6723** (finished submission). Codabench 
 - `code/`: exact source/config snapshot from the repository's Phase 4 code area; the preserved runner or builder is identified in `docs/CODE_MAP.md`.
 - `notebooks/11_B1_Stack4_Explained.ipynb`: later illustrated, unexecuted companion. Original runnable notebooks, where available, are in `code/`.
 - `evidence/`: compact copied original records with the selected configuration, training log and export verification.
+- `evidence/SOURCE_HASHES.json` and `evidence/README.md`: exact source hashes and an index of copied run records.
 - `submission/`: original verified prediction ZIP, not a report/code submission bundle.
 - `report/`: methodology PDF, editable LaTeX body, and Markdown text.
 - `figures/architecture.svg`: data flow.

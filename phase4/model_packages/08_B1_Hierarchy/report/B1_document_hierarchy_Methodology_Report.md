@@ -8,21 +8,41 @@ Phase 4 Court Judgment Prediction predicts binary outcome 0/1 from legal case te
 
 B1 6-encoder/6-decoder original Phase 1 backbone; 512 tokens per chunk, 16 ordered chunks per case, overlap 100, tail sampling. Two document Transformer blocks followed by bidirectional GRU. Token representation uses a learned mixture of mean, attention and last content token; position enters before document aggregation. The final learned attention pools document states for two-class logits. Data flow: Legal case -> B1 6+6 backbone -> 512×16 windows -> Token evidence mix -> Two document Transformer blocks followed by bidirectional GRU -> Attention pool -> Binary ZIP.
 
-## Training design and checkpoint selection
+## Scientific rationale
 
-Staged B1 fine-tuning; document head mode `transformer_gru`. Original B1 study notebook lineage `code/v1.ipynb` through `code/v4.ipynb`; latest source snapshot `code/source/b1_study/`. Saved configs and terminal/run evidence are in `evidence/`.. Original B1 study notebook lineage `code/v1.ipynb` through `code/v4.ipynb`; latest source snapshot `code/source/b1_study/`. Saved configs and terminal/run evidence are in `evidence/`.
+B1: six-layer encoder and six-layer decoder from own Phase 1 weights; decoder representations supply token evidence. This experiment isolates the effect of its recorded adaptation or document-head mechanism while retaining the original task and export contract. Comparisons across different backbones, training budgets or data coverage remain descriptive rather than controlled causal estimates.
 
 ## Exact configuration, training progress and compute
 
 Head mode transformer_gru; 6 encoder blocks, no FFN expansion in this scored configuration; window policy tail, 512 tokens per window, 16 windows, overlap 100. Backbone learning rate 1e-05, head learning rate 0.0003, accumulation 8, warmup updates 100, target maximum epochs 4. Latest recorded segment 4 in this package; selected step 6500, optimizer updates 8000, completed full epochs 2, seen training cases 63992. Selected checkpoint SHA-256 0626c85191eb9e74a2133152e336b2b0cf9ad3e9a082b315eb2d129f3ac10a90; peak GPU bytes 2520698368. The preserved lineage JSON traces the resumed optimizer/checkpoint state across segments; the ZIP is produced from a selected checkpoint, not an invented continuation.
 
-## Measured results
+## Exact prediction path
 
-Version 4 run state **complete**; 8000 optimizer updates and 2 complete epochs, selected step 6500. Calibrated official 994-case dev macro-F1 **0.534473** at threshold 0.486789; default 0.5 dev macro-F1 0.499201. Selected checkpoint SHA-256 `0626c85191eb9e74a2133152e336b2b0cf9ad3e9a082b315eb2d129f3ac10a90`; verified 1,517-ID ZIP SHA-256 `eb70fc73838a3fa84a6bd6ef5eac03ce680f62ef93bf780e8a9775ea7a384d7a`. No finished Codabench score for this exact export is established by the supplied screenshot.
+After token evidence pooling, a width-256 projection plus normalized position features enters two document Transformer blocks (four heads, width-768 gated feed-forward inner layer), then a 128-unit-per-direction bidirectional GRU. A learned document attention pools states into two logits.
 
 ## Evaluation mechanics
 
 Official labeled dev cases 994; balanced class supports [497, 497]; selected-threshold confusion matrix [[375, 122], [322, 175]]; calibrated threshold 0.486789 and macro-F1 0.534473; default 0.5 macro-F1 0.499201. These are two evaluations of the same selected weights, with different binary decision thresholds. The 1,517-ID test prediction ZIP is a separate label-free artifact.
+
+## Adaptation mechanism
+
+Staged fine-tuning starts at the task head and progressively unfreezes original encoder/decoder blocks. All optimizer parameter groups exist from the beginning; stage changes control which tensors receive gradients. Saved optimizer, scaler, RNG and position permit continuation between segments without reinitializing this head.
+
+## Training design and checkpoint selection
+
+Staged B1 fine-tuning; document head mode `transformer_gru`. Original B1 study notebook lineage `code/v1.ipynb` through `code/v4.ipynb`; latest source snapshot `code/source/b1_study/`. Saved configs and terminal/run evidence are in `evidence/`.
+
+## Training objective and validation boundary
+
+The B1 study uses cross-entropy for the binary label, AdamW with 0.01 weight decay, and staged unfreezing. Validation is performed on a fixed train-only holdout; checkpoint selection requires at least two epochs before patience can declare convergence. A time-budget stop instead records paused and a resumable checkpoint. The fixed 512-example train holdout selected model checkpoints at threshold 0.5. A separate, group-disjoint 512-example train calibration set selected the final decision threshold. The official 994-case dev evaluation used that threshold: macro-F1 0.534473; using 0.5 instead gave 0.499201. The split code excludes normalized-text duplicate groups across train, holdout, and calibration. The 1,517 test cases supplied no labels. A budget-paused run is not convergence.
+
+## Measured results
+
+Version 4 run state **complete**; 8000 optimizer updates and 2 complete epochs, selected step 6500. Calibrated official 994-case dev macro-F1 **0.534473** at threshold 0.486789; default 0.5 dev macro-F1 0.499201. Selected checkpoint SHA-256 `0626c85191eb9e74a2133152e336b2b0cf9ad3e9a082b315eb2d129f3ac10a90`; verified 1,517-ID ZIP SHA-256 `eb70fc73838a3fa84a6bd6ef5eac03ce680f62ef93bf780e8a9775ea7a384d7a`. No finished Codabench score for this exact export is established by the supplied screenshot.
+
+## Source and evidence trail
+
+B1 source and notebook versions are archived. The v7 source snapshot in code/source/ is the latest executable reference; for older v4 exports, the corresponding versioned notebook and run config identify the exact earlier run rather than implying that v7 code executed v4. The code SHA-256 manifest, original run records, selected-checkpoint identity, and verified prediction archive are indexed in evidence/README.md. This report is a later reconstruction of preserved evidence, not a claim that its companion notebook ran the original training.
 
 ## Prediction contract and verification
 

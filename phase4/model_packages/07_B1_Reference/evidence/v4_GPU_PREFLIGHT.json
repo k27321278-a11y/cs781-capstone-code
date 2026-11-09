@@ -1,0 +1,15 @@
+{
+  "padding_invariant": true,
+  "finite_task_gradient": true,
+  "frozen_parameters_respected": true,
+  "zero_gate_identity_verified": false,
+  "inference_seconds_per_case": 0.06276828166664927,
+  "peak_gpu_bytes": 1369765376,
+  "device": {
+    "torch": "2.11.0+cu128",
+    "gpu": "Tesla T4",
+    "cuda": "12.8"
+  },
+  "profile_tokens": 2048,
+  "profile_cases": 3
+}

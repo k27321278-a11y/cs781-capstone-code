@@ -1,0 +1,41 @@
+# Evidence and provenance index
+
+Each record below is copied from the original Phase 4 run or export archive; source files have their SHA-256 values in `SOURCE_HASHES.json`. Large checkpoint tensors and official data stay in local backups.
+
+- `SOURCE_HASHES.json` — 7,699 bytes
+- `v5_budget.json` — 114 bytes
+- `v5_checkpoint.json` — 221 bytes
+- `v5_config.json` — 961 bytes
+- `v5_data_audit.json` — 1,868 bytes
+- `v5_GPU_PREFLIGHT.json` — 364 bytes
+- `v5_latest_export.json` — 3,255 bytes
+- `v5_lineage.json` — 12,147 bytes
+- `v5_segment_result.json` — 11,471 bytes
+- `v5_selection.json` — 1,226 bytes
+- `v5_terminal.json` — 11,471 bytes
+- `v5_training.jsonl` — 75,218 bytes
+- `v5_worker.log` — 183,460 bytes
+- `v6_budget.json` — 114 bytes
+- `v6_checkpoint.json` — 222 bytes
+- `v6_config.json` — 1,020 bytes
+- `v6_data_audit.json` — 1,868 bytes
+- `v6_GPU_PREFLIGHT.json` — 364 bytes
+- `v6_latest_export.json` — 3,256 bytes
+- `v6_lineage.json` — 12,147 bytes
+- `v6_segment_result.json` — 11,473 bytes
+- `v6_selection.json` — 1,231 bytes
+- `v6_terminal.json` — 11,473 bytes
+- `v6_training.jsonl` — 58,207 bytes
+- `v6_worker.log` — 145,694 bytes
+- `v7_budget.json` — 125 bytes
+- `v7_checkpoint.json` — 222 bytes
+- `v7_config.json` — 1,020 bytes
+- `v7_data_audit.json` — 1,868 bytes
+- `v7_GPU_PREFLIGHT.json` — 364 bytes
+- `v7_latest_export.json` — 3,277 bytes
+- `v7_lineage.json` — 12,147 bytes
+- `v7_segment_result.json` — 11,493 bytes
+- `v7_selection.json` — 1,225 bytes
+- `v7_terminal.json` — 11,493 bytes
+- `v7_training.jsonl` — 23,252 bytes
+- `v7_worker.log` — 59,279 bytes

@@ -1,0 +1,219 @@
+{
+  "sha256": "3d2caa98549ae8cef2977d15d3cbf3c095e776269ea708aacc5de5c89162380d",
+  "bytes": 5584,
+  "cases": 1517,
+  "root_prediction_json_only": true,
+  "crc_verified": true,
+  "exact_ids_verified": true,
+  "name": "B1_Window_GRUOnly",
+  "submission": "/kaggle/working/CS781_B1_Hierarchy_Depth/runs/B1_Window_GRUOnly/exports/segment_1/UPLOAD_Phase4_B1_Window_GRUOnly_paused.zip",
+  "dev_metrics": {
+    "macro_f1": 0.6346284060698071,
+    "precision": 0.6619047619047619,
+    "recall": 0.5593561368209256,
+    "confusion_matrix": [
+      [
+        355,
+        142
+      ],
+      [
+        219,
+        278
+      ]
+    ],
+    "class_support": [
+      497,
+      497
+    ],
+    "threshold": 0.26339268684387207,
+    "cases": 994,
+    "classwise": {
+      "0": {
+        "precision": 0.6184668989547039,
+        "recall": 0.7142857142857143,
+        "f1-score": 0.6629318394024276,
+        "support": 497.0
+      },
+      "1": {
+        "precision": 0.6619047619047619,
+        "recall": 0.5593561368209256,
+        "f1-score": 0.6063249727371864,
+        "support": 497.0
+      },
+      "accuracy": 0.6368209255533199,
+      "macro avg": {
+        "precision": 0.6401858304297329,
+        "recall": 0.6368209255533199,
+        "f1-score": 0.6346284060698071,
+        "support": 994.0
+      },
+      "weighted avg": {
+        "precision": 0.6401858304297328,
+        "recall": 0.6368209255533199,
+        "f1-score": 0.634628406069807,
+        "support": 994.0
+      }
+    },
+    "roc_auc": 0.6870377192733867,
+    "pr_auc": 0.7135256109930782,
+    "at_default_threshold": {
+      "macro_f1": 0.5119088482074752,
+      "precision": 0.8828828828828829,
+      "recall": 0.19718309859154928,
+      "confusion_matrix": [
+        [
+          484,
+          13
+        ],
+        [
+          399,
+          98
+        ]
+      ],
+      "class_support": [
+        497,
+        497
+      ],
+      "threshold": 0.5,
+      "cases": 994,
+      "classwise": {
+        "0": {
+          "precision": 0.5481313703284258,
+          "recall": 0.9738430583501007,
+          "f1-score": 0.7014492753623188,
+          "support": 497.0
+        },
+        "1": {
+          "precision": 0.8828828828828829,
+          "recall": 0.19718309859154928,
+          "f1-score": 0.3223684210526316,
+          "support": 497.0
+        },
+        "accuracy": 0.5855130784708249,
+        "macro avg": {
+          "precision": 0.7155071266056543,
+          "recall": 0.585513078470825,
+          "f1-score": 0.5119088482074752,
+          "support": 994.0
+        },
+        "weighted avg": {
+          "precision": 0.7155071266056544,
+          "recall": 0.5855130784708249,
+          "f1-score": 0.5119088482074752,
+          "support": 994.0
+        }
+      },
+      "roc_auc": 0.6870377192733867,
+      "pr_auc": 0.7135256109930782
+    }
+  },
+  "stage": "paused",
+  "selected_step": 3000,
+  "selected_checkpoint_sha256": "fcb3f09b6ce99e8113bd60634c5dccaec0cb089665629857a13c0fc57b8ceb73",
+  "optimizer_updates": 3498,
+  "completed_epochs": 0,
+  "seen_training_cases": 27984,
+  "inference_seconds_per_case": {
+    "dev": 0.15142354718812803,
+    "test": 0.15268412275346083
+  },
+  "peak_gpu_bytes": 1491482112,
+  "finished_utc": "2026-10-24T19:29:20.206034+00:00",
+  "hidden_leaderboard_score": null,
+  "state": "paused",
+  "elapsed_segment_seconds": 11316.975462088,
+  "fingerprint": {
+    "config": {
+      "seed": 781,
+      "max_epochs": 4,
+      "accumulation": 8,
+      "warmup_updates": 100,
+      "patience": 5,
+      "backbone_lr": 1e-05,
+      "head_lr": 0.0003,
+      "encoder_depth": 6,
+      "expand_ffn": false,
+      "chunk_batch": 4,
+      "name": "B1_Window_GRUOnly",
+      "representation": "windows",
+      "head_mode": "gru_only",
+      "max_tokens": 512,
+      "chunks_per_case": 16,
+      "overlap": 100,
+      "window_policy": "tail"
+    },
+    "data": {
+      "Train/train.json": "49bfc5f4d441833e2468e4c280c390ce361e2bfaffd5fbf1ad54157cddda164c",
+      "Train/dev.json": "a071b080d3ffcd9789009cf46f6e4f1008142de0f44db9b97df9b64b6ee201c9",
+      "Test/test.json": "88913c10c288a6f77a030d0391904d40b645fc242f2774f0ef8216e9f5afa792"
+    },
+    "split_ids": "d32ee576bb410c48e6914adc6c71b9e36771ea52e00bfd78e11f7b8abf1a9e97",
+    "sources": {
+      "b1_study/__init__.py": "27aa66216e3a4a6db758b70d85bf6d2005adcceb790da04eb3c41190b56dc157",
+      "b1_study/data.py": "74f4e92d710de2d56fddf9c8917f8e8fea0c8eb081ba832f69db9227e0e378be",
+      "b1_study/model.py": "e593a501d0d56934c0571bc9029fb4aaa47ab99a78c895e90a98756316417aa6",
+      "b1_study/run.py": "1a3ce9211e7657a6623c2766f95a4675828695a4e5057826167ba70eda28e1f4",
+      "b1_study/train.py": "2b644ff35086d0efadd614156c6d50f0f006856bbf6b4494b09c5645d1416168",
+      "phase3_rr/__init__.py": "f38a2af63c8fe34b0e5fe200c4a9c71fb161c9ad6a37bf46ec7307eb24d00ae6",
+      "phase3_rr/archive_inputs.py": "900109016e17f4170100f04a630b7259e41eee51442d04d015b40a85d0512391",
+      "phase3_rr/common.py": "f808cde35564328d8f377dabb79da21e8ef1001623d9897d7b789fd2251e6535",
+      "phase3_rr/data.py": "00084b779497b1480c9574583faef1b6700a7bd92c4a1ff2fe5c1d1cd0ffc02a",
+      "phase3_rr/models.py": "14fc38d447e1fcb8d663d00932b24344c74d7c383cf7b543a8b90cc4e97c4eea",
+      "phase3_rr/train.py": "db1532039e21f531b81f15b568a7ab97ce86779df5df4b5b0ff1f4299fbd4f63",
+      "phase3_rr/vendor/UnicodeData-13.0.0.txt": "bdbffbbfc8ad4d3a6d01b5891510458f3d36f7170422af4ea2bed3211a73e8bb",
+      "phase3_rr/vendor/UnicodeData-14.0.0.txt": "36018e68657fdcb3485f636630ffe8c8532e01c977703d2803f5b89d6c5feafb",
+      "phase3_rr/vendor/__init__.py": "4e813963bf49a55dffeba982788a12a8d854c7e7a4e6ed19b300b4ea35cef565",
+      "phase3_rr/vendor/backbones/cs781/__init__.py": "4a3613ae45d376f074874f3924962127b635a12fc6a03c5cf2c2d2e9cc3c1c49",
+      "phase3_rr/vendor/backbones/cs781/checkpoints.py": "f70275cc12a1ca3bda33c4103dc2f697b0a374f8dcd5a3f30ab9f9f3f3b08418",
+      "phase3_rr/vendor/backbones/cs781/cli.py": "e6695a4ec962094bf8fba96d61e61182f421440af61475644ae5dfe9223bfd8f",
+      "phase3_rr/vendor/backbones/cs781/cli_b.py": "471b80b2b4485a7bbc13a196fbfa452c7faa536fce85c7f9293742012248aa33",
+      "phase3_rr/vendor/backbones/cs781/cli_c.py": "0e6b8d4aa1b942aeb214881d1d9074e524ce90dfed641b5438a41601874c3aa6",
+      "phase3_rr/vendor/backbones/cs781/contracts.py": "b4d17bf29617b79bff3c3507cf01245dbe16ad550c2c394a15aaddedd0733689",
+      "phase3_rr/vendor/backbones/cs781/corpus.py": "5706941f90284ba4481524a6ffe93c9f108bfcadcb0845107a107c57891098bf",
+      "phase3_rr/vendor/backbones/cs781/evaluate.py": "9ca3eb30f79592adfce063cdb47a34cb21a84b33b7406c8e888ce980267dba2a",
+      "phase3_rr/vendor/backbones/cs781/examples.py": "372e9d40984f66bda6873dbd87382416544eee410984651c27a7d000c38b1eba",
+      "phase3_rr/vendor/backbones/cs781/examples_alt.py": "7260c5b156dcd046c23545ab851c25014aef76a81ca73b612216de80a4c83052",
+      "phase3_rr/vendor/backbones/cs781/generate.py": "9a3bc31bd2a5e0e7fdb342e81e0fc20c031beab13711dc3bbf96b5728dcc8d03",
+      "phase3_rr/vendor/backbones/cs781/generate_b.py": "e92ed53fcf2f6853eda5cc8a48bdacac0c2b92478e4677d4161dc3b4f6eba6ba",
+      "phase3_rr/vendor/backbones/cs781/generate_c.py": "43be46a4714d76a835f83a792b72210ceb80b889ce30675e13555243bc7d598e",
+      "phase3_rr/vendor/backbones/cs781/io.py": "6f7c8510cff6eee2d6cc82dbb77cd0d3d3cd7063670c0da37363ca7d600f45e4",
+      "phase3_rr/vendor/backbones/cs781/models/__init__.py": "0da8971507f5266ea3b85759054329394979d08d7f8e4896472fd471f78d3d49",
+      "phase3_rr/vendor/backbones/cs781/models/a.py": "b5eb47496093388acf0798fa44fe2155116bd30a3fd1a9fbec3f6a71b5dca268",
+      "phase3_rr/vendor/backbones/cs781/models/b.py": "9919cc6a3ac87fb080acf6ac2be2df84bfb0d1d6d314e53fcf6c977bde14c057",
+      "phase3_rr/vendor/backbones/cs781/models/c.py": "d9c16e1b53c23db7fd2a2be3e83f09c30642012fd31a63dc8282b7e39dc98147",
+      "phase3_rr/vendor/backbones/cs781/own_bpe.py": "2cac66fc09ee09136174f3837676a7578c71fa7d59a23bada83a18203029e07e",
+      "phase3_rr/vendor/backbones/cs781/prediction_progress.py": "3d35956bdecc1f88890010be3cd15527bd33ce463ff48b2a304db470f0a505c4",
+      "phase3_rr/vendor/backbones/cs781/prepare.py": "efb7368de000b0e9f44595072b0f7f146e1809ef6f34e799859b14b33de79f9e",
+      "phase3_rr/vendor/backbones/cs781/splits.py": "2434ecd26e762919b66d4586ab530615c578d677a385bb1c78eb06f4d2cfee83",
+      "phase3_rr/vendor/backbones/cs781/submission.py": "c36de151bccce0f844827c33087ec9c1b3163cb2ed7a32e45d7bf198cad1063d",
+      "phase3_rr/vendor/backbones/cs781/tokenizer.py": "e838c764e9dc2848c1ea04f9f51b261aab1afe5607cfe8cf7322ab5984555558",
+      "phase3_rr/vendor/backbones/cs781/train.py": "a2367df0b50efb36660b067940356b953340240483feb787d2108ee4258d6588",
+      "phase3_rr/vendor/backbones/cs781/train_b.py": "3d0bac658a06799ece3b90ca23a53f6a2627749188f79418ef093344bdde0758",
+      "phase3_rr/vendor/backbones/cs781/train_c.py": "63e88403d9e6fbdd754b635d08f9e38d4b1898ff1373e927723e15e8274d0c4e",
+      "phase3_rr/vendor/backbones/legalspan/__init__.py": "c24781d92781386918ca9056ca807b62493db4b5096d078dfcb0b1809b48b37e",
+      "phase3_rr/vendor/backbones/legalspan/bpe.py": "2cac66fc09ee09136174f3837676a7578c71fa7d59a23bada83a18203029e07e",
+      "phase3_rr/vendor/backbones/legalspan/data.py": "48b7af4ae83e715210f201777ae4c876876af550a9d1f09b485d29250ba7a06b",
+      "phase3_rr/vendor/backbones/legalspan/generate.py": "315c7067041e2314df5375a0d0b29899af0972366a21da0a546b43687d2748bd",
+      "phase3_rr/vendor/backbones/legalspan/model.py": "0423c932eaf22a919139ed433f1a5aee5e8a2a3720edf4e3b9d19ac5023435d0",
+      "phase3_rr/vendor/backbones/legalspan/pipeline.py": "c20587337d8ac74b24ec517020d9752ea508f31e4b802e5219080f9728692cbb",
+      "phase3_rr/vendor/backbones/legalspan/train.py": "86a6d99aba0a153d0b0759662ba4257cd3e7955c0283a2550747f943b29017a2",
+      "phase3_rr/vendor/evaluate_phase3.py": "5b2babf1cb42a6f211c3264b7dc4be61566cd22df9eb2aae8b609ea0ee2f0b1f",
+      "phase3_rr/vendor/legal_d/__init__.py": "fe77b5788e408a4d7c774eccd3cd8b359527cc580ce82eacc38fd5294e6c8989",
+      "phase3_rr/vendor/legal_d/model.py": "35c3ebc178de3a5797884542bb739d225a3ea7fd32af9774b759187c73c272fc",
+      "phase4_cjpe/__init__.py": "f18c25fd56e59b628ab217396751039d3abbbf12ef6b0a935337a9c7b58c8576",
+      "phase4_cjpe/common.py": "0546d963cdf031283a87ce032076ffc832b7f49f15f6af1b0a9d4fc21589e069",
+      "phase4_cjpe/data.py": "95e6823bd24a6172ef3d7840112046fc818c7b069fa557638bca61adf9577703",
+      "phase4_cjpe/evaluate_phase4.py": "16f71e82d66b8b7a9e5289db22f3285edea99a4e6df8e9617b5b9e78699e3766",
+      "phase4_cjpe/export.py": "4a743510077a1fccd518774df56ecade58a5bcdac39fe69fd533408ad1f45090",
+      "phase4_cjpe/kaggle_runner.py": "8a8a4f82e083f080b93641eec1381b43720cb8e85582bb2a608e58aaf1eaed77",
+      "phase4_cjpe/models.py": "2a6fc936dd37531472824414c64bc0e561275f90c9448708e08625cbf46b9562",
+      "phase4_cjpe/online_teacher.py": "b4ae71b323ced68019127241e991d87c1a6c0995d773f33a6efdd3c914e0aed4",
+      "phase4_cjpe/runtime.py": "066e8144daf6f5a1976cd52da1a0892955f6a7460e92a41480b28c65920b4469",
+      "phase4_cjpe/train.py": "2224e8e18e00f77ec52bda3b6c85a1de3428ec2236582791ca995137333248b9"
+    },
+    "parent": "d93a2f1796e90b9fdbe4a7b542f76eb6065dab619feed4a1ef5a9952e2376a1f",
+    "tokenizer": "5c0bd30290e0bd6919253b1ff864f52053924808aabd33482df92cc4bd471c8e"
+  },
+  "latest_checkpoint_sha256": "7b258c3455b99604249314d4794ad11f7231d4ec3a5914324171489685c9cbec",
+  "latest_checkpoint_bytes": 768328651
+}

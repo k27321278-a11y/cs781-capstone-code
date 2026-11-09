@@ -1,0 +1,123 @@
+{
+  "sha256": "dde8870e1a8991e53e9a3efc518299b9a4ea3c42d8d5bb9f90baf446e788bd5f",
+  "bytes": 5591,
+  "cases": 1517,
+  "root_prediction_json_only": true,
+  "crc_verified": true,
+  "exact_ids_verified": true,
+  "name": "B1_DocumentHierarchy",
+  "submission": "/kaggle/working/CS781_B1_Hierarchy_Depth/runs/B1_DocumentHierarchy/exports/segment_1/UPLOAD_Phase4_B1_DocumentHierarchy_paused.zip",
+  "dev_metrics": {
+    "macro_f1": 0.5310715741988098,
+    "precision": 0.5558659217877095,
+    "recall": 0.40040241448692154,
+    "confusion_matrix": [
+      [
+        338,
+        159
+      ],
+      [
+        298,
+        199
+      ]
+    ],
+    "class_support": [
+      497,
+      497
+    ],
+    "threshold": 0.4702804684638977,
+    "cases": 994,
+    "classwise": {
+      "0": {
+        "precision": 0.5314465408805031,
+        "recall": 0.6800804828973843,
+        "f1-score": 0.5966460723742277,
+        "support": 497.0
+      },
+      "1": {
+        "precision": 0.5558659217877095,
+        "recall": 0.40040241448692154,
+        "f1-score": 0.4654970760233918,
+        "support": 497.0
+      },
+      "accuracy": 0.540241448692153,
+      "macro avg": {
+        "precision": 0.5436562313341063,
+        "recall": 0.540241448692153,
+        "f1-score": 0.5310715741988098,
+        "support": 994.0
+      },
+      "weighted avg": {
+        "precision": 0.5436562313341063,
+        "recall": 0.540241448692153,
+        "f1-score": 0.5310715741988098,
+        "support": 994.0
+      }
+    },
+    "roc_auc": 0.564098878988215,
+    "pr_auc": 0.5711473039941968,
+    "at_default_threshold": {
+      "macro_f1": 0.42523809523809525,
+      "precision": 0.6153846153846154,
+      "recall": 0.11267605633802817,
+      "confusion_matrix": [
+        [
+          462,
+          35
+        ],
+        [
+          441,
+          56
+        ]
+      ],
+      "class_support": [
+        497,
+        497
+      ],
+      "threshold": 0.5,
+      "cases": 994,
+      "classwise": {
+        "0": {
+          "precision": 0.5116279069767442,
+          "recall": 0.9295774647887324,
+          "f1-score": 0.66,
+          "support": 497.0
+        },
+        "1": {
+          "precision": 0.6153846153846154,
+          "recall": 0.11267605633802817,
+          "f1-score": 0.19047619047619047,
+          "support": 497.0
+        },
+        "accuracy": 0.5211267605633803,
+        "macro avg": {
+          "precision": 0.5635062611806798,
+          "recall": 0.5211267605633803,
+          "f1-score": 0.42523809523809525,
+          "support": 994.0
+        },
+        "weighted avg": {
+          "precision": 0.5635062611806798,
+          "recall": 0.5211267605633803,
+          "f1-score": 0.4252380952380953,
+          "support": 994.0
+        }
+      },
+      "roc_auc": 0.564098878988215,
+      "pr_auc": 0.5711473039941968
+    }
+  },
+  "stage": "paused",
+  "selected_step": 2000,
+  "selected_checkpoint_sha256": "fae817e456ecf7ca0cf1f08b218d14bbb81f2074802d4e971c546b383d90efe9",
+  "optimizer_updates": 3446,
+  "completed_epochs": 0,
+  "seen_training_cases": 27568,
+  "inference_seconds_per_case": {
+    "dev": 0.15242333556740467,
+    "test": 0.15221539223401467
+  },
+  "peak_gpu_bytes": 1518867968,
+  "finished_utc": "2026-10-22T14:45:39.882350+00:00",
+  "hidden_leaderboard_score": null
+}

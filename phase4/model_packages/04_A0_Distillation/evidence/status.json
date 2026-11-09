@@ -1,0 +1,23 @@
+{
+  "error": null,
+  "note": "SQLite caches on local runtime disk; checkpoints and results remain on Drive.",
+  "phase": "complete",
+  "updated_utc": "2026-10-22T09:50:52.932158+00:00",
+  "split": "test",
+  "cases": 1500,
+  "total": 1517,
+  "step": 700,
+  "last_optimizer_update_utc": "2026-10-22T09:45:17.800645+00:00",
+  "epoch": 0,
+  "seen_cases": 5600,
+  "best_holdout_f1": 0.6432165640652492,
+  "loss": 0.1476337155327201,
+  "elapsed_training_seconds": 8971.989576190997,
+  "seconds_per_update": 12.81712799477143,
+  "evaluating_split": "test",
+  "evaluated_cases": 1500,
+  "total_cases": 1517,
+  "export_stage": "final",
+  "submission": "/kaggle/working/CS781_Phase4_EvidenceV2_20261022/runs/04_A0_Distillation_KaggleEvidenceV2/exports/final/UPLOAD_Phase4_04_A0_Distillation_KaggleEvidenceV2.zip",
+  "dev_macro_f1": 0.5631788992947647
+}

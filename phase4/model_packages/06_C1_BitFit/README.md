@@ -10,6 +10,14 @@ Binary Court Judgment Prediction from long legal case text. Only bias parameters
 
 **Training/adaptation:** Bias-only backbone tuning
 
+## Architecture and experiment details
+
+C1: ten-layer encoder and four-layer GRU decoder with cross-attention For each unpadded chunk, the original backbone yields contextual token states. The head layer-normalizes them, then makes a softmax-weighted mixture of token mean, learned token attention and the last token. Normalized chunk positions enter through a learned projection. A bidirectional GRU contextualizes chunks in document order; learned attention and a chunk mean are mixed, then LayerNorm/dropout and a two-logit classifier predict the binary judgment.
+
+The backbone is frozen except bias parameters; the evidence pooling and two-class head are trainable.
+
+See [the technical reference](docs/TECHNICAL_REFERENCE.md) for the recorded configuration, validation boundary, and source-level mechanism. The [recorded trace](figures/recorded_trace.svg) is drawn from archived run records.
+
 ## Results and provenance
 
 Original Kaggle run: complete; 800 optimizer updates; selected step 400. Official 994-case dev macro-F1 **0.535560** at recorded threshold 0.449234; default 0.5 dev macro-F1 0.454764. Verified prediction ZIP SHA-256 `6d5be1e9fab3c623b9bb0323c54a5a95ab01f6421507a8fd9712e37c135d7c15`, exactly 1,517 IDs.
@@ -21,6 +29,7 @@ No finished Codabench score for this exact export is established by the supplied
 - `code/`: exact source/config snapshot from the repository's Phase 4 code area; the preserved runner or builder is identified in `docs/CODE_MAP.md`.
 - `notebooks/06_C1_BitFit_Explained.ipynb`: later illustrated, unexecuted companion. Original runnable notebooks, where available, are in `code/`.
 - `evidence/`: compact copied original records with the selected configuration, training log and export verification.
+- `evidence/SOURCE_HASHES.json` and `evidence/README.md`: exact source hashes and an index of copied run records.
 - `submission/`: original verified prediction ZIP, not a report/code submission bundle.
 - `report/`: methodology PDF, editable LaTeX body, and Markdown text.
 - `figures/architecture.svg`: data flow.

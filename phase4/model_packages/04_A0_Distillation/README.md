@@ -10,6 +10,14 @@ Binary Court Judgment Prediction from long legal case text. The twelve-layer cau
 
 **Training/adaptation:** Full A0 student tuning with teacher soft targets
 
+## Architecture and experiment details
+
+A0: 12-layer causal Transformer decoder For each unpadded chunk, the original backbone yields contextual token states. The head layer-normalizes them, then makes a softmax-weighted mixture of token mean, learned token attention and the last token. Normalized chunk positions enter through a learned projection. A bidirectional GRU contextualizes chunks in document order; learned attention and a chunk mean are mixed, then LayerNorm/dropout and a two-logit classifier predict the binary judgment.
+
+All original backbone weights are trainable, along with the task head. A0 is a full-tuned student. Frozen D222 LoRMA teacher logits are cached on training IDs only. The student loss mixes supervised cross-entropy and temperature-2 KL, each at weight 0.5; teacher targets do not include dev/test labels.
+
+See [the technical reference](docs/TECHNICAL_REFERENCE.md) for the recorded configuration, validation boundary, and source-level mechanism. The [recorded trace](figures/recorded_trace.svg) is drawn from archived run records.
+
 ## Results and provenance
 
 Original Kaggle run: complete; 700 optimizer updates; selected step 700. Official 994-case dev macro-F1 **0.563179** at recorded threshold 0.317929; default 0.5 dev macro-F1 0.367628. Verified prediction ZIP SHA-256 `4e26e303cdfc2681221be1e6fbf54be9fa07d114e4386f81cd89c128cf686ec2`, exactly 1,517 IDs. The teacher record and training-only target cache are copied in `evidence/`.
@@ -21,6 +29,7 @@ User-provided Codabench screenshot: **0.5691** (finished submission). Codabench 
 - `code/`: exact source/config snapshot from the repository's Phase 4 code area; the preserved runner or builder is identified in `docs/CODE_MAP.md`.
 - `notebooks/04_A0_Distillation_Explained.ipynb`: later illustrated, unexecuted companion. Original runnable notebooks, where available, are in `code/`.
 - `evidence/`: compact copied original records with the selected configuration, training log and export verification.
+- `evidence/SOURCE_HASHES.json` and `evidence/README.md`: exact source hashes and an index of copied run records.
 - `submission/`: original verified prediction ZIP, not a report/code submission bundle.
 - `report/`: methodology PDF, editable LaTeX body, and Markdown text.
 - `figures/architecture.svg`: data flow.

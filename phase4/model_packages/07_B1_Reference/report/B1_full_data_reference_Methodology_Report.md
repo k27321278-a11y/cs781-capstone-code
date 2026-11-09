@@ -8,21 +8,41 @@ Phase 4 Court Judgment Prediction predicts binary outcome 0/1 from legal case te
 
 B1 6-encoder/6-decoder original Phase 1 backbone; 256 tokens per chunk, 8 ordered chunks per case, overlap 0, uniform sampling. Original evidence head: token evidence, ordered chunk BiGRU, attention/mean document mix. Token representation uses a learned mixture of mean, attention and last content token; position enters before document aggregation. The final learned attention pools document states for two-class logits. Data flow: Legal case -> B1 6+6 backbone -> 256×8 windows -> Token evidence mix -> Original evidence head: token evidence, ordered chunk BiGRU, attention/mean document mix -> Attention pool -> Binary ZIP.
 
-## Training design and checkpoint selection
+## Scientific rationale
 
-Staged B1 fine-tuning; document head mode `reference`. Original B1 study notebook lineage `code/v1.ipynb` through `code/v4.ipynb`; latest source snapshot `code/source/b1_study/`. Saved configs and terminal/run evidence are in `evidence/`.. Original B1 study notebook lineage `code/v1.ipynb` through `code/v4.ipynb`; latest source snapshot `code/source/b1_study/`. Saved configs and terminal/run evidence are in `evidence/`.
+B1: six-layer encoder and six-layer decoder from own Phase 1 weights; decoder representations supply token evidence. This experiment isolates the effect of its recorded adaptation or document-head mechanism while retaining the original task and export contract. Comparisons across different backbones, training budgets or data coverage remain descriptive rather than controlled causal estimates.
 
 ## Exact configuration, training progress and compute
 
 Head mode reference; 6 encoder blocks, no FFN expansion in this scored configuration; window policy uniform, 256 tokens per window, 8 windows, overlap 0. Backbone learning rate 1e-05, head learning rate 0.0003, accumulation 8, warmup updates 100, target maximum epochs 4. Latest recorded segment 4 in this package; selected step 12500, optimizer updates 14500, completed full epochs 3, seen training cases 115988. Selected checkpoint SHA-256 5dadedc58ce5ecc89b8abe80b80c24a6165e2abb60108a81ea637bb3b3de1396; peak GPU bytes 2163620352. The preserved lineage JSON traces the resumed optimizer/checkpoint state across segments; the ZIP is produced from a selected checkpoint, not an invented continuation.
 
-## Measured results
+## Exact prediction path
 
-Version 4 run state **complete**; 14500 optimizer updates and 3 complete epochs, selected step 12500. Calibrated official 994-case dev macro-F1 **0.604727** at threshold 0.211745; default 0.5 dev macro-F1 0.634498. Selected checkpoint SHA-256 `5dadedc58ce5ecc89b8abe80b80c24a6165e2abb60108a81ea637bb3b3de1396`; verified 1,517-ID ZIP SHA-256 `fecc6fd3abe831f9156cf474dd5980a6edfc2c038eae4a84368d87c1b646be30`. User-provided Codabench screenshot: **0.6145** (finished submission).
+The reference reuses the shared evidence head: token mean/attention/last mixture, normalized position projection, bidirectional GRU over chunk vectors, attention/mean document mix, and two-class projection.
 
 ## Evaluation mechanics
 
 Official labeled dev cases 994; balanced class supports [497, 497]; selected-threshold confusion matrix [[220, 277], [104, 393]]; calibrated threshold 0.211745 and macro-F1 0.604727; default 0.5 macro-F1 0.634498. These are two evaluations of the same selected weights, with different binary decision thresholds. The 1,517-ID test prediction ZIP is a separate label-free artifact.
+
+## Adaptation mechanism
+
+Staged fine-tuning starts at the task head and progressively unfreezes original encoder/decoder blocks. All optimizer parameter groups exist from the beginning; stage changes control which tensors receive gradients. Saved optimizer, scaler, RNG and position permit continuation between segments without reinitializing this head.
+
+## Training design and checkpoint selection
+
+Staged B1 fine-tuning; document head mode `reference`. Original B1 study notebook lineage `code/v1.ipynb` through `code/v4.ipynb`; latest source snapshot `code/source/b1_study/`. Saved configs and terminal/run evidence are in `evidence/`.
+
+## Training objective and validation boundary
+
+The B1 study uses cross-entropy for the binary label, AdamW with 0.01 weight decay, and staged unfreezing. Validation is performed on a fixed train-only holdout; checkpoint selection requires at least two epochs before patience can declare convergence. A time-budget stop instead records paused and a resumable checkpoint. The fixed 512-example train holdout selected model checkpoints at threshold 0.5. A separate, group-disjoint 512-example train calibration set selected the final decision threshold. The official 994-case dev evaluation used that threshold: macro-F1 0.604727; using 0.5 instead gave 0.634498. The split code excludes normalized-text duplicate groups across train, holdout, and calibration. The 1,517 test cases supplied no labels. A budget-paused run is not convergence.
+
+## Measured results
+
+Version 4 run state **complete**; 14500 optimizer updates and 3 complete epochs, selected step 12500. Calibrated official 994-case dev macro-F1 **0.604727** at threshold 0.211745; default 0.5 dev macro-F1 0.634498. Selected checkpoint SHA-256 `5dadedc58ce5ecc89b8abe80b80c24a6165e2abb60108a81ea637bb3b3de1396`; verified 1,517-ID ZIP SHA-256 `fecc6fd3abe831f9156cf474dd5980a6edfc2c038eae4a84368d87c1b646be30`. User-provided Codabench screenshot: **0.6145** (finished submission).
+
+## Source and evidence trail
+
+B1 source and notebook versions are archived. The v7 source snapshot in code/source/ is the latest executable reference; for older v4 exports, the corresponding versioned notebook and run config identify the exact earlier run rather than implying that v7 code executed v4. The code SHA-256 manifest, original run records, selected-checkpoint identity, and verified prediction archive are indexed in evidence/README.md. This report is a later reconstruction of preserved evidence, not a claim that its companion notebook ran the original training.
 
 ## Prediction contract and verification
 

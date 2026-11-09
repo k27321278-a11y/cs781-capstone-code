@@ -10,6 +10,14 @@ Binary Court Judgment Prediction from long legal case text. This is a prediction
 
 **Training/adaptation:** Six B1 inputs; L2 logistic stack C=1.0 fit on 512 disjoint train calibration examples; decision threshold selected from five-fold out-of-fold calibration probabilities only. Official dev used for reporting; family was explored after other dev results, so cross-family comparison is exploratory. Hidden score unknown.
 
+## Architecture and experiment details
+
+Prediction-level B1 ensemble, not an additional neural backbone. For a case, stack the base-model probabilities into vector p. Compute logit = intercept + Σ(coefficient_i × p_i), apply sigmoid, and output 1 if the resulting probability reaches the recorded threshold. Every base probability comes from an independently trained B1 model; no backbone weight is updated when fitting the stack.
+
+L2-regularized logistic regression combines 6 aligned model probabilities: v7_transformer, v6_transformer, v5_gru, v4_reference, v7_gru, v6_gru. The stored coefficients are 0.6206, 0.2262, 0.1801, 0.3552, 0.1386, 0.1386 and intercept -0.0395.
+
+See [the technical reference](docs/TECHNICAL_REFERENCE.md) for the recorded configuration, validation boundary, and source-level mechanism. The [recorded trace](figures/recorded_trace.svg) is drawn from archived run records.
+
 ## Results and provenance
 
 Five-fold train-calibration CV macro-F1 **0.716744** on 512 cases. Exploratory official 994-case dev macro-F1 **0.701977**. Verified 1,517-ID ZIP SHA-256 `e879cdf4f9bc3bef32baa398e4fd931a765589297f7899a2987916f663538ef4`.
@@ -21,6 +29,7 @@ User-provided Codabench screenshot: **0.6651** (finished submission). Codabench 
 - `code/`: exact source/config snapshot from the repository's Phase 4 code area; the preserved runner or builder is identified in `docs/CODE_MAP.md`.
 - `notebooks/13_B1_Stack6_CVCal_Explained.ipynb`: later illustrated, unexecuted companion. Original runnable notebooks, where available, are in `code/`.
 - `evidence/`: compact copied original records with the selected configuration, training log and export verification.
+- `evidence/SOURCE_HASHES.json` and `evidence/README.md`: exact source hashes and an index of copied run records.
 - `submission/`: original verified prediction ZIP, not a report/code submission bundle.
 - `report/`: methodology PDF, editable LaTeX body, and Markdown text.
 - `figures/architecture.svg`: data flow.
