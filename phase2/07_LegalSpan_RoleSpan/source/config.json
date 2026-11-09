@@ -1,0 +1,24 @@
+{
+  "seed": 781,
+  "tokenizer": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/a_legalspan_v1/prepared_v2/tokenizer.json",
+  "phase2_data": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase2_20261011/data/Phase_2_LNER",
+  "output_root": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_legalspan_role_span_20261011",
+  "warm_start_checkpoint": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase2_20261011/runs/01_legalspan_lorma/best.pt",
+  "warm_start_sha256": "609c3b97603769ed8035900cad20121fd3160a5e8cd36ae1d2ba32a7a9ef9819",
+  "warm_start_spec": {
+    "family": "legalspan", "method": "lorma", "rank": 8, "alpha": 32,
+    "checkpoint": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/a_legalspan_v1/experiment/full/checkpoints/latest.pt",
+    "tokenizer": "/media/hdd/SAMBA4080_left_Dataset/stud1/cs781_phase1_v2/a_legalspan_v1/prepared_v2/tokenizer.json"
+  },
+  "header_chars": 1024,
+  "training_hours": 3,
+  "gpu_memory_fraction": 0.44,
+  "pretrain": {"deadline_utc": "2026-10-11T18:29:00+00:00"},
+  "ner": {
+    "max_epochs": 16, "patience": 4, "max_tokens": 768, "max_chars": 1600,
+    "overlap": 240, "accumulation": 8, "rare_sampling_mix": 0.65,
+    "rank": 8, "alpha": 32, "boundary_weight": 0.15,
+    "best_existing_macro_f1": 0.41164117308528686,
+    "candidates": [{"name": "role_span", "method": "full", "backbone_lr": 0.000005, "head_lr": 0.0003, "dropout": 0.1}]
+  }
+}
