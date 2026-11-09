@@ -1,0 +1,15 @@
+{
+  "fingerprint": {
+    "checkpoint": "002e0dedacc5e8283ad8519c2ee6e6c9e3af15c83e3bf4cc2ee61178499b151a",
+    "ids": "a746256e484628efe799cee6fa0e6172024111c176c543ecd4070c1bcea9a30e",
+    "data": {
+      "Train/train.json": "49bfc5f4d441833e2468e4c280c390ce361e2bfaffd5fbf1ad54157cddda164c",
+      "Train/dev.json": "a071b080d3ffcd9789009cf46f6e4f1008142de0f44db9b97df9b64b6ee201c9",
+      "Test/test.json": "88913c10c288a6f77a030d0391904d40b645fc242f2774f0ef8216e9f5afa792"
+    }
+  },
+  "sha256": "379aea626005281f3c3d1812bfde58d5ae0b7cf239250d61482f0a6524084f09",
+  "training_cases_only": true,
+  "examples_cached": 5600,
+  "target_mode": "frozen teacher, lazy per training case"
+}

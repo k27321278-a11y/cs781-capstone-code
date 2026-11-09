@@ -1,0 +1,6 @@
+{
+  "inference_seconds_per_case": 0.6356886479999654,
+  "export_reserve_seconds": 3062.530174355843,
+  "session_end_unix": 1792666964.2208734,
+  "actual_gpu": "Tesla T4"
+}

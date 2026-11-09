@@ -1,0 +1,27 @@
+{
+  "selection_split": "fixed train-only holdout",
+  "metrics": {
+    "macro_f1": 0.5702862723554905,
+    "precision": 0.5714285714285714,
+    "recall": 0.5625,
+    "confusion_matrix": [
+      [
+        148,
+        108
+      ],
+      [
+        112,
+        144
+      ]
+    ],
+    "class_support": [
+      256,
+      256
+    ],
+    "threshold": 0.2845636010169983,
+    "cases": 512,
+    "search": "all distinct holdout probability boundaries"
+  },
+  "step": 213,
+  "sha256": "002e0dedacc5e8283ad8519c2ee6e6c9e3af15c83e3bf4cc2ee61178499b151a"
+}

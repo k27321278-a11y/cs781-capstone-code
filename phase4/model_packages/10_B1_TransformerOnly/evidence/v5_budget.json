@@ -1,0 +1,5 @@
+{
+  "export_reserve_seconds": 900.0,
+  "segment_hours": 3.0,
+  "inference_seconds_per_case": 0.08303123433332378
+}

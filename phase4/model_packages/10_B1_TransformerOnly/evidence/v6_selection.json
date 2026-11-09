@@ -1,0 +1,55 @@
+{
+  "split": "fixed train holdout",
+  "metrics": {
+    "macro_f1": 0.6641710814849314,
+    "precision": 0.7301587301587301,
+    "recall": 0.5390625,
+    "confusion_matrix": [
+      [
+        205,
+        51
+      ],
+      [
+        118,
+        138
+      ]
+    ],
+    "class_support": [
+      256,
+      256
+    ],
+    "threshold": 0.5,
+    "cases": 512,
+    "classwise": {
+      "0": {
+        "precision": 0.6346749226006192,
+        "recall": 0.80078125,
+        "f1-score": 0.7081174438687392,
+        "support": 256.0
+      },
+      "1": {
+        "precision": 0.7301587301587301,
+        "recall": 0.5390625,
+        "f1-score": 0.6202247191011236,
+        "support": 256.0
+      },
+      "accuracy": 0.669921875,
+      "macro avg": {
+        "precision": 0.6824168263796746,
+        "recall": 0.669921875,
+        "f1-score": 0.6641710814849314,
+        "support": 512.0
+      },
+      "weighted avg": {
+        "precision": 0.6824168263796746,
+        "recall": 0.669921875,
+        "f1-score": 0.6641710814849314,
+        "support": 512.0
+      }
+    },
+    "roc_auc": 0.764190673828125,
+    "pr_auc": 0.7619999118922567
+  },
+  "step": 5500,
+  "sha256": "947d95bcd3637a69b1af62ff3d01772bc868473ac23beb6184712b1c1835e8b2"
+}

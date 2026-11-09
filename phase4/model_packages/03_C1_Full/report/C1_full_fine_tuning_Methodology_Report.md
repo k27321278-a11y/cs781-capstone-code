@@ -1,0 +1,33 @@
+# C1 full fine-tuning — Phase 4 CJPE methodology
+
+## Problem statement and data
+
+Phase 4 Court Judgment Prediction predicts binary outcome 0/1 from legal case text. The preserved official inputs are Train/train.json, Train/dev.json and Test/test.json. Test labels are private. Original run records report 994 official dev labels and 1,517 test IDs; macro-F1 is the central metric.
+
+## Architecture and mechanics
+
+The C1 recurrent hybrid combines a ten-layer encoder with a four-layer recurrent decoder and cross-attention. Full tuning updates its backbone and the shared evidence head. Data flow: Legal case -> C1 own tokenizer/backbone -> All backbone weights trainable -> Token evidence pooling -> Ordered chunk BiGRU -> 2-class logits -> prediction.json.
+
+## Training design and checkpoint selection
+
+All backbone weights trainable. Executed v3 runner: `code/v3_t4x2.ipynb`, `code/runner/phase4_cjpe/kaggle_runner.py` with `published_v3_schedule.json`; the six jobs share `EvidenceCaseModel` in `code/runner/phase4_cjpe/models.py`.
+
+## Exact run configuration and resource tradeoff
+
+Experiment family c1; adaptation method full; original parent checkpoint SHA-256 1903b848b39ca9f335c8d9e3add532d5f49718d539b130e6a8348d98d802433e. Configuration: 256 tokens/chunk, 8 chunks/case, 8192 source characters considered, maximum 12000 training cases, 256 holdout cases per class. Optimizer configuration: backbone learning rate 1e-05, head learning rate 0.0003, gradient accumulation 8, max epochs 4, planned training hours 3.5. Recorded 899 optimizer updates and 7192 seen training examples; selected step 899. Selected checkpoint SHA-256 63ea504014c5370d9850c733bd5f9c2e17c424bef598633727ece99d346b3bb4; parameters 118799242, trainable 118799242. Original run completed after nominal deadline: True.
+
+## Measured results
+
+Original Kaggle run: complete; 899 optimizer updates; selected step 899. Official 994-case dev macro-F1 **0.484079** at recorded threshold 0.437448; default 0.5 dev macro-F1 0.351393. Verified prediction ZIP SHA-256 `4d32491e98558bf8e0bd240519c140191a7faac18c3a23fa8feb80659b4e022a`, exactly 1,517 IDs. User-provided Codabench screenshot: **0.4994** (finished submission).
+
+## Evaluation mechanics
+
+Official labeled dev cases 994; class supports [497, 497]; confusion matrix rows true 0/1, columns predicted 0/1: [[399, 98], [375, 122]]. At selected threshold 0.437448, macro-F1 0.484079; at threshold 0.5, macro-F1 0.351393. The report keeps these thresholds separate because threshold choice changes the binary predictions. The submitted ZIP has 1,517 unique test IDs and binary labels; no test labels were available to this run.
+
+## Prediction contract and verification
+
+The original prediction ZIP contains one root-level prediction.json with 1,517 unique official test IDs and integer labels restricted to 0 and 1. This package checks the ZIP CRC and SHA-256 against the archived run/verification record. Full model checkpoint tensors remain outside GitHub; their downloaded backup receipts and hashes live in the local Phase 4 study archives.
+
+## Reproducibility and limits
+
+The local dev score uses a threshold recorded in the run; inspect its calibration/selection record before treating it as independent model-selection evidence. A prepared model notebook is source scaffolding, while `v3_t4x2.ipynb` and the Kaggle run evidence identify the executed v3 lineage. Reports and companion notebook were created after training; original scores come from copied artifacts. Model weights and course data are preserved locally, not uploaded to GitHub.

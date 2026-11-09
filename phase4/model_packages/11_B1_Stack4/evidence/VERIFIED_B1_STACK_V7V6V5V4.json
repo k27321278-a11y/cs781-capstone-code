@@ -1,0 +1,92 @@
+{
+  "created_utc": "2026-10-26T17:56:46.366949+00:00",
+  "kind": "separate_explicitly_requested_ensemble_not_single_model_B1",
+  "selection_rule": "Four inputs fixed from prior evidence; L2 logistic stack C=0.1 fit on 512 disjoint train calibration examples; five-fold calibration CV; threshold 0.5. Official dev used only to report.",
+  "models": [
+    "v7_transformer",
+    "v6_transformer",
+    "v5_gru",
+    "v4_reference"
+  ],
+  "input_hashes": {
+    "v7_transformer": {
+      "calibration": {
+        "path": "D:\\CS781\\Phase4_20261020\\kaggle_ready\\b1_hierarchy_depth_release\\outputs\\v7\\CS781_B1_Hierarchy_Depth\\runs\\B1_Window_TransformerOnly\\exports\\segment_3\\calibration_probabilities.npz",
+        "sha256": "2a578743a855e5715af9deb5fe9f57760864f6006def28e3eb5b86478407a392"
+      },
+      "dev": {
+        "path": "D:\\CS781\\Phase4_20261020\\kaggle_ready\\b1_hierarchy_depth_release\\outputs\\v7\\CS781_B1_Hierarchy_Depth\\runs\\B1_Window_TransformerOnly\\exports\\segment_3\\dev_probabilities.npz",
+        "sha256": "cdc0bbe0903d293eb30574a8ed6314a0c7056f2dd6543f1f49c77347856a51f0"
+      },
+      "test": {
+        "path": "D:\\CS781\\Phase4_20261020\\kaggle_ready\\b1_hierarchy_depth_release\\outputs\\v7\\CS781_B1_Hierarchy_Depth\\runs\\B1_Window_TransformerOnly\\exports\\segment_3\\test_probabilities.npz",
+        "sha256": "a3ad458891613b6aa4b4bda0008df60fbbe1530316b33a2ad7e5ae98f8f15c11"
+      }
+    },
+    "v6_transformer": {
+      "calibration": {
+        "path": "D:\\CS781\\Phase4_20261020\\kaggle_ready\\b1_hierarchy_depth_release\\outputs\\v6\\CS781_B1_Hierarchy_Depth\\runs\\B1_Window_TransformerOnly\\exports\\segment_2\\calibration_probabilities.npz",
+        "sha256": "bec06dd229336a7faca73edaebe94f2d5fef0e674fbc23425529872d82115966"
+      },
+      "dev": {
+        "path": "D:\\CS781\\Phase4_20261020\\kaggle_ready\\b1_hierarchy_depth_release\\outputs\\v6\\CS781_B1_Hierarchy_Depth\\runs\\B1_Window_TransformerOnly\\exports\\segment_2\\dev_probabilities.npz",
+        "sha256": "a50caf77a31b7f0b851ce31bc505ac6169760ed3588241971c1b44625b99fb42"
+      },
+      "test": {
+        "path": "D:\\CS781\\Phase4_20261020\\kaggle_ready\\b1_hierarchy_depth_release\\outputs\\v6\\CS781_B1_Hierarchy_Depth\\runs\\B1_Window_TransformerOnly\\exports\\segment_2\\test_probabilities.npz",
+        "sha256": "d404df7301a606ed45b282819d80578309542710789b815f054b955612c7659d"
+      }
+    },
+    "v5_gru": {
+      "calibration": {
+        "path": "D:\\CS781\\Phase4_20261020\\kaggle_ready\\b1_hierarchy_depth_release\\outputs\\v5\\CS781_B1_Hierarchy_Depth\\runs\\B1_Window_GRUOnly\\exports\\segment_1\\calibration_probabilities.npz",
+        "sha256": "59ece0ae9c5b919c4a812ced9b66bf35161a4e16535de2aa5ae357711f47381f"
+      },
+      "dev": {
+        "path": "D:\\CS781\\Phase4_20261020\\kaggle_ready\\b1_hierarchy_depth_release\\outputs\\v5\\CS781_B1_Hierarchy_Depth\\runs\\B1_Window_GRUOnly\\exports\\segment_1\\dev_probabilities.npz",
+        "sha256": "6afd5f5256bce3c2efcc64a16aa59195d244d6dab22237a48d7d9f18189fd285"
+      },
+      "test": {
+        "path": "D:\\CS781\\Phase4_20261020\\kaggle_ready\\b1_hierarchy_depth_release\\outputs\\v5\\CS781_B1_Hierarchy_Depth\\runs\\B1_Window_GRUOnly\\exports\\segment_1\\test_probabilities.npz",
+        "sha256": "0f874cda3a95b9e8db20a1319b773527b53323035c52492bd3141a329a16094f"
+      }
+    },
+    "v4_reference": {
+      "calibration": {
+        "path": "D:\\CS781\\Phase4_20261020\\kaggle_ready\\b1_hierarchy_depth_release\\outputs\\v4\\CS781_B1_Hierarchy_Depth\\runs\\B1_FullData_Reference\\exports\\segment_4\\calibration_probabilities.npz",
+        "sha256": "ce371fd04bf57ef5551cee0fbef3a54dadb7510b35f1539a4e7414f4455b880f"
+      },
+      "dev": {
+        "path": "D:\\CS781\\Phase4_20261020\\kaggle_ready\\b1_hierarchy_depth_release\\outputs\\v4\\CS781_B1_Hierarchy_Depth\\runs\\B1_FullData_Reference\\exports\\segment_4\\dev_probabilities.npz",
+        "sha256": "052bc702ae44ce9bbc7bbad0887fdc20a87b549fbfd55a795154ce900648fcbc"
+      },
+      "test": {
+        "path": "D:\\CS781\\Phase4_20261020\\kaggle_ready\\b1_hierarchy_depth_release\\outputs\\v4\\CS781_B1_Hierarchy_Depth\\runs\\B1_FullData_Reference\\exports\\segment_4\\test_probabilities.npz",
+        "sha256": "3b45388db923166093e5dbbec35533fc5ede4a9e0a49461569214d28afca87fe"
+      }
+    }
+  },
+  "calibration_cases": 512,
+  "calibration_cv_macro_f1": 0.7106549364613881,
+  "official_dev_cases": 994,
+  "official_dev_macro_f1": 0.6939555987684329,
+  "test_cases": 1517,
+  "test_positive_predictions": 727,
+  "coefficients": [
+    [
+      0.556751645610894,
+      0.3330229606145827,
+      0.3001991480071267,
+      0.3512995187063114
+    ]
+  ],
+  "intercept": [
+    -0.03396466502718611
+  ],
+  "zip_path": "D:\\CS781\\Phase4_20261020\\kaggle_ready\\SUBMISSIONS_READY\\B1_Stack_v7v6v5v4.zip",
+  "zip_sha256": "b341bb9d03656077c32ffd77cf4c60f9cb38ac55f6d7e583cb40080d0761e85e",
+  "zip_bytes": 5007,
+  "zip_crc_verified": true,
+  "exact_official_ids_verified": true,
+  "hidden_codabench_score": null
+}
