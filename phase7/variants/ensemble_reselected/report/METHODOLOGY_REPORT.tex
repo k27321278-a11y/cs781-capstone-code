@@ -1,0 +1,27 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{lmodern}
+\usepackage{longtable}
+\usepackage{hyperref}
+\title{Reselected neural-lexical ensemble: Methodology and Evidence}
+\author{CS781 Capstone -- Krishna K Karthikeya G N}
+\date{12 November 2026}
+\begin{document}
+\maketitle
+\noindent\textbf{Status.} Post-run methodology reconstruction grounded in archived source and reports. This document is not an executed historical notebook.\par
+\section*{Research question}
+After self-match removal, re-evaluate blend selection using valid candidate rankings. This variant checks whether a blend favored by earlier dev selection remains useful after the ranking contract changes.
+\section*{Architecture and mechanism}
+Row-normalized neural scores and lexical TF-IDF scores are blended, excluding self before choosing seven unique candidates. The reselected weights are an export-level choice, not a new trained backbone.
+\section*{Measured result}
+\begin{center}\begin{tabular}{ll}Scored submission & 1039894\\
+Codabench micro-F1@7 & 0.4017\\
+Archived local metric & not independently reported after correction\end{tabular}\end{center}
+Codabench micro-F1@7 was 0.4017, below the 0.4064 full and selected-ensemble exports. The corrected report does not claim a full independent post-selection dev estimate.
+\section*{Limitations and next check}
+Multiple blend choices on 118 dev queries can overfit; hidden scores should be reported separately. Local, pilot, and hidden metrics are deliberately kept distinct. A single scored run does not establish a causal architecture effect or statistical significance.
+\section*{Source and reproducibility}
+Original source modules: phase7\_export.py, phase7\_run.py. SHA-256 hashes, the original report, and the prediction ZIP receipt are in the companion provenance file. The explanatory notebook was written after the historical run; original execution output is never implied. Reproduction requires authorized course data, the Phase 1 parent weights/tokenizer, and the dependencies in the archived source.
+\section*{Documentation disclosure}
+AI assistance was used to organize the archived evidence and draft this explanatory document. All numerical claims above come from saved run records or the provided finished-submission screenshot; missing evidence is labelled as such.
+\end{document}

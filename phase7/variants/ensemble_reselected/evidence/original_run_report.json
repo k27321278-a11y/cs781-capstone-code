@@ -1,0 +1,47 @@
+{
+  "source_model_run": "krshnakarthikeyagn/cs781-phase7-pcr-retrieval-experiments/version/4",
+  "model_selection_in_run": "full + partial + lexical TF-IDF ensemble",
+  "correction": "Self case removed from each ranking; missing seventh case filled with the highest-ranked eligible TF-IDF candidate.",
+  "dev_metrics_of_corrected_individual_models": {
+    "full": {
+      "micro_f1_at_7": 0.4035575319622012,
+      "micro_precision_at_7": 0.43946731234866826,
+      "micro_recall_at_7": 0.37307297019527236,
+      "tp": 363,
+      "queries": 118
+    },
+    "lorma": {
+      "micro_f1_at_7": 0.39688715953307396,
+      "micro_precision_at_7": 0.4322033898305085,
+      "micro_recall_at_7": 0.3669064748201439,
+      "tp": 357,
+      "queries": 118
+    },
+    "partial": {
+      "micro_f1_at_7": 0.4035575319622012,
+      "micro_precision_at_7": 0.43946731234866826,
+      "micro_recall_at_7": 0.37307297019527236,
+      "tp": 363,
+      "queries": 118
+    },
+    "kd": {
+      "micro_f1_at_7": 0.39688715953307396,
+      "micro_precision_at_7": 0.4322033898305085,
+      "micro_recall_at_7": 0.3669064748201439,
+      "tp": 357,
+      "queries": 118
+    },
+    "lexical": {
+      "micro_f1_at_7": 0.39688715953307396,
+      "micro_precision_at_7": 0.4322033898305085,
+      "micro_recall_at_7": 0.3669064748201439,
+      "tp": 357,
+      "queries": 118
+    }
+  },
+  "corrected_selected_ensemble_dev_metric": null,
+  "test_queries": 237,
+  "test_labels_used": false,
+  "selected_model_zip": "Phase7_PCR_model_ensemble_corrected.zip",
+  "lexical_fallback_zip": "Phase7_PCR_lexical_fallback_corrected.zip"
+}

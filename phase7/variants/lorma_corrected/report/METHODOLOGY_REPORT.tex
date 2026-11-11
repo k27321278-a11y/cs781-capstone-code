@@ -1,0 +1,27 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{lmodern}
+\usepackage{longtable}
+\usepackage{hyperref}
+\title{LoRMA neural retriever: Methodology and Evidence}
+\author{CS781 Capstone -- Krishna K Karthikeya G N}
+\date{12 November 2026}
+\begin{document}
+\maketitle
+\noindent\textbf{Status.} Post-run methodology reconstruction grounded in archived source and reports. This document is not an executed historical notebook.\par
+\section*{Research question}
+Try parameter-efficient retrieval adaptation instead of updating the whole Phase 1 model. The GPU report lists about 1.18 million trainable parameters for this branch.
+\section*{Architecture and mechanism}
+LoRMA low-rank modules alter the inherited A0 representation. The query/candidate window encoder and late interaction stay comparable to the full branch.
+\section*{Measured result}
+\begin{center}\begin{tabular}{ll}Scored submission & 1039891\\
+Codabench micro-F1@7 & 0.3969\\
+Archived local metric & 0.3969 corrected local-dev micro-F1@7\end{tabular}\end{center}
+Corrected local dev micro-F1@7 was 0.3969 and Codabench was also 0.3969 to four decimals. The result did not beat the full fine-tune here.
+\section*{Limitations and next check}
+Parameter count and score alone do not measure training cost or memory; the run log is needed for those comparisons. Local, pilot, and hidden metrics are deliberately kept distinct. A single scored run does not establish a causal architecture effect or statistical significance.
+\section*{Source and reproducibility}
+Original source modules: phase7\_run.py, phase7\_export.py. SHA-256 hashes, the original report, and the prediction ZIP receipt are in the companion provenance file. The explanatory notebook was written after the historical run; original execution output is never implied. Reproduction requires authorized course data, the Phase 1 parent weights/tokenizer, and the dependencies in the archived source.
+\section*{Documentation disclosure}
+AI assistance was used to organize the archived evidence and draft this explanatory document. All numerical claims above come from saved run records or the provided finished-submission screenshot; missing evidence is labelled as such.
+\end{document}

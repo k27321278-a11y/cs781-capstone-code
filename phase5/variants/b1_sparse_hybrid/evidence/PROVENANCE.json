@@ -1,0 +1,95 @@
+{
+  "phase": 5,
+  "variant": "b1_sparse_hybrid",
+  "title": "B1 plus full-document sparse hybrid",
+  "method_kind": "two-branch prediction system",
+  "codabench_metric": "Codabench macro-F1",
+  "codabench_score": 0.3949,
+  "submission_ids": [
+    1016346,
+    1016350
+  ],
+  "local_metric": "0.3909 official-dev macro-F1",
+  "source": [
+    {
+      "path": "phase5_hybrid_blend.py",
+      "source_sha256": "fc264b6dca1dc3a5a8daec135e730e450de4ef98a102038d9f1931745c5d2f1e",
+      "bytes": 4787,
+      "repository_source": "phase5/source/phase5_hybrid_blend.py",
+      "symbols": [
+        "sha256 (line 18)",
+        "labels (line 26)",
+        "main (line 33)"
+      ]
+    },
+    {
+      "path": "phase5_prepare_hybrid_probs.py",
+      "source_sha256": "5b65d2f1a7aec7c5af956c401a470894fee12e591cd7ce6df04ebf2c8dbd8388",
+      "bytes": 1769,
+      "repository_source": "phase5/source/phase5_prepare_hybrid_probs.py",
+      "symbols": [
+        "main (line 14)"
+      ]
+    },
+    {
+      "path": "phase5_b1_train.py",
+      "source_sha256": "645cb2e65313ff49aa6ae574aeab9b015be2365bf427b5e03e3672bc94e20996",
+      "bytes": 13730,
+      "repository_source": "phase5/source/phase5_b1_train.py",
+      "symbols": [
+        "sha256 (line 34)",
+        "LoRALinear (line 42)",
+        "B1Classifier (line 57)",
+        "Rows (line 89)",
+        "read_json (line 102)",
+        "tokenize_split (line 106)",
+        "label_matrix (line 124)",
+        "predict (line 135)",
+        "train (line 147)"
+      ]
+    },
+    {
+      "path": "run_logistic.py",
+      "source_sha256": "07290f2b46fe83681c105ad9cb9e4349d0fb88140d75116908f2fe0497ade7c5",
+      "bytes": 2941,
+      "repository_source": "phase5/source/agent_sparse/run_logistic.py",
+      "symbols": [
+        "main (line 14)"
+      ]
+    },
+    {
+      "path": "run_sparse.py",
+      "source_sha256": "1671b29aa039331742c931d06458f6c877f314161218de6637a665ddb87ef92f",
+      "bytes": 4241,
+      "repository_source": "phase5/source/agent_sparse/run_sparse.py",
+      "symbols": [
+        "read_rows (line 20)",
+        "score (line 25)",
+        "tune_thresholds (line 30)",
+        "main (line 44)"
+      ]
+    }
+  ],
+  "original_notebook": null,
+  "run_report": {
+    "path": "original_run_report.json",
+    "source_sha256": "e17e6de3c39b950399fe4114e363096d6a1a0fc86aa048b255dc6fa2a83fc229",
+    "bytes": 1564
+  },
+  "run_log": {
+    "path": "original_run.log",
+    "source_sha256": "585bace1486c04c2375ceb17db5281cf7102e0e288e48bb0427c35965cb32ec3",
+    "bytes": 3193
+  },
+  "prediction_zip": {
+    "entries": [
+      "prediction.json"
+    ],
+    "prediction_count": 13019,
+    "sha256": "3e6da4355fea564e0b88373f76e144589e72db0ac048d9b6213a8b71f3153705",
+    "crc_ok": true,
+    "original_name": "phase5_b1_sparse_hybrid_prediction.zip"
+  },
+  "documentation_status": "post-run reconstruction; no fabricated notebook execution",
+  "reference_chat": "https://chatgpt.com/share/6af16e7a-7c2c-83e8-8ca7-03cf11cffc95"
+}

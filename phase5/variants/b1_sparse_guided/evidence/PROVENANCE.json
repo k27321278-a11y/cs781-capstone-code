@@ -1,0 +1,90 @@
+{
+  "phase": 5,
+  "variant": "b1_sparse_guided",
+  "title": "B1 sparse-guided passage selection",
+  "method_kind": "trained model",
+  "codabench_metric": "Codabench macro-F1",
+  "codabench_score": 0.2417,
+  "submission_ids": [
+    1016593
+  ],
+  "local_metric": "0.2464 official-dev macro-F1",
+  "source": [
+    {
+      "path": "phase5_sparse_guided_model.py",
+      "source_sha256": "0734b56f556c486cbe7f741c6bfd198d399c34396b7bc55b605c3064a7da2071",
+      "bytes": 1998,
+      "repository_source": "phase5/source/phase5_sparse_guided_model.py",
+      "symbols": [
+        "install (line 11)"
+      ]
+    },
+    {
+      "path": "phase5_sparse_guided_starts.py",
+      "source_sha256": "ebe4269cabef2e4d588470631846a5191f108ae826c346eefe8ce574943739d1",
+      "bytes": 2646,
+      "repository_source": "phase5/source/phase5_sparse_guided_starts.py",
+      "symbols": [
+        "select_batch (line 15)",
+        "main (line 46)"
+      ]
+    },
+    {
+      "path": "phase5_multiwindow.py",
+      "source_sha256": "86ac644db5ab5f19b2da1772deae2ebcc8fbe25b67cb599b30f765fa53a990da",
+      "bytes": 4446,
+      "repository_source": "phase5/source/phase5_multiwindow.py",
+      "symbols": [
+        "pack_four_windows (line 26)",
+        "AdapterBlock (line 41)",
+        "MultiWindowB1Classifier (line 54)",
+        "tokenize_split_four (line 85)",
+        "install (line 105)"
+      ]
+    },
+    {
+      "path": "phase5_b1_train.py",
+      "source_sha256": "645cb2e65313ff49aa6ae574aeab9b015be2365bf427b5e03e3672bc94e20996",
+      "bytes": 13730,
+      "repository_source": "phase5/source/phase5_b1_train.py",
+      "symbols": [
+        "sha256 (line 34)",
+        "LoRALinear (line 42)",
+        "B1Classifier (line 57)",
+        "Rows (line 89)",
+        "read_json (line 102)",
+        "tokenize_split (line 106)",
+        "label_matrix (line 124)",
+        "predict (line 135)",
+        "train (line 147)"
+      ]
+    }
+  ],
+  "original_notebook": {
+    "path": "original_runner.ipynb",
+    "source_sha256": "bf810968cd1d8659d2731d4c2954520abcd80c228c4bd817bc17c54574bc5a14",
+    "bytes": 1738,
+    "repository_source": "phase5/notebooks/phase5_kaggle_guided_kernel/phase5_b1_sparse_guided.ipynb"
+  },
+  "run_report": {
+    "path": "original_run_report.json",
+    "source_sha256": "7c6b37bf89e7b667a57696553fa7d2dc005ffd44412915626e9476d38e12e4c8",
+    "bytes": 11122
+  },
+  "run_log": {
+    "path": "original_run.log",
+    "source_sha256": "d0051ce83b84df459b3152f8dbccbe10699960de2b9b0f82c018d55551804f72",
+    "bytes": 43061
+  },
+  "prediction_zip": {
+    "entries": [
+      "prediction.json"
+    ],
+    "prediction_count": 13019,
+    "sha256": "b4de5ce376713c8218e7170f7530f3df598f5f936220b020cd2cd0e061685988",
+    "crc_ok": true,
+    "original_name": "phase5_b1_sparse_guided_prediction.zip"
+  },
+  "documentation_status": "post-run reconstruction; no fabricated notebook execution",
+  "reference_chat": "https://chatgpt.com/share/6af16e7a-7c2c-83e8-8ca7-03cf11cffc95"
+}

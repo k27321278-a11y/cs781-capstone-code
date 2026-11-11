@@ -1,0 +1,27 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{lmodern}
+\usepackage{longtable}
+\usepackage{hyperref}
+\title{C1 Houlsby with 400-word output cap: Methodology and Evidence}
+\author{CS781 Capstone -- Krishna K Karthikeya G N}
+\date{12 November 2026}
+\begin{document}
+\maketitle
+\noindent\textbf{Status.} Post-run methodology reconstruction grounded in archived source and reports. This document is not an executed historical notebook.\par
+\section*{Research question}
+Check whether C1's generated answer length is mismatched to the reference summaries. The cap was selected on 32 validation examples by approximate ROUGE-1 F1 and tested on a distinct 64-example confirmation set.
+\section*{Architecture and mechanism}
+The existing C1 Houlsby output is truncated at 400 whitespace-delimited words; the model weights and adapter architecture are unchanged.
+\section*{Measured result}
+\begin{center}\begin{tabular}{ll}Scored submission & 1030822\\
+Codabench BERTScore F1 & 0.7750\\
+Archived local metric & not reported\end{tabular}\end{center}
+The proxy rose from 0.29545 to 0.30539 on validation and 0.28951 to 0.29776 on confirmation; Codabench BERTScore F1 was 0.7750, compared with 0.7700 for the original export.
+\section*{Limitations and next check}
+Do not interpret this as a new trained model or as evidence that a 400-word cap generalizes to every dataset. Local, pilot, and hidden metrics are deliberately kept distinct. A single scored run does not establish a causal architecture effect or statistical significance.
+\section*{Source and reproducibility}
+Original source modules: c1\_houlsby.py, train\_phase6.py. SHA-256 hashes, the original report, and the prediction ZIP receipt are in the companion provenance file. The explanatory notebook was written after the historical run; original execution output is never implied. Reproduction requires authorized course data, the Phase 1 parent weights/tokenizer, and the dependencies in the archived source.
+\section*{Documentation disclosure}
+AI assistance was used to organize the archived evidence and draft this explanatory document. All numerical claims above come from saved run records or the provided finished-submission screenshot; missing evidence is labelled as such.
+\end{document}

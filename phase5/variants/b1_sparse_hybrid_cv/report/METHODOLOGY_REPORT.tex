@@ -1,0 +1,27 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{lmodern}
+\usepackage{longtable}
+\usepackage{hyperref}
+\title{B1 sparse hybrid with calibration CV: Methodology and Evidence}
+\author{CS781 Capstone -- Krishna K Karthikeya G N}
+\date{12 November 2026}
+\begin{document}
+\maketitle
+\noindent\textbf{Status.} Post-run methodology reconstruction grounded in archived source and reports. This document is not an executed historical notebook.\par
+\section*{Research question}
+Check whether the strong sparse hybrid depended too much on one calibration split's fitted thresholds. The cross-validation route limits optimistic threshold fitting without using official dev labels for selection.
+\section*{Architecture and mechanism}
+The same 0.9 sparse/0.1 B1 blend is evaluated with five-fold cross-validation inside the official-train calibration subset. Class thresholds shrink toward a global prior according to support; the final thresholds are refit on all calibration rows.
+\section*{Measured result}
+\begin{center}\begin{tabular}{ll}Scored submission & 1016805\\
+Codabench macro-F1 & 0.3944\\
+Archived local metric & 0.3933 official-dev macro-F1\end{tabular}\end{center}
+The report records calibration CV macro-F1 0.4282, official-dev macro-F1 0.3933, and Codabench 0.3944. The latter is effectively tied with the fixed hybrid and does not establish a hidden-score gain.
+\section*{Limitations and next check}
+Five-fold calibration still has variance for rare labels; selection is not a substitute for a larger independent development set. Local, pilot, and hidden metrics are deliberately kept distinct. A single scored run does not establish a causal architecture effect or statistical significance.
+\section*{Source and reproducibility}
+Original source modules: phase5\_hybrid\_calibration\_cv.py, phase5\_prepare\_hybrid\_probs.py, phase5\_b1\_train.py, run\_logistic.py. SHA-256 hashes, the original report, and the prediction ZIP receipt are in the companion provenance file. The explanatory notebook was written after the historical run; original execution output is never implied. Reproduction requires authorized course data, the Phase 1 parent weights/tokenizer, and the dependencies in the archived source.
+\section*{Documentation disclosure}
+AI assistance was used to organize the archived evidence and draft this explanatory document. All numerical claims above come from saved run records or the provided finished-submission screenshot; missing evidence is labelled as such.
+\end{document}

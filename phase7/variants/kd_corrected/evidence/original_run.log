@@ -1,0 +1,103 @@
+[{"stream_name":"stdout","time":22.100502996,"data":"[05:41:51] device cuda gpu Tesla T4 cuda_mem_gb 15.64\n"}
+,{"stream_name":"stdout","time":26.484370368,"data":"[05:41:55] split counts {\"train_queries\": 827, \"train_candidates\": 4320, \"dev_queries\": 118, \"dev_candidates\": 1023, \"test_queries\": 237, \"test_candidates\": 1727, \"train_relevant\": 5308, \"dev_relevant\": 973}\n"}
+,{"stream_name":"stdout","time":35.866056773,"data":"[05:42:05] verified Phase1 parent 1e8aca9800b87e952ed82e54307dd874220845d6a8545d2568bb743993cfb9dc config {\"vocab_size\": 32768, \"max_seq_len\": 2048, \"n_layers\": 12, \"d_model\": 768, \"n_heads\": 12, \"d_head\": 64, \"d_ff\": 2048, \"rope_theta\": 10000.0, \"dropout\": 0.0, \"gradient_checkpointing\": true} steps 11617\n"}
+,{"stream_name":"stdout","time":36.126537563,"data":"[05:42:05] token IDs {\"pad\": 0, \"bos\": 1, \"eos\": 2, \"vocab\": 32768}\n"}
+,{"stream_name":"stdout","time":55.326484831,"data":"[05:42:24] tokenized train_queries 827 mean_tokens 8752.1 p95_tokens 26245 max_tokens 152277\n"}
+,{"stream_name":"stdout","time":77.074123672,"data":"[05:42:46] tokenized train_candidates 1000 elapsed_s 22\n"}
+,{"stream_name":"stdout","time":98.804875069,"data":"[05:43:08] tokenized train_candidates 2000 elapsed_s 43\n"}
+,{"stream_name":"stdout","time":119.123076517,"data":"[05:43:28] tokenized train_candidates 3000 elapsed_s 64\n"}
+,{"stream_name":"stdout","time":136.958109747,"data":"[05:43:46] tokenized train_candidates 4000 elapsed_s 82\n"}
+,{"stream_name":"stdout","time":146.290641061,"data":"[05:43:55] tokenized train_candidates 4320 mean_tokens 8094.0 p95_tokens 24680 max_tokens 523037\n"}
+,{"stream_name":"stdout","time":149.800654129,"data":"[05:43:59] tokenized dev_queries 118 mean_tokens 10780.0 p95_tokens 25219 max_tokens 133989\n"}
+,{"stream_name":"stdout","time":180.99205838,"data":"[05:44:30] tokenized dev_candidates 1000 elapsed_s 31\n"}
+,{"stream_name":"stdout","time":181.973287352,"data":"[05:44:31] tokenized dev_candidates 1023 mean_tokens 11040.0 p95_tokens 34734 max_tokens 523037\n"}
+,{"stream_name":"stdout","time":187.489437231,"data":"[05:44:36] tokenized test_queries 237 mean_tokens 8626.7 p95_tokens 25526 max_tokens 114915\n"}
+,{"stream_name":"stdout","time":212.648800068,"data":"[05:45:01] tokenized test_candidates 1000 elapsed_s 25\n"}
+,{"stream_name":"stdout","time":230.866644887,"data":"[05:45:20] tokenized test_candidates 1727 mean_tokens 8977.3 p95_tokens 26552 max_tokens 523037\n"}
+,{"stream_name":"stdout","time":230.866854146,"data":"[05:45:20] all tokenization seconds 194.7\n"}
+,{"stream_name":"stdout","time":230.878062746,"data":"[05:45:20] TF-IDF train queries 827 candidates 4320\n"}
+,{"stream_name":"stdout","time":294.064048947,"data":"[05:46:23] TF-IDF ready train features 300000 nnz 14696858\n"}
+,{"stream_name":"stdout","time":294.105969654,"data":"[05:46:23] TF-IDF dev queries 118 candidates 1023\n"}
+,{"stream_name":"stdout","time":312.449383402,"data":"[05:46:41] TF-IDF ready dev features 300000 nnz 4262380\n"}
+,{"stream_name":"stdout","time":312.484174858,"data":"[05:46:41] TF-IDF test queries 237 candidates 1727\n"}
+,{"stream_name":"stdout","time":337.313402079,"data":"[05:47:06] TF-IDF ready test features 300000 nnz 6376414\n"}
+,{"stream_name":"stdout","time":338.473386354,"data":"[05:47:07] lexical baseline dev {\"micro_f1_at_7\": 0.37465258476931623, \"micro_precision_at_7\": 0.40799031476997577, \"micro_recall_at_7\": 0.34635149023638234, \"tp\": 337, \"fp\": 489, \"fn\": 636, \"queries\": 118}\n"}
+,{"stream_name":"stdout","time":340.914693624,"data":"[05:47:10] full parameters trainable/total 110317824 110317824\n"}
+,{"stream_name":"stderr","time":347.712693309,"data":"/kaggle/src/script.py:533: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":347.712737313,"data":"  scaler = torch.cuda.amp.GradScaler(enabled=AMP)\n"}
+,{"stream_name":"stdout","time":406.296211332,"data":"[05:48:15] full epoch 1 step 200 loss 1.6416 elapsed_min 1.0\n"}
+,{"stream_name":"stdout","time":463.235693404,"data":"[05:49:12] full epoch 1 step 400 loss 1.5951 elapsed_min 1.9\n"}
+,{"stream_name":"stdout","time":521.693282084,"data":"[05:50:11] full epoch 1 step 600 loss 1.5843 elapsed_min 2.9\n"}
+,{"stream_name":"stdout","time":579.517035532,"data":"[05:51:08] full epoch 1 step 800 loss 1.5193 elapsed_min 3.9\n"}
+,{"stream_name":"stdout","time":584.48605269,"data":"[05:51:13] dev encode start full_epoch1\n"}
+,{"stream_name":"stdout","time":603.460653167,"data":"[05:51:32] dev result full_epoch1 {\"dense_weight\": 0.30000000000000004, \"micro_f1_at_7\": 0.38354641467481937, \"micro_precision_at_7\": 0.41767554479418884, \"micro_recall_at_7\": 0.3545734840698869, \"tp\": 345, \"fp\": 481, \"fn\": 628, \"queries\": 118}\n"}
+,{"stream_name":"stdout","time":604.28636207,"data":"[05:51:33] full epoch 1 mean_loss 1.58108 best_dev_f1 0.38355\n"}
+,{"stream_name":"stdout","time":662.743047585,"data":"[05:52:32] full epoch 2 step 200 loss 1.4184 elapsed_min 5.3\n"}
+,{"stream_name":"stdout","time":720.820038821,"data":"[05:53:30] full epoch 2 step 400 loss 1.4275 elapsed_min 6.2\n"}
+,{"stream_name":"stdout","time":778.630233546,"data":"[05:54:27] full epoch 2 step 600 loss 1.3502 elapsed_min 7.2\n"}
+,{"stream_name":"stdout","time":836.764638894,"data":"[05:55:26] full epoch 2 step 800 loss 1.4155 elapsed_min 8.2\n"}
+,{"stream_name":"stdout","time":841.973200629,"data":"[05:55:31] dev encode start full_epoch2\n"}
+,{"stream_name":"stdout","time":860.958005151,"data":"[05:55:50] dev result full_epoch2 {\"dense_weight\": 0.4, \"micro_f1_at_7\": 0.3790994997220678, \"micro_precision_at_7\": 0.4128329297820823, \"micro_recall_at_7\": 0.35046248715313466, \"tp\": 341, \"fp\": 485, \"fn\": 632, \"queries\": 118}\n"}
+,{"stream_name":"stdout","time":860.958208894,"data":"[05:55:50] full epoch 2 mean_loss 1.39975 best_dev_f1 0.38355\n"}
+,{"stream_name":"stdout","time":863.195128223,"data":"[05:55:52] LoRMA+ post-mode modules 60 rank 8\n"}
+,{"stream_name":"stdout","time":863.331066721,"data":"[05:55:52] lorma parameters trainable/total 1181184 111300864\n"}
+,{"stream_name":"stdout","time":928.007072633,"data":"[05:56:57] lorma epoch 1 step 200 loss 1.7043 elapsed_min 1.1\n"}
+,{"stream_name":"stdout","time":991.813649302,"data":"[05:58:01] lorma epoch 1 step 400 loss 1.6461 elapsed_min 2.1\n"}
+,{"stream_name":"stdout","time":1056.06517268,"data":"[05:59:05] lorma epoch 1 step 600 loss 1.5584 elapsed_min 3.2\n"}
+,{"stream_name":"stdout","time":1120.512963106,"data":"[06:00:09] lorma epoch 1 step 800 loss 1.6553 elapsed_min 4.3\n"}
+,{"stream_name":"stdout","time":1126.234404138,"data":"[06:00:15] dev encode start lorma_epoch1\n"}
+,{"stream_name":"stdout","time":1151.009945501,"data":"[06:00:40] dev result lorma_epoch1 {\"dense_weight\": 0.0, \"micro_f1_at_7\": 0.37465258476931623, \"micro_precision_at_7\": 0.40799031476997577, \"micro_recall_at_7\": 0.34635149023638234, \"tp\": 337, \"fp\": 489, \"fn\": 636, \"queries\": 118}\n"}
+,{"stream_name":"stdout","time":1151.024595226,"data":"[06:00:40] lorma epoch 1 mean_loss 1.64296 best_dev_f1 0.37465\n"}
+,{"stream_name":"stdout","time":1215.232752284,"data":"[06:01:44] lorma epoch 2 step 200 loss 1.5313 elapsed_min 5.9\n"}
+,{"stream_name":"stdout","time":1279.48550645,"data":"[06:02:48] lorma epoch 2 step 400 loss 1.5558 elapsed_min 6.9\n"}
+,{"stream_name":"stdout","time":1343.212295572,"data":"[06:03:52] lorma epoch 2 step 600 loss 1.6552 elapsed_min 8.0\n"}
+,{"stream_name":"stdout","time":1407.517825051,"data":"[06:04:56] lorma epoch 2 step 800 loss 1.6091 elapsed_min 9.1\n"}
+,{"stream_name":"stdout","time":1412.953227968,"data":"[06:05:02] dev encode start lorma_epoch2\n"}
+,{"stream_name":"stdout","time":1437.70100331,"data":"[06:05:27] dev result lorma_epoch2 {\"dense_weight\": 0.1, \"micro_f1_at_7\": 0.3779877709838799, \"micro_precision_at_7\": 0.4116222760290557, \"micro_recall_at_7\": 0.3494347379239466, \"tp\": 340, \"fp\": 486, \"fn\": 633, \"queries\": 118}\n"}
+,{"stream_name":"stdout","time":1437.716526919,"data":"[06:05:27] lorma epoch 2 mean_loss 1.58199 best_dev_f1 0.37799\n"}
+,{"stream_name":"stdout","time":1440.033683275,"data":"[06:05:29] partial parameters trainable/total 28516608 110317824\n"}
+,{"stream_name":"stdout","time":1468.006513207,"data":"[06:05:57] partial epoch 1 step 200 loss 1.5881 elapsed_min 0.5\n"}
+,{"stream_name":"stdout","time":1495.97770119,"data":"[06:06:25] partial epoch 1 step 400 loss 1.5232 elapsed_min 0.9\n"}
+,{"stream_name":"stdout","time":1523.858590358,"data":"[06:06:53] partial epoch 1 step 600 loss 1.5886 elapsed_min 1.4\n"}
+,{"stream_name":"stdout","time":1551.855541785,"data":"[06:07:21] partial epoch 1 step 800 loss 1.4912 elapsed_min 1.9\n"}
+,{"stream_name":"stdout","time":1554.257622991,"data":"[06:07:23] dev encode start partial_epoch1\n"}
+,{"stream_name":"stdout","time":1573.282153089,"data":"[06:07:42] dev result partial_epoch1 {\"dense_weight\": 0.1, \"micro_f1_at_7\": 0.3790994997220678, \"micro_precision_at_7\": 0.4128329297820823, \"micro_recall_at_7\": 0.35046248715313466, \"tp\": 341, \"fp\": 485, \"fn\": 632, \"queries\": 118}\n"}
+,{"stream_name":"stdout","time":1573.466876017,"data":"[06:07:42] partial epoch 1 mean_loss 1.53796 best_dev_f1 0.3791\n"}
+,{"stream_name":"stdout","time":1601.453441118,"data":"[06:08:10] partial epoch 2 step 200 loss 1.5003 elapsed_min 2.7\n"}
+,{"stream_name":"stdout","time":1629.383657848,"data":"[06:08:38] partial epoch 2 step 400 loss 1.4611 elapsed_min 3.2\n"}
+,{"stream_name":"stdout","time":1657.289556911,"data":"[06:09:06] partial epoch 2 step 600 loss 1.4334 elapsed_min 3.6\n"}
+,{"stream_name":"stdout","time":1685.513601457,"data":"[06:09:34] partial epoch 2 step 800 loss 1.5405 elapsed_min 4.1\n"}
+,{"stream_name":"stdout","time":1687.902595872,"data":"[06:09:37] dev encode start partial_epoch2\n"}
+,{"stream_name":"stdout","time":1706.852878259,"data":"[06:09:56] dev result partial_epoch2 {\"dense_weight\": 0.4, \"micro_f1_at_7\": 0.38132295719844356, \"micro_precision_at_7\": 0.4152542372881356, \"micro_recall_at_7\": 0.35251798561151076, \"tp\": 343, \"fp\": 483, \"fn\": 630, \"queries\": 118}\n"}
+,{"stream_name":"stdout","time":1707.085126771,"data":"[06:09:56] partial epoch 2 mean_loss 1.48369 best_dev_f1 0.38132\n"}
+,{"stream_name":"stdout","time":1707.367290347,"data":"[06:09:56] KD teacher selected by dev full dev_f1 0.38354641467481937\n"}
+,{"stream_name":"stdout","time":1709.96555075,"data":"[06:09:59] KD teacher embeddings 827 queries 4320 candidate cases\n"}
+,{"stream_name":"stdout","time":1743.681844312,"data":"[06:10:33] embedded docs 1200 of 4320 elapsed_s 20\n"}
+,{"stream_name":"stdout","time":1763.556917723,"data":"[06:10:52] embedded docs 2400 of 4320 elapsed_s 40\n"}
+,{"stream_name":"stdout","time":1783.249160098,"data":"[06:11:12] embedded docs 3600 of 4320 elapsed_s 60\n"}
+,{"stream_name":"stdout","time":1798.496136474,"data":"[06:11:27] kd parameters trainable/total 67841280 67841280\n"}
+,{"stream_name":"stderr","time":1798.49635738,"data":"/kaggle/src/script.py:629: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.\n"}
+,{"stream_name":"stderr","time":1798.496369598,"data":"  scaler = torch.cuda.amp.GradScaler(enabled=AMP)\n"}
+,{"stream_name":"stdout","time":1856.820261612,"data":"[06:12:26] kd epoch 1 step 100 loss inf elapsed_min 1.0\n"}
+,{"stream_name":"stdout","time":1915.674010339,"data":"[06:13:24] kd epoch 1 step 200 loss inf elapsed_min 2.0\n"}
+,{"stream_name":"stdout","time":1974.041362067,"data":"[06:14:23] kd epoch 1 step 300 loss inf elapsed_min 2.9\n"}
+,{"stream_name":"stdout","time":2032.944530682,"data":"[06:15:22] kd epoch 1 step 400 loss inf elapsed_min 3.9\n"}
+,{"stream_name":"stdout","time":2089.382677989,"data":"[06:16:18] kd epoch 1 step 500 loss 0.39 elapsed_min 4.8\n"}
+,{"stream_name":"stdout","time":2147.92903655,"data":"[06:17:17] kd epoch 1 step 600 loss inf elapsed_min 5.8\n"}
+,{"stream_name":"stdout","time":2206.408701463,"data":"[06:18:15] kd epoch 1 step 700 loss 0.3688 elapsed_min 6.8\n"}
+,{"stream_name":"stdout","time":2264.648771358,"data":"[06:19:13] kd epoch 1 step 800 loss inf elapsed_min 7.8\n"}
+,{"stream_name":"stdout","time":2280.422777029,"data":"[06:19:29] dev encode start kd_epoch1\n"}
+,{"stream_name":"stdout","time":2290.175255637,"data":"[06:19:39] dev result kd_epoch1 {\"dense_weight\": 0.0, \"micro_f1_at_7\": 0.37465258476931623, \"micro_precision_at_7\": 0.40799031476997577, \"micro_recall_at_7\": 0.34635149023638234, \"tp\": 337, \"fp\": 489, \"fn\": 636, \"queries\": 118}\n"}
+,{"stream_name":"stdout","time":2290.743118694,"data":"[06:19:40] kd epoch 1 mean_loss inf best_dev_f1 0.37465\n"}
+,{"stream_name":"stdout","time":2291.372817149,"data":"[06:19:40] validation-selected system {\"type\": \"ensemble\", \"metrics\": {\"micro_f1_at_7\": 0.38465814341300725, \"micro_precision_at_7\": 0.4188861985472155, \"micro_recall_at_7\": 0.355601233299075, \"tp\": 346, \"fp\": 480, \"fn\": 627, \"queries\": 118, \"method_a\": \"full\", \"method_b\": \"partial\", \"method_a_weight\": 0.6000000000000001, \"lexical_weight\": 0.6000000000000001}, \"method_a\": \"full\", \"method_b\": \"partial\", \"method_a_weight\": 0.6000000000000001, \"lexical_weight\": 0.6000000000000001}\n"}
+,{"stream_name":"stdout","time":2319.859569005,"data":"[06:20:09] embedded docs 1200 of 1727 elapsed_s 20\n"}
+,{"stream_name":"stdout","time":2352.567681922,"data":"[06:20:41] embedded docs 1200 of 1727 elapsed_s 20\n"}
+,{"stream_name":"stdout","time":2361.60325456,"data":"[06:20:50] COMPLETE {\"lexical_tfidf_dev\": {\"micro_f1_at_7\": 0.37465258476931623, \"micro_precision_at_7\": 0.40799031476997577, \"micro_recall_at_7\": 0.34635149023638234, \"tp\": 337, \"fp\": 489, \"fn\": 636, \"queries\": 118}, \"experiments\": {\"full\": {\"description\": \"Full fine-tuning of the 12-layer Phase 1 A0 backbone plus retrieval projection.\", \"best_epoch\": 1, \"dev_metrics\": {\"dense_weight\": 0.30000000000000004, \"micro_f1_at_7\": 0.38354641467481937, \"micro_precision_at_7\": 0.41767554479418884, \"micro_recall_at_7\": 0.3545734840698869, \"tp\": 345, \"fp\": 481, \"fn\": 628, \"queries\": 118}, \"elapsed_seconds\": 513.544196844101, \"checkpoint\": \"full_best.pt\", \"trainable_parameters\": 110317824, \"total_parameters\": 110317824}, \"lorma\": {\"description\": \"LoRMA+ post-mode multiplicative adapters (rank 8, alpha 16) in attention and feed-forward linear layers; backbone weights frozen.\", \"best_epoch\": 2, \"dev_metrics\": {\"dense_weight\": 0.1, \"micro_f1_at_7\": 0.3779877709838799, \"micro_precision_at_7\": 0.4116222760290557, \"micro_recall_at_7\": 0.3494347379239466, \"tp\": 340, \"fp\": 486, \"fn\": 633, \"queries\": 118}, \"elapsed_seconds\": 574.6744549274445, \"checkpoint\": \"lorma_best.pt\", \"trainable_parameters\": 1181184, \"total_parameters\": 111300864}, \"partial\": {\"description\": \"Upper-layer fine-tuning of the final four of twelve Phase 1 transformer blocks plus final norm and retrieval projection.\", \"best_epoch\": 2, \"dev_metrics\": {\"dense_weight\": 0.4, \"micro_f1_at_7\": 0.38132295719844356, \"micro_precision_at_7\": 0.4152542372881356, \"micro_recall_at_7\": 0.35251798561151076, \"tp\": 343, \"fp\": 483, \"fn\": 630, \"queries\": 118}, \"elapsed_seconds\": 267.3320937156677, \"checkpoint\": \"partial_best.pt\", \"trainable_parameters\": 28516608, \"total_parameters\": 110317824}, \"kd\": {\"description\": \"Knowledge distillation from the best validation single-model teacher into a six-layer student initialized from alternating Phase 1 blocks; teacher score distribution plus gold labels.\", \"best_epoch\": 1, \"dev_metrics\": {\"dense_weight\": 0.0, \"micro_f1_at_7\": 0.37465258476931623, \"micro_precision_at_7\": 0.40799031476997577, \"micro_recall_at_7\": 0.34635149023638234, \"tp\": 337, \"fp\": 489, \"fn\": 636, \"queries\": 118}, \"elapsed_seconds\": 492.5320656299591, \"checkpoint\": \"kd_student_best.pt\", \"trainable_parameters\": 67841280, \"total_parameters\": 67841280}}, \"kd_teacher\": \"full\", \"ensemble_dev\": {\"micro_f1_at_7\": 0.38465814341300725, \"micro_precision_at_7\": 0.4188861985472155, \"micro_recall_at_7\": 0.355601233299075, \"tp\": 346, \"fp\": 480, \"fn\": 627, \"queries\": 118, \"method_a\": \"full\", \"method_b\": \"partial\", \"method_a_weight\": 0.6000000000000001, \"lexical_weight\": 0.6000000000000001}, \"selected_system\": {\"type\": \"ensemble\", \"metrics\": {\"micro_f1_at_7\": 0.38465814341300725, \"micro_precision_at_7\": 0.4188861985472155, \"micro_recall_at_7\": 0.355601233299075, \"tp\": 346, \"fp\": 480, \"fn\": 627, \"queries\": 118, \"method_a\": \"full\", \"method_b\": \"partial\", \"method_a_weight\": 0.6000000000000001, \"lexical_weight\": 0.6000000000000001}, \"method_a\": \"full\", \"method_b\": \"partial\", \"method_a_weight\": 0.6000000000000001, \"lexical_weight\": 0.6000000000000001}, \"test_predictions\": {\"query_count\": 237, \"ranked_candidates_per_query\": 7, \"unique_ids_verified\": true, \"candidate_pool_membership_verified\": true, \"test_score\": null}}\n"}
+,{"stream_name":"stdout","time":2361.603333898,"data":"[06:20:50] artifacts ['CS781_Phase7_PCR_Submission.zip', 'checkpoints', 'dev_predictions_by_experiment.json', 'experiment_report.json', 'prediction.json']\n"}
+,{"stream_name":"stderr","time":2370.806274167,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":2370.806305817,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":2371.281729599,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":2371.281755061,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":2372.387150994,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":2373.995306059,"data":"[NbConvertApp] Writing 515081 bytes to __results__.html\n"}
+]

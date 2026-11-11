@@ -1,0 +1,12 @@
+{
+  "method": "c1_houlsby",
+  "change": "truncate existing model summary to at most 400 whitespace-delimited words",
+  "selection": "selected using 32 held-out validation examples by approximate ROUGE-1 F1; 64 held-out confirmation examples evaluated after selection",
+  "validation_rouge1_original": 0.29545,
+  "validation_rouge1_candidate": 0.30539,
+  "confirmation_rouge1_original": 0.28951,
+  "confirmation_rouge1_candidate": 0.29776,
+  "bertscore": "not measured",
+  "test_count": 100,
+  "zip_sha256": "877a34828b724b84ede777d1e3b66f02f4ea16e3672016de14272f46cac889c9"
+}

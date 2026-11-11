@@ -1,0 +1,27 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{lmodern}
+\usepackage{longtable}
+\usepackage{hyperref}
+\title{Corrected lexical fallback: Methodology and Evidence}
+\author{CS781 Capstone -- Krishna K Karthikeya G N}
+\date{12 November 2026}
+\begin{document}
+\maketitle
+\noindent\textbf{Status.} Post-run methodology reconstruction grounded in archived source and reports. This document is not an executed historical notebook.\par
+\section*{Research question}
+Retain a simple valid submission path if the neural scorer fails to load. The fallback uses no adapted retrieval checkpoint, so it is a useful control against the more complex neural systems.
+\section*{Architecture and mechanism}
+Corrected lexical ranking excludes the query itself, checks pool membership and uniqueness, and emits exactly seven candidate IDs.
+\section*{Measured result}
+\begin{center}\begin{tabular}{ll}Scored submission & 1039899, 1039901\\
+Codabench micro-F1@7 & 0.4022\\
+Archived local metric & not independently reported after correction\end{tabular}\end{center}
+Its Codabench micro-F1@7 was 0.4022, near the corrected neural runs. This shows the lexical signal remained strong on this task.
+\section*{Limitations and next check}
+It does not demonstrate that lexical matching understands legal entailment or precedent relevance. Local, pilot, and hidden metrics are deliberately kept distinct. A single scored run does not establish a causal architecture effect or statistical significance.
+\section*{Source and reproducibility}
+Original source modules: phase7\_export.py, phase7\_run.py. SHA-256 hashes, the original report, and the prediction ZIP receipt are in the companion provenance file. The explanatory notebook was written after the historical run; original execution output is never implied. Reproduction requires authorized course data, the Phase 1 parent weights/tokenizer, and the dependencies in the archived source.
+\section*{Documentation disclosure}
+AI assistance was used to organize the archived evidence and draft this explanatory document. All numerical claims above come from saved run records or the provided finished-submission screenshot; missing evidence is labelled as such.
+\end{document}

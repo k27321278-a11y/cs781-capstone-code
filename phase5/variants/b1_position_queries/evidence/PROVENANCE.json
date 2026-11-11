@@ -1,0 +1,81 @@
+{
+  "phase": 5,
+  "variant": "b1_position_queries",
+  "title": "B1 position-aware statute queries",
+  "method_kind": "trained model",
+  "codabench_metric": "Codabench macro-F1",
+  "codabench_score": 0.2254,
+  "submission_ids": [
+    1016786
+  ],
+  "local_metric": "0.2299 official-dev macro-F1",
+  "source": [
+    {
+      "path": "phase5_position_queries.py",
+      "source_sha256": "5b50d61811aae7d98f184190003509a2ea3798ae837dd4fa27f70de5d16e09f5",
+      "bytes": 2192,
+      "repository_source": "phase5/source/phase5_position_queries.py",
+      "symbols": [
+        "PositionQueryB1Classifier (line 11)",
+        "install (line 44)"
+      ]
+    },
+    {
+      "path": "phase5_multiwindow.py",
+      "source_sha256": "86ac644db5ab5f19b2da1772deae2ebcc8fbe25b67cb599b30f765fa53a990da",
+      "bytes": 4446,
+      "repository_source": "phase5/source/phase5_multiwindow.py",
+      "symbols": [
+        "pack_four_windows (line 26)",
+        "AdapterBlock (line 41)",
+        "MultiWindowB1Classifier (line 54)",
+        "tokenize_split_four (line 85)",
+        "install (line 105)"
+      ]
+    },
+    {
+      "path": "phase5_b1_train.py",
+      "source_sha256": "645cb2e65313ff49aa6ae574aeab9b015be2365bf427b5e03e3672bc94e20996",
+      "bytes": 13730,
+      "repository_source": "phase5/source/phase5_b1_train.py",
+      "symbols": [
+        "sha256 (line 34)",
+        "LoRALinear (line 42)",
+        "B1Classifier (line 57)",
+        "Rows (line 89)",
+        "read_json (line 102)",
+        "tokenize_split (line 106)",
+        "label_matrix (line 124)",
+        "predict (line 135)",
+        "train (line 147)"
+      ]
+    }
+  ],
+  "original_notebook": {
+    "path": "original_runner.ipynb",
+    "source_sha256": "0144f9068d1bc156a1acafa3ebf4c3f27f841fc652cc7abde70dcf3dbd78735f",
+    "bytes": 3825,
+    "repository_source": "phase5/notebooks/phase5_kaggle_position_queries/phase5_b1_position_queries.ipynb"
+  },
+  "run_report": {
+    "path": "original_run_report.json",
+    "source_sha256": "aca5eb0f5704eaf2e32f1e71bd5ef6d284c5ea2dcdf21c7b0725b58c1855c95a",
+    "bytes": 10888
+  },
+  "run_log": {
+    "path": "original_run.log",
+    "source_sha256": "a8f288ee85670970449aa3e88668432402c671209c7a9970c7da2114867d35bc",
+    "bytes": 43249
+  },
+  "prediction_zip": {
+    "entries": [
+      "prediction.json"
+    ],
+    "prediction_count": 13019,
+    "sha256": "ef8ebe89a452a9610277677ae905def65d482fa4cd574b60070539a2d13f66d7",
+    "crc_ok": true,
+    "original_name": "phase5_b1_position_queries_prediction.zip"
+  },
+  "documentation_status": "post-run reconstruction; no fabricated notebook execution",
+  "reference_chat": "https://chatgpt.com/share/6af16e7a-7c2c-83e8-8ca7-03cf11cffc95"
+}

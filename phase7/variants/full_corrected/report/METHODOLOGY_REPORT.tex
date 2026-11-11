@@ -1,0 +1,27 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{lmodern}
+\usepackage{longtable}
+\usepackage{hyperref}
+\title{Full fine-tuned neural retriever: Methodology and Evidence}
+\author{CS781 Capstone -- Krishna K Karthikeya G N}
+\date{12 November 2026}
+\begin{document}
+\maketitle
+\noindent\textbf{Status.} Post-run methodology reconstruction grounded in archived source and reports. This document is not an executed historical notebook.\par
+\section*{Research question}
+Test whether adapting the full in-house Phase 1 A0 language model improves case matching beyond lexical overlap. The full model has about 110.3 million trainable parameters in the saved GPU report, much more than the partial or LoRMA branches.
+\section*{Architecture and mechanism}
+Four evenly spaced 256-token windows encode each query and candidate. The model mean-pools hidden states within each window and applies late max interaction across windows; supervised hard negatives come from the lexical retriever.
+\section*{Measured result}
+\begin{center}\begin{tabular}{ll}Scored submission & 1039892\\
+Codabench micro-F1@7 & 0.4064\\
+Archived local metric & 0.4036 corrected local-dev micro-F1@7\end{tabular}\end{center}
+Corrected local dev micro-F1@7 was 0.4036 on 118 queries; Codabench was 0.4064. The latter ties the corrected model ensemble in the screenshot.
+\section*{Limitations and next check}
+A score tie on one hidden evaluation does not show the ensemble and full model made identical predictions. Local, pilot, and hidden metrics are deliberately kept distinct. A single scored run does not establish a causal architecture effect or statistical significance.
+\section*{Source and reproducibility}
+Original source modules: phase7\_run.py, phase7\_export.py. SHA-256 hashes, the original report, and the prediction ZIP receipt are in the companion provenance file. The explanatory notebook was written after the historical run; original execution output is never implied. Reproduction requires authorized course data, the Phase 1 parent weights/tokenizer, and the dependencies in the archived source.
+\section*{Documentation disclosure}
+AI assistance was used to organize the archived evidence and draft this explanatory document. All numerical claims above come from saved run records or the provided finished-submission screenshot; missing evidence is labelled as such.
+\end{document}

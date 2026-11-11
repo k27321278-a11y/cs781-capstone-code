@@ -1,0 +1,81 @@
+{
+  "phase": 5,
+  "variant": "b1_statute_gru",
+  "title": "B1 statute-wise GRU memory",
+  "method_kind": "trained model",
+  "codabench_metric": "Codabench macro-F1",
+  "codabench_score": 0.2238,
+  "submission_ids": [
+    1016621
+  ],
+  "local_metric": "0.2293 official-dev macro-F1",
+  "source": [
+    {
+      "path": "phase5_statute_gru.py",
+      "source_sha256": "2a91a94f60bc9c3f6db4bf391fd85018a3e3fd9fba6b6aa2e5a514d4b42ec99c",
+      "bytes": 2154,
+      "repository_source": "phase5/source/phase5_statute_gru.py",
+      "symbols": [
+        "StatuteMemoryB1Classifier (line 11)",
+        "install (line 43)"
+      ]
+    },
+    {
+      "path": "phase5_multiwindow.py",
+      "source_sha256": "86ac644db5ab5f19b2da1772deae2ebcc8fbe25b67cb599b30f765fa53a990da",
+      "bytes": 4446,
+      "repository_source": "phase5/source/phase5_multiwindow.py",
+      "symbols": [
+        "pack_four_windows (line 26)",
+        "AdapterBlock (line 41)",
+        "MultiWindowB1Classifier (line 54)",
+        "tokenize_split_four (line 85)",
+        "install (line 105)"
+      ]
+    },
+    {
+      "path": "phase5_b1_train.py",
+      "source_sha256": "645cb2e65313ff49aa6ae574aeab9b015be2365bf427b5e03e3672bc94e20996",
+      "bytes": 13730,
+      "repository_source": "phase5/source/phase5_b1_train.py",
+      "symbols": [
+        "sha256 (line 34)",
+        "LoRALinear (line 42)",
+        "B1Classifier (line 57)",
+        "Rows (line 89)",
+        "read_json (line 102)",
+        "tokenize_split (line 106)",
+        "label_matrix (line 124)",
+        "predict (line 135)",
+        "train (line 147)"
+      ]
+    }
+  ],
+  "original_notebook": {
+    "path": "original_runner.ipynb",
+    "source_sha256": "4a8f9ec6f53db4ceabf6a7c6a7e52e14f0ea452d5ed4dff6c07dea7022b353b4",
+    "bytes": 3743,
+    "repository_source": "phase5/notebooks/phase5_kaggle_statute_gru/phase5_b1_statute_gru.ipynb"
+  },
+  "run_report": {
+    "path": "original_run_report.json",
+    "source_sha256": "645fe572eae23c977577c4dc4bb3bec6ec7b539ec01a9c05f794bd9be5e23be6",
+    "bytes": 10919
+  },
+  "run_log": {
+    "path": "original_run.log",
+    "source_sha256": "72bdb79220fc9bb1f843538ff685dcc5095e1b08a623e7443d2fb3deb2840633",
+    "bytes": 43267
+  },
+  "prediction_zip": {
+    "entries": [
+      "prediction.json"
+    ],
+    "prediction_count": 13019,
+    "sha256": "0e868cd6c21a156e9e53b9ee4965e9dc440f0f15e18378c65e5267e35bdee874",
+    "crc_ok": true,
+    "original_name": "phase5_b1_statute_gru_prediction.zip"
+  },
+  "documentation_status": "post-run reconstruction; no fabricated notebook execution",
+  "reference_chat": "https://chatgpt.com/share/6af16e7a-7c2c-83e8-8ca7-03cf11cffc95"
+}

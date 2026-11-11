@@ -1,0 +1,83 @@
+{
+  "phase": 6,
+  "variant": "d222_prefix",
+  "title": "D222 prefix-tuned summarizer",
+  "method_kind": "trained summarizer",
+  "codabench_metric": "Codabench BERTScore F1",
+  "codabench_score": 0.771,
+  "submission_ids": [
+    1031005
+  ],
+  "local_metric": "-1.6961 validation negative NLL; BERTScore not measured in this report",
+  "source": [
+    {
+      "path": "d222_prefix.py",
+      "source_sha256": "297e37408eeb46c7203fd49cf7db5d5db9d8e2d0b1d90b0d8daa71345bf91157",
+      "bytes": 8074,
+      "repository_source": "phase6/source/runtime/d222_prefix.py",
+      "symbols": [
+        "GlobalPrefixAttention (line 19)",
+        "adapt_model (line 57)",
+        "_activate_source (line 69)",
+        "build (line 93)",
+        "_causal_batch (line 132)",
+        "training_loss (line 145)",
+        "generate (line 152)"
+      ]
+    },
+    {
+      "path": "phase6_data.py",
+      "source_sha256": "7b539dd1679e593c85058aa14d31f04ad92b85ff7c9d9e9fa647d48aa3a40b4f",
+      "bytes": 2459,
+      "repository_source": "phase6/source/runtime/phase6_data.py",
+      "symbols": [
+        "normalize_rows (line 6)",
+        "document_hash (line 27)",
+        "split_rows (line 31)",
+        "select_passages (line 40)",
+        "validate_predictions (line 50)"
+      ]
+    },
+    {
+      "path": "train_phase6.py",
+      "source_sha256": "4d1b2f0c303e140e659136f8712c2337cfd095004a643c49e8b0a03c4fb84af8",
+      "bytes": 16559,
+      "repository_source": "phase6/source/runtime/train_phase6.py",
+      "symbols": [
+        "sha (line 19)",
+        "save_json (line 24)",
+        "trainable_state (line 31)",
+        "restore_trainable (line 35)",
+        "pack_source (line 44)",
+        "main (line 59)"
+      ]
+    }
+  ],
+  "original_notebook": {
+    "path": "original_runner.ipynb",
+    "source_sha256": "42476b0f6ba77c53d091fc48bafb69942eb1cef12fcb0f96fd501f73d76d0b71",
+    "bytes": 1061,
+    "repository_source": "phase6/notebooks/d222_prefix/cs781-phase6-d222-prefix.ipynb"
+  },
+  "run_report": {
+    "path": "original_run_report.json",
+    "source_sha256": "e45f2945cd4a7212480f24e0d1b372db72d56c7b3702f1e28c00927e8e0d6e9c",
+    "bytes": 2415
+  },
+  "run_log": {
+    "path": "original_run.log",
+    "source_sha256": "cb5d38622ccfe9fd6834779cc790074837a25f3a116e70dea63ae9f43f56238b",
+    "bytes": 22042
+  },
+  "prediction_zip": {
+    "entries": [
+      "prediction.json"
+    ],
+    "prediction_count": 100,
+    "sha256": "65f6fe67b106cbf4f2ff8204eb0b330a2d1a93d37927e8cdf98f7a529936ac98",
+    "crc_ok": true,
+    "original_name": "phase6_d222_prefix_prediction.zip"
+  },
+  "documentation_status": "post-run reconstruction; no fabricated notebook execution",
+  "reference_chat": "https://chatgpt.com/share/6af16e7a-7c2c-83e8-8ca7-03cf11cffc95"
+}

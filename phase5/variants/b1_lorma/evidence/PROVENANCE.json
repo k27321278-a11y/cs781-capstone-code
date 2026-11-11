@@ -1,0 +1,78 @@
+{
+  "phase": 5,
+  "variant": "b1_lorma",
+  "title": "B1 LoRMA+ statute classifier",
+  "method_kind": "trained model",
+  "codabench_metric": "Codabench macro-F1",
+  "codabench_score": 0.2542,
+  "submission_ids": [
+    1016282
+  ],
+  "local_metric": "0.2517 official-dev macro-F1",
+  "source": [
+    {
+      "path": "phase5_b1_train.py",
+      "source_sha256": "645cb2e65313ff49aa6ae574aeab9b015be2365bf427b5e03e3672bc94e20996",
+      "bytes": 13730,
+      "repository_source": "phase5/source/phase5_b1_train.py",
+      "symbols": [
+        "sha256 (line 34)",
+        "LoRALinear (line 42)",
+        "B1Classifier (line 57)",
+        "Rows (line 89)",
+        "read_json (line 102)",
+        "tokenize_split (line 106)",
+        "label_matrix (line 124)",
+        "predict (line 135)",
+        "train (line 147)"
+      ]
+    },
+    {
+      "path": "phase5_lorma.py",
+      "source_sha256": "d991d6da627a21f8f178dedff98c090eba364f55ba0b15db51467c384f7f1ba1",
+      "bytes": 1028,
+      "repository_source": "phase5/source/phase5_lorma.py",
+      "symbols": [
+        "LoRMAPlusLinear (line 11)"
+      ]
+    },
+    {
+      "path": "phase5_core.py",
+      "source_sha256": "5ea4fb38802cabb47692e80ae21b873afdb0caa67cee7fbbec59fc44db575009",
+      "bytes": 2957,
+      "repository_source": "phase5/source/phase5_core.py",
+      "symbols": [
+        "pack_windows (line 6)",
+        "f1_scores (line 24)",
+        "choose_thresholds (line 44)"
+      ]
+    }
+  ],
+  "original_notebook": {
+    "path": "original_runner.ipynb",
+    "source_sha256": "7fbb45d62ed734d14057a7af06a28e314b2e7d1d6ed0399bbfabf9ed726d69bd",
+    "bytes": 2656,
+    "repository_source": "phase5/notebooks/phase5_kaggle_lorma/phase5_b1_lorma.ipynb"
+  },
+  "run_report": {
+    "path": "original_run_report.json",
+    "source_sha256": "0e9200267bc55dded6635cb52ef501306e43f5fd40c4768c850752041e5830d2",
+    "bytes": 10919
+  },
+  "run_log": {
+    "path": "original_run.log",
+    "source_sha256": "d5d058e0e827f9e81b8f3a8ca8f33be42e2f160be8bb11ac7002399ab49727f8",
+    "bytes": 25748
+  },
+  "prediction_zip": {
+    "entries": [
+      "prediction.json"
+    ],
+    "prediction_count": 13019,
+    "sha256": "998b2192f7725e401167c6dad54558a3de7e19546469d575fc02cb599a52a620",
+    "crc_ok": true,
+    "original_name": "phase5_b1_lorma_prediction.zip"
+  },
+  "documentation_status": "post-run reconstruction; no fabricated notebook execution",
+  "reference_chat": "https://chatgpt.com/share/6af16e7a-7c2c-83e8-8ca7-03cf11cffc95"
+}

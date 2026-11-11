@@ -1,0 +1,70 @@
+{
+  "phase": 6,
+  "variant": "b1_fusion_length",
+  "title": "B1 fusion with 300-word output cap",
+  "method_kind": "decoding variant",
+  "codabench_metric": "Codabench BERTScore F1",
+  "codabench_score": 0.7783,
+  "submission_ids": [
+    1030821
+  ],
+  "local_metric": "not reported",
+  "source": [
+    {
+      "path": "b1_fusion.py",
+      "source_sha256": "58c9ee6bddcca2fd62d285ebaf6fb70524405cda5de90c451ea46984ddb26aa5",
+      "bytes": 17002,
+      "repository_source": "phase6/source/runtime/b1_fusion.py",
+      "symbols": [
+        "_sha256 (line 39)",
+        "_find (line 47)",
+        "_verify_source (line 60)",
+        "_discover_source (line 84)",
+        "_activate_source (line 110)",
+        "TokenizerAdapter (line 124)",
+        "LoRMAOutputLinear (line 141)",
+        "B1PassageFusion (line 160)",
+        "build (line 243)",
+        "training_loss (line 299)",
+        "generate (line 310)"
+      ]
+    },
+    {
+      "path": "train_phase6.py",
+      "source_sha256": "4d1b2f0c303e140e659136f8712c2337cfd095004a643c49e8b0a03c4fb84af8",
+      "bytes": 16559,
+      "repository_source": "phase6/source/runtime/train_phase6.py",
+      "symbols": [
+        "sha (line 19)",
+        "save_json (line 24)",
+        "trainable_state (line 31)",
+        "restore_trainable (line 35)",
+        "pack_source (line 44)",
+        "main (line 59)"
+      ]
+    }
+  ],
+  "original_notebook": {
+    "path": "original_runner.ipynb",
+    "source_sha256": "8ae01ddcde22d908d5541142c22c6b8ef718700acebb72af2110791e7a5e78b5",
+    "bytes": 911,
+    "repository_source": "phase6/notebooks/b1_lorma/cs781-phase6-b1-passage-fusion-lorma.ipynb"
+  },
+  "run_report": {
+    "path": "original_run_report.json",
+    "source_sha256": "078d6768b1553f331a327f3360e63265834afe15990ffbba43c2ca6d90a40ae5",
+    "bytes": 587
+  },
+  "run_log": null,
+  "prediction_zip": {
+    "entries": [
+      "prediction.json"
+    ],
+    "prediction_count": 100,
+    "sha256": "8ac71f40cba1898d13ee5c3b7a1ab5b83d6d0f03ce3082a3eec91ec58be6a39c",
+    "crc_ok": true,
+    "original_name": "phase6_b1_fusion_length_candidate.zip"
+  },
+  "documentation_status": "post-run reconstruction; no fabricated notebook execution",
+  "reference_chat": "https://chatgpt.com/share/6af16e7a-7c2c-83e8-8ca7-03cf11cffc95"
+}

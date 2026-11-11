@@ -1,0 +1,12 @@
+{
+  "method": "b1_fusion",
+  "change": "truncate existing model summary to at most 300 whitespace-delimited words",
+  "selection": "selected using 32 held-out validation examples by approximate ROUGE-1 F1; 64 held-out confirmation examples evaluated after selection",
+  "validation_rouge1_original": 0.22108,
+  "validation_rouge1_candidate": 0.25564,
+  "confirmation_rouge1_original": 0.23031,
+  "confirmation_rouge1_candidate": 0.26328,
+  "bertscore": "not measured",
+  "test_count": 100,
+  "zip_sha256": "8ac71f40cba1898d13ee5c3b7a1ab5b83d6d0f03ce3082a3eec91ec58be6a39c"
+}

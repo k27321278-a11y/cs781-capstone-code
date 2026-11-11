@@ -1,0 +1,27 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{lmodern}
+\usepackage{longtable}
+\usepackage{hyperref}
+\title{LegalSpan LoRA summarizer: Methodology and Evidence}
+\author{CS781 Capstone -- Krishna K Karthikeya G N}
+\date{12 November 2026}
+\begin{document}
+\maketitle
+\noindent\textbf{Status.} Post-run methodology reconstruction grounded in archived source and reports. This document is not an executed historical notebook.\par
+\section*{Research question}
+Keep the legal span representation from Phase 1 and adapt only compact low-rank modules to summarization. The report records selected epoch 4 by negative summary NLL, with no reference-dependent test passage selection.
+\section*{Architecture and mechanism}
+The LegalSpan source and tokenizer feed a document-only passage strategy with first/last coverage. LoRA modules modify selected projections, and autoregressive generation produces the summary.
+\section*{Measured result}
+\begin{center}\begin{tabular}{ll}Scored submission & 1031076, 1031077, 1031078\\
+Codabench BERTScore F1 & 0.7847\\
+Archived local metric & -1.1865 validation negative NLL; BERTScore not measured in this report\end{tabular}\end{center}
+Codabench BERTScore F1 was 0.7847, the highest among these submitted Phase 6 variants. The evidence supports this result for the scored submission, not a universal model ranking.
+\section*{Limitations and next check}
+BERTScore is a semantic-overlap measure; legal fact fidelity and citation accuracy require separate review. Local, pilot, and hidden metrics are deliberately kept distinct. A single scored run does not establish a causal architecture effect or statistical significance.
+\section*{Source and reproducibility}
+Original source modules: legalspan\_lora.py, phase6\_data.py, train\_phase6.py. SHA-256 hashes, the original report, and the prediction ZIP receipt are in the companion provenance file. The explanatory notebook was written after the historical run; original execution output is never implied. Reproduction requires authorized course data, the Phase 1 parent weights/tokenizer, and the dependencies in the archived source.
+\section*{Documentation disclosure}
+AI assistance was used to organize the archived evidence and draft this explanatory document. All numerical claims above come from saved run records or the provided finished-submission screenshot; missing evidence is labelled as such.
+\end{document}

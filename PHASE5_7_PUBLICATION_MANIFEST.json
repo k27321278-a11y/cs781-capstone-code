@@ -1,0 +1,194 @@
+[
+  {
+    "phase": 5,
+    "slug": "b1_lora",
+    "score": 0.2554,
+    "zip": true,
+    "prediction_count": 13019,
+    "path": "phase5/variants/b1_lora"
+  },
+  {
+    "phase": 5,
+    "slug": "b1_lorma",
+    "score": 0.2542,
+    "zip": true,
+    "prediction_count": 13019,
+    "path": "phase5/variants/b1_lorma"
+  },
+  {
+    "phase": 5,
+    "slug": "b1_sparse_hybrid",
+    "score": 0.3949,
+    "zip": true,
+    "prediction_count": 13019,
+    "path": "phase5/variants/b1_sparse_hybrid"
+  },
+  {
+    "phase": 5,
+    "slug": "b1_sparse_hybrid_cv",
+    "score": 0.3944,
+    "zip": true,
+    "prediction_count": 13019,
+    "path": "phase5/variants/b1_sparse_hybrid_cv"
+  },
+  {
+    "phase": 5,
+    "slug": "b1_sparse_guided",
+    "score": 0.2417,
+    "zip": true,
+    "prediction_count": 13019,
+    "path": "phase5/variants/b1_sparse_guided"
+  },
+  {
+    "phase": 5,
+    "slug": "b1_statute_gru",
+    "score": 0.2238,
+    "zip": true,
+    "prediction_count": 13019,
+    "path": "phase5/variants/b1_statute_gru"
+  },
+  {
+    "phase": 5,
+    "slug": "b1_position_queries",
+    "score": 0.2254,
+    "zip": true,
+    "prediction_count": 13019,
+    "path": "phase5/variants/b1_position_queries"
+  },
+  {
+    "phase": 6,
+    "slug": "b1_fusion",
+    "score": 0.7674,
+    "zip": true,
+    "prediction_count": 100,
+    "path": "phase6/variants/b1_fusion"
+  },
+  {
+    "phase": 6,
+    "slug": "b1_fusion_length",
+    "score": 0.7783,
+    "zip": true,
+    "prediction_count": 100,
+    "path": "phase6/variants/b1_fusion_length"
+  },
+  {
+    "phase": 6,
+    "slug": "c1_houlsby",
+    "score": 0.77,
+    "zip": true,
+    "prediction_count": 100,
+    "path": "phase6/variants/c1_houlsby"
+  },
+  {
+    "phase": 6,
+    "slug": "c1_houlsby_length",
+    "score": 0.775,
+    "zip": true,
+    "prediction_count": 100,
+    "path": "phase6/variants/c1_houlsby_length"
+  },
+  {
+    "phase": 6,
+    "slug": "b1_adalora",
+    "score": 0.7656,
+    "zip": true,
+    "prediction_count": 100,
+    "path": "phase6/variants/b1_adalora"
+  },
+  {
+    "phase": 6,
+    "slug": "c1_continue",
+    "score": 0.7671,
+    "zip": true,
+    "prediction_count": 100,
+    "path": "phase6/variants/c1_continue"
+  },
+  {
+    "phase": 6,
+    "slug": "d222_prefix",
+    "score": 0.771,
+    "zip": true,
+    "prediction_count": 100,
+    "path": "phase6/variants/d222_prefix"
+  },
+  {
+    "phase": 6,
+    "slug": "legalspan_lora",
+    "score": 0.7847,
+    "zip": true,
+    "prediction_count": 100,
+    "path": "phase6/variants/legalspan_lora"
+  },
+  {
+    "phase": 7,
+    "slug": "lexical_fallback_initial",
+    "score": 0.368,
+    "zip": false,
+    "prediction_count": null,
+    "path": "phase7/variants/lexical_fallback_initial"
+  },
+  {
+    "phase": 7,
+    "slug": "lexical_excluded_self",
+    "score": 0.4017,
+    "zip": true,
+    "prediction_count": 237,
+    "path": "phase7/variants/lexical_excluded_self"
+  },
+  {
+    "phase": 7,
+    "slug": "lexical_fallback_corrected",
+    "score": 0.4022,
+    "zip": true,
+    "prediction_count": 237,
+    "path": "phase7/variants/lexical_fallback_corrected"
+  },
+  {
+    "phase": 7,
+    "slug": "full_corrected",
+    "score": 0.4064,
+    "zip": true,
+    "prediction_count": 237,
+    "path": "phase7/variants/full_corrected"
+  },
+  {
+    "phase": 7,
+    "slug": "partial_corrected",
+    "score": 0.4028,
+    "zip": true,
+    "prediction_count": 237,
+    "path": "phase7/variants/partial_corrected"
+  },
+  {
+    "phase": 7,
+    "slug": "lorma_corrected",
+    "score": 0.3969,
+    "zip": true,
+    "prediction_count": 237,
+    "path": "phase7/variants/lorma_corrected"
+  },
+  {
+    "phase": 7,
+    "slug": "kd_corrected",
+    "score": 0.4034,
+    "zip": true,
+    "prediction_count": 237,
+    "path": "phase7/variants/kd_corrected"
+  },
+  {
+    "phase": 7,
+    "slug": "ensemble_reselected",
+    "score": 0.4017,
+    "zip": true,
+    "prediction_count": 237,
+    "path": "phase7/variants/ensemble_reselected"
+  },
+  {
+    "phase": 7,
+    "slug": "model_ensemble_corrected",
+    "score": 0.4064,
+    "zip": true,
+    "prediction_count": 237,
+    "path": "phase7/variants/model_ensemble_corrected"
+  }
+]

@@ -1,0 +1,75 @@
+{
+  "method": "d222_prefix",
+  "phase1_parent": {
+    "method": "D222 global grouped-query attention prefix tuning",
+    "phase1_checkpoint_sha256": "0d0e3d47b2e4254d3662f8f5c03e7436207bd822cb9298218f0d7a02558e2c9b",
+    "tokenizer_sha256": "5c0bd30290e0bd6919253b1ff864f52053924808aabd33482df92cc4bd471c8e",
+    "source_model_sha256": "35c3ebc178de3a5797884542bb739d225a3ea7fd32af9774b759187c73c272fc",
+    "phase1_source_checkpoint_sha256": "08a737d002a71a90ad21f350e25a76f1e70eb172badf0671ff8818d96ea5c46f",
+    "model_config": {
+      "vocab_size": 32768,
+      "layers": 24,
+      "width": 896,
+      "query_heads": 14,
+      "kv_heads": 2,
+      "head_dim": 64,
+      "ff_width": 2304,
+      "context": 2048,
+      "local_window": 512,
+      "global_every": 4,
+      "query_tile": 128,
+      "dropout": 0.0,
+      "rope_theta": 10000.0,
+      "checkpointing": true
+    },
+    "adaptation": {
+      "type": "prefix tuning",
+      "prefix_length": 16,
+      "targets": "global attention layers only",
+      "additional_trainable": "RMSNorm scales"
+    },
+    "trainable_parameters": 68480,
+    "total_parameters": 222104448
+  },
+  "counts": {
+    "fit": 6296,
+    "validation": 589,
+    "confirmation": 143
+  },
+  "test_count": 100,
+  "selected_epoch": 2,
+  "validation": {
+    "bertscore_f1": null,
+    "count": 32,
+    "selection": "negative_summary_nll",
+    "negative_nll": -1.6961322911083698
+  },
+  "confirmation": {
+    "bertscore_f1": null,
+    "count": 64,
+    "selection": "negative_summary_nll",
+    "negative_nll": -1.6304393410682678
+  },
+  "passage_strategy": "document-only uniform coverage including first and last; no reference-dependent passage selection",
+  "args": {
+    "input": "/kaggle/input/datasets/krshnakarthikeyagn/cs781-phase6-official-data-code-20261103",
+    "models_input": "/kaggle/input/datasets/krshnakarthikeyagn/cs781-phase6-c1-d222-parents-20261103",
+    "output": "/kaggle/working/d222_prefix",
+    "method": "d222_prefix",
+    "epochs": 4,
+    "accum": 8,
+    "lr": 0.00015,
+    "passages": 3,
+    "passage_tokens": 320,
+    "target_tokens": 1024,
+    "validation_limit": 32,
+    "confirmation_limit": 64,
+    "max_train_hours": 2.0,
+    "resume": null,
+    "teacher_predictions": null,
+    "skip_bertscore": true
+  },
+  "zip_sha256": "65f6fe67b106cbf4f2ff8204eb0b330a2d1a93d37927e8cdf98f7a529936ac98",
+  "elapsed_minutes": 204.63683229498335,
+  "codabench_score": null
+}

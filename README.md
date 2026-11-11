@@ -1,6 +1,6 @@
 # CS781 capstone: recovered source and evidence
 
-This repository is **private while being organized**. It contains recovered Phase 1, Phase 2 and Phase 4 packages, plus compact source snapshots for Phases 3, 5, 6 and 7 and a clearly marked draft of the seven-phase report. Every source archive, result, and notebook is labeled by provenance. The large original checkpoint/data archives remain in separate local backups; the compact code and evidence packages here are intended for inspection and report preparation.
+This repository contains recovered Phase 1, Phase 2 and Phase 4 packages, detailed scored-variant packages for Phases 5, 6 and 7, plus prepared Phase 3 source snapshots and a clearly marked draft of the seven-phase report. Every source archive, result, and notebook is labeled by provenance. The large original checkpoint/data archives remain in separate local backups; the compact code and evidence packages here are intended for inspection and report preparation.
 
 ## Where to start
 
@@ -9,9 +9,9 @@ This repository is **private while being organized**. It contains recovered Phas
 - [Phase 4 package index](phase4/model_packages/README.md): six initial Kaggle adaptations, four B1 head variants, and three later probability stacks, each with source, evidence, an illustrated companion notebook, PDF/LaTeX methodology, and a verified prediction ZIP.
 - [Phase 1 best-model report](report/phase1_best_legalspan/Phase1_LegalSpan_Report.pdf): LegalSpan technical report with Markdown and editable LaTeX source.
 - [Phase 3 prepared notebooks](phase3/prepared_unscored/): four source notebooks with credential-like strings redacted; no completed scored run or best model has been verified.
-- [Phase 5 source and notebooks](phase5/): sparse/neural statute variants and compact run reports.
-- [Phase 6 source and notebooks](phase6/): summarization variants, including the best scored LegalSpan LoRA line.
-- [Phase 7 source](phase7/): original retrieval run/export scripts and local run record; corrected hidden scores are documented in the final draft.
+- [Phase 5 scored variants](phase5/SUBMITTED_VARIANTS.md): seven distinct statute-identification submissions with source, notebooks, evidence, reports, and prediction ZIPs where recovered.
+- [Phase 6 scored variants](phase6/SUBMITTED_VARIANTS.md): eight distinct summarization exports, including the best scored LegalSpan LoRA line.
+- [Phase 7 scored variants](phase7/SUBMITTED_VARIANTS.md): nine distinct retrieval exports with original source, corrected-score evidence, and prediction ZIPs where recovered.
 - [Seven-phase report draft](report/final_draft_20261109/): editable LaTeX, compiled PDF, figure, source score verification and a truthful LLM-use declaration. The student's Q4 contribution statement remains open.
 
 Each lineage directory contains `source/` recovered from its original complete archive and a `code/` source snapshot inside the reproducibility package structure. Its README, technical reference, line-level code map, illustrated notebook, figure, report PDF/Markdown/LaTeX, and small evidence records live beside the code. The same materials are downloadable as per-model and all-model ZIPs under `packages/`.

@@ -1,0 +1,78 @@
+{
+  "method": "c1_houlsby",
+  "phase1_parent": {
+    "method": "C1 Houlsby-style bottleneck adapters with recurrent readout tuning",
+    "phase1_checkpoint_sha256": "f1f440afb15d8a3b6ffa7eb0d7299628ac9279a5170f8079f3ac6e505ff09399",
+    "tokenizer_sha256": "5c0bd30290e0bd6919253b1ff864f52053924808aabd33482df92cc4bd471c8e",
+    "source_model_sha256": "d9c16e1b53c23db7fd2a2be3e83f09c30642012fd31a63dc8282b7e39dc98147",
+    "phase1_source_checkpoint_sha256": "1903b848b39ca9f335c8d9e3add532d5f49718d539b130e6a8348d98d802433e",
+    "model_config": {
+      "vocab_size": 32768,
+      "max_seq_len": 2048,
+      "max_prompt_len": 8192,
+      "n_encoder_layers": 10,
+      "n_gru_layers": 4,
+      "d_model": 768,
+      "n_heads": 12,
+      "d_head": 64,
+      "d_ff": 2048,
+      "rope_theta": 10000.0,
+      "dropout": 0.0,
+      "gradient_checkpointing": true,
+      "pad_token_id": 0
+    },
+    "adaptation": {
+      "type": "Houlsby bottleneck",
+      "bottleneck": 64,
+      "positions": "every encoder block and recurrent fusion output",
+      "additional_tuned_modules": [
+        "initial_projection",
+        "gru",
+        "cross_attn"
+      ]
+    },
+    "trainable_parameters": 18214592,
+    "total_parameters": 118896320
+  },
+  "counts": {
+    "fit": 6296,
+    "validation": 589,
+    "confirmation": 143
+  },
+  "test_count": 100,
+  "selected_epoch": 3,
+  "validation": {
+    "bertscore_f1": null,
+    "count": 32,
+    "selection": "negative_summary_nll",
+    "negative_nll": -1.9365056417882442
+  },
+  "confirmation": {
+    "bertscore_f1": null,
+    "count": 64,
+    "selection": "negative_summary_nll",
+    "negative_nll": -1.8970763590186834
+  },
+  "passage_strategy": "document-only uniform coverage including first and last; no reference-dependent passage selection",
+  "args": {
+    "input": "/kaggle/input/datasets/krshnakarthikeyagn/cs781-phase6-official-data-code-20261103",
+    "models_input": "/kaggle/input/datasets/krshnakarthikeyagn/cs781-phase6-c1-d222-parents-20261103",
+    "output": "/kaggle/working/c1_houlsby",
+    "method": "c1_houlsby",
+    "epochs": 4,
+    "accum": 8,
+    "lr": 0.00015,
+    "passages": 8,
+    "passage_tokens": 384,
+    "target_tokens": 1024,
+    "validation_limit": 32,
+    "confirmation_limit": 64,
+    "max_train_hours": 0.5,
+    "resume": "/kaggle/input/notebooks/krshnakarthikeyagn/cs781-phase6-c1-houlsby/c1_houlsby/latest.pt",
+    "teacher_predictions": null,
+    "skip_bertscore": true
+  },
+  "zip_sha256": "b8b273d4214b300b1e3592040784286d3cf4383158638591203893d5f258f0b3",
+  "elapsed_minutes": 38.176797667016665,
+  "codabench_score": null
+}

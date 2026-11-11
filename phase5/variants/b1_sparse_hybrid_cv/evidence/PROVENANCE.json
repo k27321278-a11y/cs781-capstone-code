@@ -1,0 +1,89 @@
+{
+  "phase": 5,
+  "variant": "b1_sparse_hybrid_cv",
+  "title": "B1 sparse hybrid with calibration CV",
+  "method_kind": "calibration variant",
+  "codabench_metric": "Codabench macro-F1",
+  "codabench_score": 0.3944,
+  "submission_ids": [
+    1016805
+  ],
+  "local_metric": "0.3933 official-dev macro-F1",
+  "source": [
+    {
+      "path": "phase5_hybrid_calibration_cv.py",
+      "source_sha256": "b456fcc8d7bd8072311ca3011dbf16d0e8e6e17b4c6330a4d9f4f436f68ea1aa",
+      "bytes": 9303,
+      "repository_source": "phase5/source/phase5_hybrid_calibration_cv.py",
+      "symbols": [
+        "sha256 (line 30)",
+        "make_labels (line 38)",
+        "fit_threshold_parts (line 45)",
+        "thresholds_from_parts (line 62)",
+        "main (line 78)"
+      ]
+    },
+    {
+      "path": "phase5_prepare_hybrid_probs.py",
+      "source_sha256": "5b65d2f1a7aec7c5af956c401a470894fee12e591cd7ce6df04ebf2c8dbd8388",
+      "bytes": 1769,
+      "repository_source": "phase5/source/phase5_prepare_hybrid_probs.py",
+      "symbols": [
+        "main (line 14)"
+      ]
+    },
+    {
+      "path": "phase5_b1_train.py",
+      "source_sha256": "645cb2e65313ff49aa6ae574aeab9b015be2365bf427b5e03e3672bc94e20996",
+      "bytes": 13730,
+      "repository_source": "phase5/source/phase5_b1_train.py",
+      "symbols": [
+        "sha256 (line 34)",
+        "LoRALinear (line 42)",
+        "B1Classifier (line 57)",
+        "Rows (line 89)",
+        "read_json (line 102)",
+        "tokenize_split (line 106)",
+        "label_matrix (line 124)",
+        "predict (line 135)",
+        "train (line 147)"
+      ]
+    },
+    {
+      "path": "run_logistic.py",
+      "source_sha256": "07290f2b46fe83681c105ad9cb9e4349d0fb88140d75116908f2fe0497ade7c5",
+      "bytes": 2941,
+      "repository_source": "phase5/source/agent_sparse/run_logistic.py",
+      "symbols": [
+        "main (line 14)"
+      ]
+    }
+  ],
+  "original_notebook": {
+    "path": "original_runner.ipynb",
+    "source_sha256": "47ab806c13b93c1c984f2f6fa33d4c1050173717abf861dd8c31c833353ef694",
+    "bytes": 919,
+    "repository_source": "phase5/notebooks/phase5_kaggle_hybrid_cal/phase5_b1_hybrid_cal.ipynb"
+  },
+  "run_report": {
+    "path": "original_run_report.json",
+    "source_sha256": "64bbb26b22cbcc4cf46320b9a44f6c1a4465355a80c27c698d1f2b76f06bd577",
+    "bytes": 13344
+  },
+  "run_log": {
+    "path": "original_run.log",
+    "source_sha256": "585bace1486c04c2375ceb17db5281cf7102e0e288e48bb0427c35965cb32ec3",
+    "bytes": 3193
+  },
+  "prediction_zip": {
+    "entries": [
+      "prediction.json"
+    ],
+    "prediction_count": 13019,
+    "sha256": "ad8ec9ce8ff61d061293c92fd55258ae7edb26120c1e7879b41e246ee0e056bd",
+    "crc_ok": true,
+    "original_name": "phase5_b1_sparse_hybrid_cv_prediction.zip"
+  },
+  "documentation_status": "post-run reconstruction; no fabricated notebook execution",
+  "reference_chat": "https://chatgpt.com/share/6af16e7a-7c2c-83e8-8ca7-03cf11cffc95"
+}

@@ -1,0 +1,89 @@
+{
+  "phase": 6,
+  "variant": "b1_fusion",
+  "title": "B1 passage fusion with LoRMA+",
+  "method_kind": "trained summarizer",
+  "codabench_metric": "Codabench BERTScore F1",
+  "codabench_score": 0.7674,
+  "submission_ids": [
+    1030742,
+    1030744,
+    1030983
+  ],
+  "local_metric": "-1.6703 validation negative NLL; BERTScore not measured in this report",
+  "source": [
+    {
+      "path": "b1_fusion.py",
+      "source_sha256": "58c9ee6bddcca2fd62d285ebaf6fb70524405cda5de90c451ea46984ddb26aa5",
+      "bytes": 17002,
+      "repository_source": "phase6/source/runtime/b1_fusion.py",
+      "symbols": [
+        "_sha256 (line 39)",
+        "_find (line 47)",
+        "_verify_source (line 60)",
+        "_discover_source (line 84)",
+        "_activate_source (line 110)",
+        "TokenizerAdapter (line 124)",
+        "LoRMAOutputLinear (line 141)",
+        "B1PassageFusion (line 160)",
+        "build (line 243)",
+        "training_loss (line 299)",
+        "generate (line 310)"
+      ]
+    },
+    {
+      "path": "phase6_data.py",
+      "source_sha256": "7b539dd1679e593c85058aa14d31f04ad92b85ff7c9d9e9fa647d48aa3a40b4f",
+      "bytes": 2459,
+      "repository_source": "phase6/source/runtime/phase6_data.py",
+      "symbols": [
+        "normalize_rows (line 6)",
+        "document_hash (line 27)",
+        "split_rows (line 31)",
+        "select_passages (line 40)",
+        "validate_predictions (line 50)"
+      ]
+    },
+    {
+      "path": "train_phase6.py",
+      "source_sha256": "4d1b2f0c303e140e659136f8712c2337cfd095004a643c49e8b0a03c4fb84af8",
+      "bytes": 16559,
+      "repository_source": "phase6/source/runtime/train_phase6.py",
+      "symbols": [
+        "sha (line 19)",
+        "save_json (line 24)",
+        "trainable_state (line 31)",
+        "restore_trainable (line 35)",
+        "pack_source (line 44)",
+        "main (line 59)"
+      ]
+    }
+  ],
+  "original_notebook": {
+    "path": "original_runner.ipynb",
+    "source_sha256": "8ae01ddcde22d908d5541142c22c6b8ef718700acebb72af2110791e7a5e78b5",
+    "bytes": 911,
+    "repository_source": "phase6/notebooks/b1_lorma/cs781-phase6-b1-passage-fusion-lorma.ipynb"
+  },
+  "run_report": {
+    "path": "original_run_report.json",
+    "source_sha256": "3bd6b09aae2741ba61abf27a0a1a00565051abf2df3dcaff3d362dd487706ffc",
+    "bytes": 6461
+  },
+  "run_log": {
+    "path": "original_run.log",
+    "source_sha256": "ac104231329def940a55263d44f4035daf5f2cf1914bf35dc09b7325786da0ff",
+    "bytes": 69847
+  },
+  "prediction_zip": {
+    "entries": [
+      "prediction.json"
+    ],
+    "prediction_count": 100,
+    "sha256": "424d233722e4ffbf4423ab78011c5eaef7f7ee311773ce3d64cbc642bef87ebc",
+    "crc_ok": true,
+    "original_name": "phase6_b1_fusion_prediction.zip"
+  },
+  "documentation_status": "post-run reconstruction; no fabricated notebook execution",
+  "reference_chat": "https://chatgpt.com/share/6af16e7a-7c2c-83e8-8ca7-03cf11cffc95"
+}

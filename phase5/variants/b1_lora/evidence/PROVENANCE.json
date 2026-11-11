@@ -1,0 +1,79 @@
+{
+  "phase": 5,
+  "variant": "b1_lora",
+  "title": "B1 LoRA statute classifier",
+  "method_kind": "trained model",
+  "codabench_metric": "Codabench macro-F1",
+  "codabench_score": 0.2554,
+  "submission_ids": [
+    1016271
+  ],
+  "local_metric": "0.2555 official-dev macro-F1",
+  "source": [
+    {
+      "path": "phase5_b1_train.py",
+      "source_sha256": "645cb2e65313ff49aa6ae574aeab9b015be2365bf427b5e03e3672bc94e20996",
+      "bytes": 13730,
+      "repository_source": "phase5/source/phase5_b1_train.py",
+      "symbols": [
+        "sha256 (line 34)",
+        "LoRALinear (line 42)",
+        "B1Classifier (line 57)",
+        "Rows (line 89)",
+        "read_json (line 102)",
+        "tokenize_split (line 106)",
+        "label_matrix (line 124)",
+        "predict (line 135)",
+        "train (line 147)"
+      ]
+    },
+    {
+      "path": "phase5_core.py",
+      "source_sha256": "5ea4fb38802cabb47692e80ae21b873afdb0caa67cee7fbbec59fc44db575009",
+      "bytes": 2957,
+      "repository_source": "phase5/source/phase5_core.py",
+      "symbols": [
+        "pack_windows (line 6)",
+        "f1_scores (line 24)",
+        "choose_thresholds (line 44)"
+      ]
+    },
+    {
+      "path": "phase5_b1_cal_infer.py",
+      "source_sha256": "eac8c1a4907f3cb90b38fb96ead9e2308e11770961cf4150878f8416ed5140ca",
+      "bytes": 2479,
+      "repository_source": "phase5/source/phase5_b1_cal_infer.py",
+      "symbols": [
+        "digest (line 14)",
+        "main (line 18)"
+      ]
+    }
+  ],
+  "original_notebook": {
+    "path": "original_runner.ipynb",
+    "source_sha256": "3c1f784f6dc2387c6c82862d850d29b9a5da7f93f91b186ec76a0504eaa6d9cb",
+    "bytes": 1151,
+    "repository_source": "phase5/notebooks/phase5_kaggle_kernel/phase5_b1_lora.ipynb"
+  },
+  "run_report": {
+    "path": "original_run_report.json",
+    "source_sha256": "e0f3b71be0836c4801d4b47cdcc4e4d701f2ca16f13e900273851573ccd3b1b3",
+    "bytes": 10746
+  },
+  "run_log": {
+    "path": "original_run.log",
+    "source_sha256": "4af81cd765eeaf4c157de4b203064e9f98387d99f94350950dda71b01e96fa5b",
+    "bytes": 49281
+  },
+  "prediction_zip": {
+    "entries": [
+      "prediction.json"
+    ],
+    "prediction_count": 13019,
+    "sha256": "f3ba4712713a6cd1727c3d30dcfb7797ce8816c741a7a570e6ee8327b2c88a49",
+    "crc_ok": true,
+    "original_name": "phase5_b1_lora_prediction.zip"
+  },
+  "documentation_status": "post-run reconstruction; no fabricated notebook execution",
+  "reference_chat": "https://chatgpt.com/share/6af16e7a-7c2c-83e8-8ca7-03cf11cffc95"
+}

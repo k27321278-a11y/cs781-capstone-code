@@ -1,0 +1,66 @@
+{
+  "phase": 6,
+  "variant": "c1_houlsby_length",
+  "title": "C1 Houlsby with 400-word output cap",
+  "method_kind": "decoding variant",
+  "codabench_metric": "Codabench BERTScore F1",
+  "codabench_score": 0.775,
+  "submission_ids": [
+    1030822
+  ],
+  "local_metric": "not reported",
+  "source": [
+    {
+      "path": "c1_houlsby.py",
+      "source_sha256": "aac5188ee4f3c29e861938c2ddba05edbbcb9c32d1e02f79fd99d4b6d3aeab37",
+      "bytes": 6631,
+      "repository_source": "phase6/source/runtime/c1_houlsby.py",
+      "symbols": [
+        "BottleneckAdapter (line 19)",
+        "EncoderWithAdapter (line 31)",
+        "FusionWithAdapter (line 41)",
+        "adapt_model (line 51)",
+        "build (line 65)",
+        "training_loss (line 115)",
+        "generate (line 127)"
+      ]
+    },
+    {
+      "path": "train_phase6.py",
+      "source_sha256": "4d1b2f0c303e140e659136f8712c2337cfd095004a643c49e8b0a03c4fb84af8",
+      "bytes": 16559,
+      "repository_source": "phase6/source/runtime/train_phase6.py",
+      "symbols": [
+        "sha (line 19)",
+        "save_json (line 24)",
+        "trainable_state (line 31)",
+        "restore_trainable (line 35)",
+        "pack_source (line 44)",
+        "main (line 59)"
+      ]
+    }
+  ],
+  "original_notebook": {
+    "path": "original_runner.ipynb",
+    "source_sha256": "a634024924e19062da6e4d4936d3b097744d2f70f3b9cdd0164a23cf38aeb627",
+    "bytes": 1010,
+    "repository_source": "phase6/notebooks/c1_houlsby/cs781-phase6-c1-houlsby.ipynb"
+  },
+  "run_report": {
+    "path": "original_run_report.json",
+    "source_sha256": "38f9d16e9c3a647037a0af72dd9056c9df5b959bafb6a8c40345b7738e3d708b",
+    "bytes": 588
+  },
+  "run_log": null,
+  "prediction_zip": {
+    "entries": [
+      "prediction.json"
+    ],
+    "prediction_count": 100,
+    "sha256": "877a34828b724b84ede777d1e3b66f02f4ea16e3672016de14272f46cac889c9",
+    "crc_ok": true,
+    "original_name": "phase6_c1_houlsby_length_candidate.zip"
+  },
+  "documentation_status": "post-run reconstruction; no fabricated notebook execution",
+  "reference_chat": "https://chatgpt.com/share/6af16e7a-7c2c-83e8-8ca7-03cf11cffc95"
+}

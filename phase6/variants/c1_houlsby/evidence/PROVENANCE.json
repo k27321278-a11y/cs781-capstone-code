@@ -1,0 +1,85 @@
+{
+  "phase": 6,
+  "variant": "c1_houlsby",
+  "title": "C1 Houlsby bottleneck summarizer",
+  "method_kind": "trained summarizer",
+  "codabench_metric": "Codabench BERTScore F1",
+  "codabench_score": 0.77,
+  "submission_ids": [
+    1030778,
+    1030779,
+    1030987
+  ],
+  "local_metric": "-1.9414 validation negative NLL; BERTScore not measured in this report",
+  "source": [
+    {
+      "path": "c1_houlsby.py",
+      "source_sha256": "aac5188ee4f3c29e861938c2ddba05edbbcb9c32d1e02f79fd99d4b6d3aeab37",
+      "bytes": 6631,
+      "repository_source": "phase6/source/runtime/c1_houlsby.py",
+      "symbols": [
+        "BottleneckAdapter (line 19)",
+        "EncoderWithAdapter (line 31)",
+        "FusionWithAdapter (line 41)",
+        "adapt_model (line 51)",
+        "build (line 65)",
+        "training_loss (line 115)",
+        "generate (line 127)"
+      ]
+    },
+    {
+      "path": "phase6_data.py",
+      "source_sha256": "7b539dd1679e593c85058aa14d31f04ad92b85ff7c9d9e9fa647d48aa3a40b4f",
+      "bytes": 2459,
+      "repository_source": "phase6/source/runtime/phase6_data.py",
+      "symbols": [
+        "normalize_rows (line 6)",
+        "document_hash (line 27)",
+        "split_rows (line 31)",
+        "select_passages (line 40)",
+        "validate_predictions (line 50)"
+      ]
+    },
+    {
+      "path": "train_phase6.py",
+      "source_sha256": "4d1b2f0c303e140e659136f8712c2337cfd095004a643c49e8b0a03c4fb84af8",
+      "bytes": 16559,
+      "repository_source": "phase6/source/runtime/train_phase6.py",
+      "symbols": [
+        "sha (line 19)",
+        "save_json (line 24)",
+        "trainable_state (line 31)",
+        "restore_trainable (line 35)",
+        "pack_source (line 44)",
+        "main (line 59)"
+      ]
+    }
+  ],
+  "original_notebook": {
+    "path": "original_runner.ipynb",
+    "source_sha256": "a634024924e19062da6e4d4936d3b097744d2f70f3b9cdd0164a23cf38aeb627",
+    "bytes": 1010,
+    "repository_source": "phase6/notebooks/c1_houlsby/cs781-phase6-c1-houlsby.ipynb"
+  },
+  "run_report": {
+    "path": "original_run_report.json",
+    "source_sha256": "54b8cecc17f9e932887603ca57326cd2863d1c8e4cde27375d2f3344049f3eb4",
+    "bytes": 2514
+  },
+  "run_log": {
+    "path": "original_run.log",
+    "source_sha256": "94fb27b7b558456c2e8436bdf16202338a1cec6e17e8298a1aea2bbf71129792",
+    "bytes": 26717
+  },
+  "prediction_zip": {
+    "entries": [
+      "prediction.json"
+    ],
+    "prediction_count": 100,
+    "sha256": "73819cb0edabb88822eb85577e5941f3532917705693bad1e2a45a942eebeb91",
+    "crc_ok": true,
+    "original_name": "phase6_c1_houlsby_prediction.zip"
+  },
+  "documentation_status": "post-run reconstruction; no fabricated notebook execution",
+  "reference_chat": "https://chatgpt.com/share/6af16e7a-7c2c-83e8-8ca7-03cf11cffc95"
+}

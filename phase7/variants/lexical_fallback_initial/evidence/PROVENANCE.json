@@ -1,0 +1,70 @@
+{
+  "phase": 7,
+  "variant": "lexical_fallback_initial",
+  "title": "Initial lexical fallback",
+  "method_kind": "retrieval baseline",
+  "codabench_metric": "Codabench micro-F1@7",
+  "codabench_score": 0.368,
+  "submission_ids": [
+    1039286
+  ],
+  "local_metric": "not independently reported after correction",
+  "source": [
+    {
+      "path": "phase7_run.py",
+      "source_sha256": "849a42dc8b5f179ce01197419c9cd2429bd324e4d3d60a949b863caa9b70191e",
+      "bytes": 42572,
+      "repository_source": "phase7/source/phase7_run.py",
+      "symbols": [
+        "ModelConfig (line 23)",
+        "RMSNorm (line 42)",
+        "RotaryEmbedding (line 53)",
+        "CausalMHA (line 71)",
+        "SwiGLU (line 94)",
+        "TransformerBlock (line 105)",
+        "LegalGPT (line 117)",
+        "log (line 169)",
+        "sha256_file (line 173)",
+        "read_json (line 181)",
+        "record_text (line 186)",
+        "load_split (line 190)",
+        "locate_data_root (line 197)",
+        "metric_at7 (line 236)",
+        "top7_predictions (line 248)",
+        "row_zscore (line 256)",
+        "tune_blend (line 263)",
+        "build_lexical (line 275)",
+        "make_hard_negatives (line 290)",
+        "prepare_token_cache (line 299)",
+        "LoRMALinear (line 329)",
+        "RetrievalModel (line 346)",
+        "inject_lorma (line 366)",
+        "build_model (line 376)",
+        "pack_sequences (line 412)",
+        "encode_doc_batch (line 422)",
+        "encode_all (line 444)",
+        "late_scores_torch (line 465)",
+        "all_pair_scores (line 475)",
+        "evaluate_model (line 489)",
+        "trainable_state (line 500)",
+        "save_checkpoint (line 508)",
+        "load_experiment_model (line 516)",
+        "train_supervised (line 523)",
+        "build_student_base (line 593)",
+        "teacher_targets (line 598)",
+        "train_student_kd (line 620)",
+        "main (line 685)"
+      ]
+    }
+  ],
+  "original_notebook": null,
+  "run_report": {
+    "path": "original_run_report.json",
+    "source_sha256": "48667284a5ac2af559127c3baaab6c7bff45374e51d88dcd94e0aaf9203dbfcd",
+    "bytes": 5143
+  },
+  "run_log": null,
+  "prediction_zip": null,
+  "documentation_status": "post-run reconstruction; no fabricated notebook execution",
+  "reference_chat": "https://chatgpt.com/share/6af16e7a-7c2c-83e8-8ca7-03cf11cffc95"
+}

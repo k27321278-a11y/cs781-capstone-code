@@ -1,0 +1,86 @@
+{
+  "phase": 6,
+  "variant": "b1_adalora",
+  "title": "B1 AdaLoRA summarizer",
+  "method_kind": "trained summarizer",
+  "codabench_metric": "Codabench BERTScore F1",
+  "codabench_score": 0.7656,
+  "submission_ids": [
+    1030985
+  ],
+  "local_metric": "-1.6305 validation negative NLL; BERTScore not measured in this report",
+  "source": [
+    {
+      "path": "b1_adalora.py",
+      "source_sha256": "768c00167623ba837641ebdcd0eebb0c2ec0210d67ad90c642c6c918215458c8",
+      "bytes": 4574,
+      "repository_source": "phase6/source/runtime/b1_adalora.py",
+      "symbols": [
+        "AdaLoRALinear (line 11)",
+        "allocate_ranks (line 44)",
+        "build (line 67)",
+        "on_optimizer_step (line 95)"
+      ]
+    },
+    {
+      "path": "b1_fusion.py",
+      "source_sha256": "58c9ee6bddcca2fd62d285ebaf6fb70524405cda5de90c451ea46984ddb26aa5",
+      "bytes": 17002,
+      "repository_source": "phase6/source/runtime/b1_fusion.py",
+      "symbols": [
+        "_sha256 (line 39)",
+        "_find (line 47)",
+        "_verify_source (line 60)",
+        "_discover_source (line 84)",
+        "_activate_source (line 110)",
+        "TokenizerAdapter (line 124)",
+        "LoRMAOutputLinear (line 141)",
+        "B1PassageFusion (line 160)",
+        "build (line 243)",
+        "training_loss (line 299)",
+        "generate (line 310)"
+      ]
+    },
+    {
+      "path": "train_phase6.py",
+      "source_sha256": "4d1b2f0c303e140e659136f8712c2337cfd095004a643c49e8b0a03c4fb84af8",
+      "bytes": 16559,
+      "repository_source": "phase6/source/runtime/train_phase6.py",
+      "symbols": [
+        "sha (line 19)",
+        "save_json (line 24)",
+        "trainable_state (line 31)",
+        "restore_trainable (line 35)",
+        "pack_source (line 44)",
+        "main (line 59)"
+      ]
+    }
+  ],
+  "original_notebook": {
+    "path": "original_runner.ipynb",
+    "source_sha256": "f6e90a3f98cb55a4e597331ba3a6b5146aaf7c971c51490aa19a57ce4b6a1500",
+    "bytes": 1069,
+    "repository_source": "phase6/notebooks/b1_adalora/cs781-phase6-b1-adalora.ipynb"
+  },
+  "run_report": {
+    "path": "original_run_report.json",
+    "source_sha256": "d0eab9fbcfa48204127b17df6bf5244986e31d72d20f7320d46ce6e89d92b850",
+    "bytes": 6585
+  },
+  "run_log": {
+    "path": "original_run.log",
+    "source_sha256": "9c92c323517516614cd2ce65021d62182135cb9a2c77a43a1ef5192083abe3c9",
+    "bytes": 22467
+  },
+  "prediction_zip": {
+    "entries": [
+      "prediction.json"
+    ],
+    "prediction_count": 100,
+    "sha256": "69b7c1323489a0502422f837ea46c68c54cbd8b467da36077510713ab7170fca",
+    "crc_ok": true,
+    "original_name": "phase6_b1_adalora_prediction.zip"
+  },
+  "documentation_status": "post-run reconstruction; no fabricated notebook execution",
+  "reference_chat": "https://chatgpt.com/share/6af16e7a-7c2c-83e8-8ca7-03cf11cffc95"
+}
