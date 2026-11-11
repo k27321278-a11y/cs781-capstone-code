@@ -1,0 +1,429 @@
+[
+  {
+    "phase": 1,
+    "variant": "A_dense (A0)",
+    "report": "phase1/A_dense/historical_A0_methodology/report/A0_Methodology_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": true
+  },
+  {
+    "phase": 1,
+    "variant": "A0_LegalSpan",
+    "report": "phase1/A0_LegalSpan/report/A0_LegalSpan_Methodology_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 1,
+    "variant": "B0_EncoderDecoder",
+    "report": "phase1/B0_EncoderDecoder/report/B0_EncoderDecoder_Methodology_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 1,
+    "variant": "B_Improved",
+    "report": "phase1/B_Improved/report/B_Improved_Methodology_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 1,
+    "variant": "B1_EncoderDecoder",
+    "report": "phase1/B1_EncoderDecoder/report/B1_EncoderDecoder_Methodology_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 1,
+    "variant": "C0_EncoderGRU",
+    "report": "phase1/C0_EncoderGRU/report/C0_EncoderGRU_Methodology_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 1,
+    "variant": "C1_EncoderGRU",
+    "report": "phase1/C1_EncoderGRU/report/C1_EncoderGRU_Methodology_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 1,
+    "variant": "D222_LocalGlobal (extension)",
+    "report": "extensions/D222_LocalGlobal/report/D222_LocalGlobal_Methodology_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 2,
+    "variant": "01_LegalSpan_LoRMA",
+    "report": "phase2/01_LegalSpan_LoRMA/report/01_LegalSpan_LoRMA_Technical_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 2,
+    "variant": "02_B1_LoRA",
+    "report": "phase2/02_B1_LoRA/report/02_B1_LoRA_Technical_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 2,
+    "variant": "03_C1_Full",
+    "report": "phase2/03_C1_Full/report/03_C1_Full_Technical_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 2,
+    "variant": "04_A0_KD",
+    "report": "phase2/04_A0_KD/report/04_A0_KD_Technical_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 2,
+    "variant": "05_Consensus_2of4",
+    "report": "phase2/05_Consensus_2of4/report/05_Consensus_2of4_Technical_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 2,
+    "variant": "06_LegalSpan_HeaderCRF",
+    "report": "phase2/06_LegalSpan_HeaderCRF/report/06_LegalSpan_HeaderCRF_Technical_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 2,
+    "variant": "07_LegalSpan_RoleSpan",
+    "report": "phase2/07_LegalSpan_RoleSpan/report/07_LegalSpan_RoleSpan_Technical_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 2,
+    "variant": "08_D222_Full",
+    "report": "phase2/08_D222_Full/report/08_D222_Full_Technical_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 2,
+    "variant": "09_D222_LoRMA",
+    "report": "phase2/09_D222_LoRMA/report/09_D222_LoRMA_Technical_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 2,
+    "variant": "10_D222_Continued_LoRMA",
+    "report": "phase2/10_D222_Continued_LoRMA/report/10_D222_Continued_LoRMA_Technical_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 2,
+    "variant": "11_D222_100M_LoRMA",
+    "report": "phase2/11_D222_100M_LoRMA/report/11_D222_100M_LoRMA_Technical_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 2,
+    "variant": "12_D222_200M_LoRMA",
+    "report": "phase2/12_D222_200M_LoRMA/report/12_D222_200M_LoRMA_Technical_Report.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 3,
+    "variant": "01_D222_LoRMA",
+    "report": null,
+    "pdf_exists": false,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 3,
+    "variant": "02_B1_LoRA",
+    "report": null,
+    "pdf_exists": false,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 3,
+    "variant": "03_C1_IA3",
+    "report": null,
+    "pdf_exists": false,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 3,
+    "variant": "04_A0_Distillation",
+    "report": null,
+    "pdf_exists": false,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 4,
+    "variant": "01_D222_LoRMA",
+    "report": "phase4/model_packages/01_D222_LoRMA/report/",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 4,
+    "variant": "02_B1_Partial",
+    "report": "phase4/model_packages/02_B1_Partial/report/",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 4,
+    "variant": "03_C1_Full",
+    "report": "phase4/model_packages/03_C1_Full/report/",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 4,
+    "variant": "04_A0_Distillation",
+    "report": "phase4/model_packages/04_A0_Distillation/report/",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 4,
+    "variant": "05_D222_Adapters",
+    "report": "phase4/model_packages/05_D222_Adapters/report/",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 4,
+    "variant": "06_C1_BitFit",
+    "report": "phase4/model_packages/06_C1_BitFit/report/",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 4,
+    "variant": "07_B1_Reference",
+    "report": "phase4/model_packages/07_B1_Reference/report/",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 4,
+    "variant": "08_B1_Hierarchy",
+    "report": "phase4/model_packages/08_B1_Hierarchy/report/",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 4,
+    "variant": "09_B1_GRUOnly",
+    "report": "phase4/model_packages/09_B1_GRUOnly/report/",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 4,
+    "variant": "10_B1_TransformerOnly",
+    "report": "phase4/model_packages/10_B1_TransformerOnly/report/",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 4,
+    "variant": "11_B1_Stack4",
+    "report": "phase4/model_packages/11_B1_Stack4/report/",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 4,
+    "variant": "12_B1_Stack6",
+    "report": "phase4/model_packages/12_B1_Stack6/report/",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 4,
+    "variant": "13_B1_Stack6_CVCal",
+    "report": "phase4/model_packages/13_B1_Stack6_CVCal/report/",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 5,
+    "variant": "b1_lora",
+    "report": "phase5/variants/b1_lora/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 5,
+    "variant": "b1_lorma",
+    "report": "phase5/variants/b1_lorma/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 5,
+    "variant": "b1_position_queries",
+    "report": "phase5/variants/b1_position_queries/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 5,
+    "variant": "b1_sparse_guided",
+    "report": "phase5/variants/b1_sparse_guided/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 5,
+    "variant": "b1_sparse_hybrid",
+    "report": "phase5/variants/b1_sparse_hybrid/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 5,
+    "variant": "b1_sparse_hybrid_cv",
+    "report": "phase5/variants/b1_sparse_hybrid_cv/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 5,
+    "variant": "b1_statute_gru",
+    "report": "phase5/variants/b1_statute_gru/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 6,
+    "variant": "b1_adalora",
+    "report": "phase6/variants/b1_adalora/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 6,
+    "variant": "b1_fusion",
+    "report": "phase6/variants/b1_fusion/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 6,
+    "variant": "b1_fusion_length",
+    "report": "phase6/variants/b1_fusion_length/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 6,
+    "variant": "c1_continue",
+    "report": "phase6/variants/c1_continue/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 6,
+    "variant": "c1_houlsby",
+    "report": "phase6/variants/c1_houlsby/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 6,
+    "variant": "c1_houlsby_length",
+    "report": "phase6/variants/c1_houlsby_length/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 6,
+    "variant": "d222_prefix",
+    "report": "phase6/variants/d222_prefix/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 6,
+    "variant": "legalspan_lora",
+    "report": "phase6/variants/legalspan_lora/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 7,
+    "variant": "ensemble_reselected",
+    "report": "phase7/variants/ensemble_reselected/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 7,
+    "variant": "full_corrected",
+    "report": "phase7/variants/full_corrected/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 7,
+    "variant": "kd_corrected",
+    "report": "phase7/variants/kd_corrected/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 7,
+    "variant": "lexical_excluded_self",
+    "report": "phase7/variants/lexical_excluded_self/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 7,
+    "variant": "lexical_fallback_corrected",
+    "report": "phase7/variants/lexical_fallback_corrected/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 7,
+    "variant": "lexical_fallback_initial",
+    "report": "phase7/variants/lexical_fallback_initial/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 7,
+    "variant": "lorma_corrected",
+    "report": "phase7/variants/lorma_corrected/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 7,
+    "variant": "model_ensemble_corrected",
+    "report": "phase7/variants/model_ensemble_corrected/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  },
+  {
+    "phase": 7,
+    "variant": "partial_corrected",
+    "report": "phase7/variants/partial_corrected/report/METHODOLOGY_REPORT.pdf",
+    "pdf_exists": true,
+    "strict_a0_depth": false
+  }
+]
