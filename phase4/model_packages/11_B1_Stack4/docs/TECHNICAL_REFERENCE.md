@@ -6,17 +6,17 @@ Phase 4 predicts a binary outcome (0 or 1) from a legal case. The provided files
 
 ## Mechanism [CODE]
 
-This is a prediction-level ensemble, not a newly trained Phase 1/B1 backbone. It joins saved calibration, dev and test probabilities from: v7_transformer, v6_transformer, v5_gru, v4_reference. An L2-regularized logistic regression learns the mixing weights from 512 training-calibration examples; each original model retains its own checkpoint. Decision threshold 0.500000.
+This is a prediction-level ensemble, not a newly trained Phase 1/B1 backbone. It loads saved raw class logits from calibration, dev and test exports for: v7_transformer, v6_transformer, v5_gru, v4_reference. An L2-regularized logistic regression learns the mixing weights from 512 training-calibration examples; each original model retains its own checkpoint. Decision threshold 0.500000.
 
-Data flow: B1 model probabilities → 4 inputs → 512 train calibration → L2 logistic weights → Threshold 0.500 → Binary ZIP. The source under `code/` is the authority for exact tensor operations and dimensions. Four inputs fixed from prior evidence; L2 logistic stack C=0.1 fit on 512 disjoint train calibration examples; five-fold calibration CV; threshold 0.5. Official dev used only to report..
+Data flow: B1 class-score margins → 4 inputs → 512 train calibration → L2 logistic weights → Threshold 0.500 → Binary ZIP. The source under `code/` is the authority for exact tensor operations and dimensions. Four inputs fixed from prior evidence; L2 logistic stack C=0.1 fit on 512 disjoint train calibration examples; five-fold calibration CV; threshold 0.5. Official dev used only to report..
 
 ### Provenance and scientific boundary
 
 [CODE] Prediction-level B1 ensemble, not an additional neural backbone.
 
-[CODE] For a case, stack the base-model probabilities into vector p. Compute logit = intercept + Σ(coefficient_i × p_i), apply sigmoid, and output 1 if the resulting probability reaches the recorded threshold. Every base probability comes from an independently trained B1 model; no backbone weight is updated when fitting the stack.
+[CODE] For each aligned case, take each base model's two raw class logits and subtract the class-0 logit from the class-1 logit. StandardScaler centers and scales each model's margin column using training-calibration statistics. Logistic regression combines these standardized margins, applies the sigmoid, and thresholds the resulting class-1 probability. The recorded coefficients multiply standardized margins, not raw probabilities. No backbone weight is updated when fitting the stack.
 
-[CODE/RUN] L2-regularized logistic regression combines 4 aligned model probabilities: v7_transformer, v6_transformer, v5_gru, v4_reference. The stored coefficients are 0.5568, 0.3330, 0.3002, 0.3513 and intercept -0.0340.
+[CODE/RUN] L2-regularized logistic regression combines 4 aligned standardized class-score differences: v7_transformer, v6_transformer, v5_gru, v4_reference. The stored coefficients are 0.5568, 0.3330, 0.3002, 0.3513 and intercept -0.0340.
 
 ### Exact recorded configuration
 
@@ -33,7 +33,7 @@ Data flow: B1 model probabilities → 4 inputs → 512 train calibration → L2 
 
 ### Optimization and selection
 
-[CODE] There are no optimizer epochs for a new backbone here. The logistic combiner fits probability columns with L2 regularization. The stack with CV-calibrated threshold chooses its cutoff using out-of-fold calibration scores; the other stacks use 0.5.
+[CODE] There are no optimizer epochs for a new backbone here. The logistic combiner fits standardized margin columns with L2 regularization. The stack with CV-calibrated threshold chooses its cutoff using out-of-fold calibration scores; the other stacks use 0.5.
 
 ### Evaluation protocol
 
@@ -56,3 +56,9 @@ Run the original builder `code/build_b1_stack_submission.py` with the exact mode
 ## Limitations
 
 The stack was explored after inspecting other dev results, so comparisons across stack families on the same official dev set are post-selection and may be optimistic. The train-calibration CV is not an unseen test estimate. Reproduction needs the saved per-model probability arrays and selected checkpoint lineage in the original local B1 archive; the small package includes the builder script and full hash/provenance record, but not all probabilities or model weights. This package contains a later explanatory notebook, not a notebook with original saved execution outputs. GitHub excludes checkpoint tensors and official datasets; their original local backups are preserved. Do not infer a hidden leaderboard score from official-dev performance.
+
+## Exact scaler and margin convention (documentation corrected 15 November 2026)
+
+The final scaler is fitted on the 512 training-calibration cases and reused unchanged on official dev and test. During five-fold cross-validation, the entire StandardScaler/logistic-regression pipeline is refitted on each fold's training partition; validation-fold statistics are not used to fit that scaler. StandardScaler uses population variance (ddof=0); a constant feature receives scale 1. Reproducing the coefficients requires the same input order and the fitted scaler, or refitting the full pipeline from the original calibration logits and labels.
+
+For base model i, `m_i = logit_i[1] - logit_i[0]`, `u_i = (m_i - mean_i) / scale_i`, and `q = sigmoid(intercept + sum(coefficient_i * u_i))`. The means and scales describe margin columns, not token features.
