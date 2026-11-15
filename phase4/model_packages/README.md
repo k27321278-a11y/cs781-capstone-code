@@ -2,7 +2,7 @@
 
 This follows the Phase 1 A0 and Phase 2 package format: source, run evidence, README, technical reference, code map, architecture diagram, illustrated companion notebook, editable LaTeX/Markdown/PDF methodology report, and a verified prediction ZIP. Documentation was assembled after the actual Kaggle runs. Companion notebooks have no fabricated execution outputs.
 
-**Counting:** 13 prediction/method exports in this collection: six initial Kaggle adaptation jobs, four B1 study heads, three later B1 stacks. The six initial jobs and four B1 heads are trained variants; the stacks are prediction-level ensembles, not new neural backbones. B1 v5/v6/v7 are continuation segments of the same two head experiments, not separate architectures. Prepared but unlaunched depth/FFN options and additional model notebooks are retained in the source inventory but are not scored runs.
+**Counting:** 13 prediction/method exports in this collection: six initial Kaggle adaptation jobs, four B1 study heads, three later B1 margin-based logistic stacks. The six initial jobs and four B1 heads are trained variants; the stacks are prediction-level ensembles, not new neural backbones. B1 v5/v6/v7 are continuation segments of the same two head experiments, not separate architectures. Prepared but unlaunched depth/FFN options and additional model notebooks are retained in the source inventory but are not scored runs.
 
 | Package | Method | Official-dev macro-F1 | Codabench screenshot | Download |
 |---|---:|---:|---:|---|
@@ -33,3 +33,7 @@ The model source and notebooks also live under `../shared_runner/`, `../individu
 ## Submission guidance
 
 The course's final Hello IITK ZIP is a separate deliverable, with only best-performing code for each phase plus the report, while the private GitHub repository is the broader record of all model code and experiments. The private repository must be made public only after a fresh user instruction. These model packages are documentation and reproducibility bundles, not an automatically submitted final Hello IITK ZIP.
+
+## Documentation correction - 15 November 2026
+
+The three stack packages now describe standardized class-1 minus class-0 logit margins, rather than raw probabilities. Their builders, prediction ZIPs, and measured scores are unchanged. README, technical reference, diagram, notebook, PDF/LaTeX report, and download ZIPs use the corrected convention.
