@@ -6,15 +6,15 @@ This is a **source-audited Phase 4 documentation package assembled after the tra
 
 ## Task and method
 
-Binary Court Judgment Prediction from long legal case text. This is a prediction-level ensemble, not a newly trained Phase 1/B1 backbone. It joins saved calibration, dev and test probabilities from: v7_transformer, v6_transformer, v5_gru, v4_reference, v7_gru, v6_gru. An L2-regularized logistic regression learns the mixing weights from 512 training-calibration examples; each original model retains its own checkpoint. Decision threshold 0.514611.
+Binary Court Judgment Prediction from long legal case text. This is a prediction-level ensemble, not a newly trained Phase 1/B1 backbone. It loads saved raw class logits from calibration, dev and test exports for: v7_transformer, v6_transformer, v5_gru, v4_reference, v7_gru, v6_gru. An L2-regularized logistic regression learns the mixing weights from 512 training-calibration examples; each original model retains its own checkpoint. Decision threshold 0.514611.
 
 **Training/adaptation:** Six B1 inputs; L2 logistic stack C=1.0 fit on 512 disjoint train calibration examples; decision threshold selected from five-fold out-of-fold calibration probabilities only. Official dev used for reporting; family was explored after other dev results, so cross-family comparison is exploratory. Hidden score unknown.
 
 ## Architecture and experiment details
 
-Prediction-level B1 ensemble, not an additional neural backbone. For a case, stack the base-model probabilities into vector p. Compute logit = intercept + Σ(coefficient_i × p_i), apply sigmoid, and output 1 if the resulting probability reaches the recorded threshold. Every base probability comes from an independently trained B1 model; no backbone weight is updated when fitting the stack.
+Prediction-level B1 ensemble, not an additional neural backbone. For each aligned case, take each base model's two raw class logits and subtract the class-0 logit from the class-1 logit. StandardScaler centers and scales each model's margin column using training-calibration statistics. Logistic regression combines these standardized margins, applies the sigmoid, and thresholds the resulting class-1 probability. The recorded coefficients multiply standardized margins, not raw probabilities. No backbone weight is updated when fitting the stack.
 
-L2-regularized logistic regression combines 6 aligned model probabilities: v7_transformer, v6_transformer, v5_gru, v4_reference, v7_gru, v6_gru. The stored coefficients are 0.6206, 0.2262, 0.1801, 0.3552, 0.1386, 0.1386 and intercept -0.0395.
+L2-regularized logistic regression combines 6 aligned standardized class-score differences: v7_transformer, v6_transformer, v5_gru, v4_reference, v7_gru, v6_gru. The stored coefficients are 0.6206, 0.2262, 0.1801, 0.3552, 0.1386, 0.1386 and intercept -0.0395.
 
 See [the technical reference](docs/TECHNICAL_REFERENCE.md) for the recorded configuration, validation boundary, and source-level mechanism. The [recorded trace](figures/recorded_trace.svg) is drawn from archived run records.
 
@@ -41,3 +41,9 @@ Run the original builder `code/build_b1_stack6_cvcal_submission.py` with the exa
 ## Interpretation
 
 The stack was explored after inspecting other dev results, so comparisons across stack families on the same official dev set are post-selection and may be optimistic. The train-calibration CV is not an unseen test estimate. Reproduction needs the saved per-model probability arrays and selected checkpoint lineage in the original local B1 archive; the small package includes the builder script and full hash/provenance record, but not all probabilities or model weights.
+
+## Exact scaler and margin convention (documentation corrected 15 November 2026)
+
+The final scaler is fitted on the 512 training-calibration cases and reused unchanged on official dev and test. During five-fold cross-validation, the entire StandardScaler/logistic-regression pipeline is refitted on each fold's training partition; validation-fold statistics are not used to fit that scaler. StandardScaler uses population variance (ddof=0); a constant feature receives scale 1. Reproducing the coefficients requires the same input order and the fitted scaler, or refitting the full pipeline from the original calibration logits and labels.
+
+For base model i, `m_i = logit_i[1] - logit_i[0]`, `u_i = (m_i - mean_i) / scale_i`, and `q = sigmoid(intercept + sum(coefficient_i * u_i))`. The means and scales describe margin columns, not token features.
