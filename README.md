@@ -6,12 +6,13 @@ This repository contains recovered Phase 1, Phase 2 and Phase 4 packages, detail
 
 - [Phase 1 package index](packages/phase1/README_FIRST.md): eight lineages, original source/config, A0 historical Colab notebook, later illustrated notebooks, reports, diagrams, and compact logs/metrics. The D222 extension is marked post-deadline.
 - [Phase 2 package index](packages/phase2/README_FIRST.md): twelve prediction exports across five backbone families, including one ensemble and two post-deadline checkpoint studies.
-- [Phase 4 package index](phase4/model_packages/README.md): six initial Kaggle adaptations, four B1 head variants, and three later probability stacks, each with source, evidence, an illustrated companion notebook, PDF/LaTeX methodology, and a verified prediction ZIP.
+- [Phase 4 package index](phase4/model_packages/README.md): six initial Kaggle adaptations, four B1 head variants, and three later margin-based logistic stacks, each with source, evidence, an illustrated companion notebook, PDF/LaTeX methodology, and a verified prediction ZIP.
 - [Phase 1 best-model report](report/phase1_best_legalspan/Phase1_LegalSpan_Report.pdf): LegalSpan technical report with Markdown and editable LaTeX source.
 - [Phase 3 prepared notebooks](phase3/prepared_unscored/): four source notebooks with credential-like strings redacted; no completed scored run or best model has been verified.
 - [Phase 5 scored variants](phase5/SUBMITTED_VARIANTS.md): seven distinct statute-identification submissions with source, notebooks, evidence, reports, and prediction ZIPs where recovered.
 - [Phase 6 scored variants](phase6/SUBMITTED_VARIANTS.md): eight distinct summarization exports, including the best scored LegalSpan LoRA line.
 - [Phase 7 scored variants](phase7/SUBMITTED_VARIANTS.md): nine distinct retrieval exports with original source, corrected-score evidence, and prediction ZIPs where recovered.
+- [Report correction and remaining draft status](report/final_draft_20261109/REVISION_STATUS.md): the stack equations now match the standardized-logit-margin code; the student contribution statement remains unfinished.
 - [Seven-phase report draft](report/final_draft_20261109/): editable LaTeX, compiled PDF, figure, source score verification and a truthful LLM-use declaration. The student's Q4 contribution statement remains open.
 
 Each lineage directory contains `source/` recovered from its original complete archive and a `code/` source snapshot inside the reproducibility package structure. Its README, technical reference, line-level code map, illustrated notebook, figure, report PDF/Markdown/LaTeX, and small evidence records live beside the code. The same materials are downloadable as per-model and all-model ZIPs under `packages/`.
